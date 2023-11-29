@@ -1,4 +1,4 @@
-elections20-primaries
+elections24-primaries
 ======================================================
 
 This news app is built on our `interactive template <https://github.com/nprapps/interactive-template>`_. Check the readme for that template for more details about the structure and mechanics of the app, as well as how to start your own project.
@@ -14,8 +14,8 @@ To run this project you will need:
 
 With those installed, you can then set the project up using your terminal:
 
-#. Pull the code - ``git clone git@github.com:nprapps/elections20-primaries``
-#. Enter the project folder - ``cd elections20-primaries``
+#. Pull the code - ``git clone git@github.com:nprapps/elections24-primaries``
+#. Enter the project folder - ``cd elections24-primaries``
 #. Install dependencies from NPM - ``npm install``
 #. Update from the google sheets - ``grunt sheets``
 #. Start the server - ``grunt``
@@ -48,7 +48,7 @@ This particular project includes some special tasks:
 
 * ``ap`` - Run the elex task and its prerequisites together
 
-To get started with Iowa data, run ``grunt --date=2/3/2020``
+To get started with Iowa data, run ``grunt --date=1/15/2024``
 
 There are also three tasks that are related to testing the app in "persistent" mode (i.e., running with regular updates and either displaying them locally or publishing them).
 
@@ -92,7 +92,7 @@ and control its operation::
     sudo systemctl status primaries
 
 To update the code running on the server, SSH into the EC2 box, enter the
-``elections20-primaries`` directory, and ``git pull`` to get the latest
+``elections24-primaries`` directory, and ``git pull`` to get the latest
 source. To be safe, restart the server with ``sudo systemctl restart
 primaries``--this will force the server to redeploy all resources (the
 schedule deployments only run AP data processing, not front-end code).
