@@ -1,0 +1,89 @@
+{
+  "supertuesday": {
+    "eventDate": "3/3/2020",
+    "schedule": {
+      "7 p.m. ET": [
+        { "state": "VT", "ap": "Vt.", "delegates": 16 },
+        { "state": "VA", "ap": "Va.", "delegates": 99 }
+      ],
+      "7:30": [
+        { "state": "NC", "ap": "N.C.", "delegates": 110 }
+      ],
+      "8:00": [
+        { "state": "AL", "ap": "Ala.", "delegates": 52 },
+        { "state": "ME", "ap": "Maine", "delegates": 24 },
+        { "state": "MA", "ap": "Mass.", "delegates": 91 },
+        { "state": "OK", "ap": "Okla.", "delegates": 37 },
+        { "state": "TN", "ap": "Tenn.", "delegates": 64 }
+      ],
+      "8:30": [
+        { "state": "AR", "ap": "Ark.", "delegates": 31 }
+      ],
+      "9:00": [
+        { "state": "CO", "ap": "Colo.", "delegates": 67 },
+        { "state": "MN", "ap": "Minn.", "delegates": 75 },
+        { "state": "TX", "ap": "Texas", "delegates": 228 }
+      ],
+      "10:00": [
+        { "state": "UT", "ap": "Utah", "delegates": 29 }
+      ],
+      "11:00": [
+        { "state": "CA", "ap": "Calif.", "delegates": 415 }
+      ]
+    },
+    "candidates": ["Biden", "Bloomberg", "Gabbard", "Sanders", "Warren"]
+  },
+  "march10": {
+    "eventDate": "3/10/2020",
+    "schedule": {
+      "8 p.m. ET": [
+        { "state": "MS", "ap": "Miss.", "delegates": 36 },
+        { "state": "MO", "ap": "Mo.", "delegates": 68 },
+        { "state": "ND", "ap": "N.D.", "delegates": 14 }
+      ],
+      "9 p.m. ET": [
+        { "state": "MI", "ap": "Mich.", "delegates": 125 }
+      ],
+      "11 p.m. ET": [
+        { "state": "ID", "ap": "Idaho", "delegates": 20 },
+        { "state": "WA", "ap": "Wash.", "delegates": 89 }
+      ]
+    },
+    "candidates": ["Biden", "Gabbard", "Sanders"]
+  },
+  "march17": {
+    "eventDate": "3/17/2020",
+    "schedule": {
+      "8 p.m. ET": [
+        { "state": "FL", "ap": "Fla.", "delegates": 219 },
+        { "state": "IL", "ap": "Ill.", "delegates": 155 }
+      ],
+      "10 p.m. ET": [
+        { "state": "AZ", "ap": "Ariz.", "delegates": 67 }
+      ]
+    },
+    "candidates": ["Biden", "Sanders"]
+  },
+  "june2": {
+    "eventDate": "6/2/2020",
+    "schedule": {
+      "7 p.m. ET": [
+        { "state": "IN", "ap": "Ind.", "delegates": 82 }
+      ],
+      "8 p.m. ET": [
+        { "state": "DC", "ap": "D.C.", "delegates": 20 },
+        { "state": "MD", "ap": "Md.", "delegates": 96 },
+        { "state": "PA", "ap": "Pa.", "delegates": 186 },
+        { "state": "RI", "ap": "R.I.", "delegates": 26 }
+      ],
+      "9 p.m. ET": [
+        { "state": "NM", "ap": "N.M.", "delegates": 34 },
+        { "state": "SD", "ap": "S.D.", "delegates": 16 }
+      ],
+      "10 p.m. ET": [
+        { "state": "MT", "ap": "Mont.", "delegates": 19 }
+      ]
+    },
+    "candidates": ["Biden", "Sanders"]
+  }
+}

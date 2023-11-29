@@ -1,0 +1,59 @@
+@import "../../../css/values.less";
+
+house-primary {
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footnote {
+    font-family: @sans;
+    font-size: 0.85em;
+    font-style: italic;
+    color: var(--secondary);
+    margin-top: 5px;
+  }
+
+  house-seat {
+    padding-right: 20px;
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+
+    h4 {
+      .gotham();
+      margin: 0 0 22px 0;
+      font-weight: bold;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
+      font-size: 1.1em;
+    }
+
+    [data-as="results"] {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+
+      @media @mobile {
+        display: block;
+
+        results-table + results-table {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    &[data-count="1"] {
+      flex: 0 0 50%;
+
+      [data-as="results"] {
+        display: block;
+      }
+
+      @media @mobile {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+
+}

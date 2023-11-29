@@ -1,0 +1,144 @@
+@import "../../../css/values.less";
+
+delegate-total {
+  min-width: 200px;
+  font-size: var(--font-size);
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    color: var(--foreground);
+
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+      .gotham();
+      color: inherit;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-size: .85em;
+      color: var(--secondary);
+    }
+  }
+
+
+  .key {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+
+    @media @mobile {
+      display: none;
+    }
+
+    span {
+      .knockout-header();
+      font-size: .85em;
+      color: var(--secondary);
+      text-align: left;
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    .gotham();
+    font-size: .85em;
+
+    @media @tablet {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .extra-data-column & {
+      @media @desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: var(--shaded);
+    color: var(--primary);
+    margin-bottom: 4px;
+    align-items: center;
+    height: 4em;
+
+    @media @tablet {
+      display: block;
+      width: 33%;
+
+      span {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .extra-data-column & {
+      @media @desktop {
+        display: block;
+        width: 33%;
+
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &[shown="2"] li {
+    @media @tablet {
+      width: calc(50% - 1px);
+    }
+
+    .extra-data-column & {
+      @media @desktop {
+        width: calc(50% - 1px);
+      }
+    }
+  }
+
+  .count {
+    text-align: right;
+
+    @media @tablet {
+      text-align: center;
+      margin-top: 3px;
+    }
+
+    .extra-data-column & {
+      @media @desktop {
+        text-align: center;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  .full-report {
+    display: block;
+    .knockout-header();
+    color: var(--link);
+    text-decoration: none;
+    margin-top: 10px;
+
+    &:hover, &:active {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}

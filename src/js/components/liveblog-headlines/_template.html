@@ -1,0 +1,20 @@
+<%
+  var classify = function(str) {
+    return str
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/\-\-+/g, "-")
+      .replace(/^-+|[^\w\-]|-+$/g, "");
+  };
+%>
+<% data.headlines.forEach(function(h, i) { %>
+<li>
+  <h3><a href="<%= h.link %>"><%= h.headline %></a></h3>
+  <span class="meta">
+    <%= h.relative %>
+    <% if (h.flag) { %>
+      &nbsp;&nbsp;|&nbsp;&nbsp;<span class="flag <%= classify(h.flag) %>"><%= h.flag %></span>
+    <% } %>
+  </span>
+</li>
+<% }); %>

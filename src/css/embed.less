@@ -1,0 +1,73 @@
+@import "base";
+
+.embed-row {
+  display: flex;
+
+  & > *:first-child {
+    flex: 1;
+  }
+
+  hr {
+    margin: 0 22px;
+    border: 1px solid var(--shaded);
+
+    @media @tablet {
+      margin: 22px 0;
+    }
+
+    .extra-data-column & {
+      @media @desktop {
+        margin: 22px 0;
+      }
+    }
+  }
+
+  @media @tablet {
+    display: block;
+  }
+
+  &.extra-data-column {
+    @media @desktop {
+      display: block;
+    }
+  }
+}
+
+body.homepage,
+body.social {
+  [data-theme-exclude="homepage"] {
+    display: none !important;
+  }
+
+}
+
+body.social {
+
+  president-results {
+    .results-header h3 { display: none; }
+    .board .tbody,
+    .board .thead {
+      columns: 1;
+    }
+    .board .sde,
+    .board .votes {
+      display: none;
+    }
+    .board .percentage { padding-right: .9em; }
+    .board .thead .tr.duplicate { display: none; }
+    .metadata-row .show-more { display: none; }
+    .foldable,
+    .row-wrapper.shown:nth-child(5),
+    .row-wrapper.shown:nth-child(6) {
+      display: none !important;
+    }
+  }
+
+  president-primary {
+    .footnote { display: none; }
+  }
+}
+
+body.padded {
+  padding: 1em 0;
+}

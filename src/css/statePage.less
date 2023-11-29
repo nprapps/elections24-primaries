@@ -1,0 +1,287 @@
+@import "base";
+@import "nav";
+@import "footer";
+
+:root {
+  font-size: 16px;
+}
+
+// suppress focus styles for programmatic jumps
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 24px 16px;
+
+  .side-ad {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    display: flex;
+
+    .main {
+      flex: 1 1 900px;
+    }
+
+    .side-ad {
+      display: block;
+      flex: 0 0 300px;
+      margin-left: 45px;
+      order: 2;
+    }
+  }
+}
+
+[disabled] a {
+  &, &:hover, &:focus {
+    color: var(--secondary) !important;
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+.show-counties[disabled], h2[disabled] {
+  display: none;
+}
+
+header {
+  padding-bottom: 16px;
+
+  .state-icon {
+    float: left;
+    margin-right: 14px;
+    max-width: 75px;
+    height: 60px;
+    opacity: .4;
+
+    @media @tiny {
+      max-width: 55px;
+    }
+  }
+
+  h2 {
+    .knockout-header();
+    margin: 0;
+    color: var(--secondary);
+    font-size: .85rem;
+
+    a, a:link, a:visited {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+    a:hover, a:active {
+      color: var(--link);
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+
+    @media @mobile {
+      font-size: 1.8rem;
+    }
+
+    @media @tiny {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.mobile-calendar-wrapper{
+  display: none;
+
+  @media @mobile {
+    display: block;
+  }
+}
+
+.select-label {
+  .knockout();
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  margin-right: 6px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.outer-mobile-calendar {
+  padding: 6px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.mobile-calendar {
+  border: none;
+  font-size: 14px;
+  font-family: @gotham;
+  background: transparent;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+nav.race-calendar {
+  @border-color: #EEE;
+  .gotham();
+
+  @media @mobile {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 0 0 8px;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    border-bottom: 2px solid @border-color;
+  }
+
+  li {
+    display: block;
+    padding: 10px 20px;
+    border-right: 2px solid @border-color;
+    border-top: 2px solid transparent;
+    line-height: 1.5em;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .office {
+    display: block;
+    font-weight: bold;
+    /*color: var(--foreground);*/
+  }
+
+  .parties {
+    display: block;
+  }
+
+  .date {
+    display: block;
+    color: #AAA;
+    font-size: 12px;
+  }
+
+  .active {
+    border-top: 2px solid #CCC;
+  }
+}
+
+.chatter {
+  font-family: @serif;
+  font-size: 16px;
+  line-height: 1.5em;
+
+  &:empty { display: none; }
+
+  .module & {
+    font-family: @sans;
+    font-size: 1em;
+    font-style: italic;
+    color: #787878;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+
+a.general-link,
+a.general-link:visited {
+  font-style: italic;
+  display: block;
+  border: 1px solid darken(#ffe8a2, 10%);
+  background: lighten(#ffe8a2, 10%);
+  padding: 20px;
+  // color: #333;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border-bottom: 2px solid #ccc;
+  margin: 22px 0;
+}
+
+h3.latest-results {
+  .knockout-header();
+  font-size: 1em;
+  margin: -14px 0 22px 0;
+  color: #787878;
+  font-weight: normal;
+
+  body.filtered & {
+    display: none;
+  }
+}
+
+hr {
+  border: 1px solid #EEE;
+}
+
+.module {
+  padding-bottom: 20px;
+
+  pre {
+    padding: 30px;
+    background: #EEE;
+  }
+
+  h2 {
+    .gotham();
+    font-weight: bold;
+    margin: 0 0 22px 0;
+    font-size: 1.3em;
+  }
+
+  h2 + house-primary .chatter {
+    margin-top: -15px;
+  }
+
+   h2 + president-primary .chatter {
+    margin-top: -15px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .no-results {
+    .gotham();
+  }
+}
+
+body.counties .full-results {
+  display: none !important;
+}
+
+president-results, results-table {
+  .source-line {
+    display: none;
+  }
+}

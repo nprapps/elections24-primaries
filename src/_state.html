@@ -1,0 +1,199 @@
+<%
+  /*
+Things passed into this page:
+* schedule: all possible races
+* displays: menu items for each race
+* state: which state this is (postal abbr)
+* stateFull: the full state name
+* stateAP: AP abbreviation
+  */
+
+var { seo, strings } = grunt.data.json;
+var metadata = {
+  project: Object.assign({}, grunt.data.json.project, {
+    title: seo.stateTitle.replace(/%state%/g, stateFull),
+    description: seo["description" + state]
+  })
+};
+%>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", metadata) %>
+    <link rel="stylesheet" type="text/css" href="state.css">
+  </head>
+  <body class="standalone">
+    <script>
+      var here = new URL(window.location);
+      if (here.searchParams.has("theme")) {
+        document.body.classList.add(here.searchParams.get("theme"));
+      }
+      if (here.searchParams.has("embedded")) {
+        document.body.classList.add("embedded")
+        document.body.classList.remove("standalone");
+      }
+    </script>
+
+    <%= t.include("partials/_nav.html", { prefix: "../" }) %>
+
+    <main>
+
+      <div class="side-ad" aria-hidden="true">
+        <google-ad></google-ad>
+      </div>
+
+      <div class="main">
+        <header>
+          <img src="../assets/states/<%= state %>.svg" class="state-icon" alt="">
+          <h2><a href="..">2020 Primaries and Caucuses</a></h2>
+          <h1><%= strings[state] %> Results</h1>
+        </header>
+
+      <%
+
+var hashRace = function(race) {
+  var search = new URLSearchParams();
+  var fields = "date office special".split(" ");
+  for (var f of fields) {
+    if (f in race && race[f]) {
+      search.set(f, race[f]);
+    }
+  }
+  return search.toString();
+}
+var makeOption = (item, suffix = "") => `value="${hashRace(item.race)}${suffix}"`;
+var makeLink = (item, suffix = "") => `href="#${hashRace(item.race)}${suffix}"`;
+
+var getDescriptors = function(item) {
+  var key = "";
+  if (item.general) key += "G";
+  if (item.runoff) key += "R";
+  if (item.special) key += "S";
+  return strings["race-" + key];
+}
+
+      %>
+        <div class="mobile-calendar-wrapper">
+          <div class="select-label">Select a contest</div>
+          <div class="outer-mobile-calendar">
+            <select class="mobile-calendar">
+              <% displays.forEach(function(item) { %>
+
+                <% if (!item.race.singleParty) { %>
+                <option
+                  value="<%= hashRace(item.race) %>"
+                  data-days="<%= item.race.days %>">
+                  <%= item.office %>
+                  <% if (item.race.runoff || item.race.special || item.race.general) { %>
+                  - <%= getDescriptors(item.race) %>
+                  <% } %>
+                  (<%= item.date %>)
+                </option>
+                <% } %>
+
+                <% if (item.parties) item.parties.forEach(function(p) { %>
+                <option
+                  value="<%= hashRace(item.race) %>&party=<%= p || "" %>&counties=true&state"
+                  data-days="<%= item.race.days %>">
+                  <%= item.office %>
+                  <% if (item.race.runoff || item.race.special || item.race.general) { %>
+                  - <%= getDescriptors(item.race) %>
+                  <% } %>
+                  - <%= p == "Dem" ? "Dem." : p %> only
+                  (<%= item.date %>)
+                </option>
+                <% }); %>
+
+              <% }); %>
+            </select>
+          </div>
+        </div>
+
+        <nav class="race-calendar">
+          <ul>
+            <% displays.forEach(function(item) { %>
+            <li data-days="<%= item.race.days %>">
+              <a class="office" href="#<%= hashRace(item.race) %>">
+                <%= item.office %>
+                <% if (item.race.runoff || item.race.special || item.race.general) { %>
+                <span class="special">— <br /><%= getDescriptors(item.race) %></span> 
+                <% } %>
+              </a>
+              <% if (item.parties) { %>
+              <span class="parties">
+                <%= item.parties.map(p => `
+                <a href="#${hashRace(item.race)}&party=${p || ""}&counties=true&state">
+                  ${p == "Dem" ? "Dem." : p}
+                </a>
+                  `).join("|") %>
+                </span>
+              <% } %>
+              <span class="date"><%= item.date %></span>
+            <% }) %>
+          </ul>
+        </nav>
+
+        <p class="chatter">
+          <%= grunt.data.json.chatter[state] %>
+        </p>
+
+        <a class="general-link" href="https://apps.npr.org/elections20-interactive/#/states/<%= state %>">
+          Looking for general election results? &rsaquo;
+        </a>
+
+        <hr>
+
+        <h3 class="latest-results">Most recent results</h3>
+
+        <div class="module hidden future">
+          <span class="no-results">No results available yet.</span>
+        </div>
+
+        <% displays.forEach(function(row, i) { %>
+
+          <div class="module <%= i ? "hidden" : "" %>"
+            data-office="<%= row.race.office %>"
+            data-date="<%= row.race.date %>"
+            data-special="<%= row.race.special || "" %>"
+          >
+            <h2 tabindex="-1">
+              <%= row.office %>
+              <% if (row.race.runoff || row.race.special || row.race.general) { %>
+              — <%= getDescriptors(row.race) %>
+              <% } %>
+            </h2>
+
+            <% var partial = row.race.caucus ? "caucus" : row.race.element ? "random" : row.race.office %>
+            <%= t.include(`statePartials/_${partial}.html`, { row }) %>
+
+          </div>
+
+          <% if (row.race.office != "H" && !row.race.stateOnly) { %>
+          <div class="module hidden"
+            data-office="<%= row.race.office %>"
+            data-date="<%= row.race.date %>"
+            data-counties="true"
+          >
+            <h2 tabindex="-1">
+              <%= row.office %>
+              <% if (row.race.runoff || row.race.special || row.race.general) { %>
+              — <%= getDescriptors(row.race) %>
+              <% } %>
+              results by county
+            </h2>
+            <%= t.include("statePartials/_counties.html", { row, state }) %>
+          </div>
+          <% } %>
+
+        <% }) %>
+
+      </div> <!-- the main wrapper -->
+
+    </main>
+
+    <%= t.include("partials/_footer.html", { prefix: "" }) %>
+
+    <script src="state.js" async></script>
+    <%= t.include("partials/_analytics.html") %>
+  </body>
+</html>
