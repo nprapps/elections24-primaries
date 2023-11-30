@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-env": "^7.14.2",
     "@nprapps/sidechain": "^1.0.12",
     "@webcomponents/custom-elements": "^1.3.2",
     "@nprapps/betty": "^1.0.9",
