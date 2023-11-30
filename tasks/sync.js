@@ -1,9 +1,9 @@
 /*
 Sync assets to S3, instead of checking into Git
+This is still mostly callbacks instead of async/await because of the AWS SDK
 */
 
 module.exports = function(grunt) {
-
   var async = require("async");
   var aws = require("aws-sdk");
   var fs = require("fs");
@@ -11,15 +11,19 @@ module.exports = function(grunt) {
   var shell = require("shelljs");
   var mime = require("mime");
   
-  grunt.registerTask("sync", "Sync to S3 using the AWS CLI", function(target = "stage") {
+  grunt.registerTask("sync", "Sync to S3 using the AWS CLI", function(
+    target = "stage"
+  ) {
     var done = this.async();
 
-    shell.mkdir("-p", "src/assets/synced");
+    var folder = grunt.option("sync-folder") || "synced";
+
+    shell.mkdir("-p", `src/assets/${folder}`);
 
     var config = require("../project.json");
     var dest = config.s3[target];
-    var localSynced = "src/assets/synced";
-    var remoteSynced = path.join(dest.path, "assets/synced");
+    var localSynced = `src/assets/${folder}`;
+    var remoteSynced = path.join(dest.path, `assets/${folder}`);
 
     var creds = {
       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
