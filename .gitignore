@@ -8,3 +8,4 @@ data/*.sheet.json
 data/*.docs.txt
 src/assets/synced
 package-lock.json
+stage-elections24.json

@@ -2,11 +2,11 @@
   "s3": {
     "stage": {
       "bucket": "stage-apps.npr.org",
-      "path": "elections20-primaries"
+      "path": "elections24-primaries"
     },
     "live": {
       "bucket": "apps.npr.org",
-      "path": "elections20-primaries"
+      "path": "elections24-primaries"
     }
   },
   "styles": {
@@ -23,9 +23,9 @@
     "src/js/embeds/headlines.js": "build/embeds/headlines.js",
     "src/js/embeds/custom.js": "build/embeds/custom.js"
   },
-  "title": "2020 Primary Results",
+  "title": "2024 Primary Results",
   "description": "",
-  "url": "https://apps.npr.org/elections20-primaries/",
+  "url": "https://apps.npr.org/elections24-primaries/",
   "image": "assets/primaries_logo.jpg",
   "analytics": {
     "topicIDs": [],
@@ -35,5 +35,5 @@
   "sheets": ["1O9eh7yU5eaK55R4KROdiF_B_I42urTIQllwVOtrhO0M"],
   "docs": {},
   "embedded": false,
-  "production": true
+  "production": false
 }

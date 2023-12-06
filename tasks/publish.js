@@ -59,9 +59,23 @@ module.exports = function(grunt) {
       grunt.fail.fatal(checklist);
     }
 
-    var bucketConfig = deploy != "simulated" ? config.s3[deploy] : {
-      path: "SIMULATION"
-    };
+    var bucketConfig;
+    switch (deploy) {
+      case "simulated":
+        bucketConfig = {
+          path: "SIMULATION"
+        };
+        break;
+
+      case "live":
+        bucketConfig = config.s3.live;
+        break;
+
+      case "stage":
+        bucketConfig = require("../stage-elections24.json");
+        break;
+    }
+
     //strip slashes for safety
     bucketConfig.path = bucketConfig.path.replace(/^\/|\/$/g, "");
     if (!bucketConfig.path) {

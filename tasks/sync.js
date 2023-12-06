@@ -22,6 +22,9 @@ module.exports = function (grunt) {
 
     var config = require("../project.json");
     var dest = config.s3[target];
+    if (target == "stage") {
+      dest = require("../stage-elections24.json");
+    }
     var localSynced = `src/assets/${folder}`;
     var remoteSynced = path.join(dest.path, `assets/${folder}`);
 
