@@ -7,7 +7,9 @@ Analytics config,"- [ ] Standard events for completion and click interaction
 - [ ] Document any custom events in the README",Launch TODO
 Verify page title tags are good,,Launch TODO
 Optimize images,,Launch TODO
+Determine what the publish URL will be,"Workshop w/ the engagement team. Sort this out before requesting redirects.",Launch TODO
 Create Seamus stub/shell page and request redirects,"- [ ] Create page on live Seamus
+- [ ] Make sure publish URLS are finalized
 - [ ] Publish on staging (one day later, after DB syncs to stage)
 - [ ] Publish on live
 - [ ] Request redirects for staging and live
@@ -23,9 +25,10 @@ Schedule sprint retrospectives,,Project Management
 Let the copy desk know an app is coming,,Project Management
 Copy edit,,Launch TODO
 Email media relations re: press releases,,Launch TODO
+Email comms re: promoting the project in Nipper News,,Launch TODO
 Alert stations about project,Specifically send a heads-up to stations with local interest. Determine if the stub page also will be syndicated/communicated to stations.,Project Management
 Draft promo language for social media with engagement team,Includes Facebook and Twitter,Launch TODO
-"Social metadata and images (for Twitter, Facebook)",Images should have an aspect ratio of 1.91:1 and be a minimum of 1200 x 630. Verify with debuggers: https://developers.facebook.com/tools/debug/ and https://dev.twitter.com/docs/cards/validation/validator,Launch TODO
+"Social metadata and images (for Twitter, Facebook)","Images should have an aspect ratio of 1.91:1 and be a minimum of 1200 x 630. Verify with debuggers: https://developers.facebook.com/tools/debug/ and https://dev.twitter.com/docs/cards/validation/validator",Launch TODO
 Distribute launch timeline,"Let stakeholders, engagement, social media, etc know what the launch schedule is",Project Management
 Browser testing,"- [ ] Edge 
 - [ ] Chrome (OS X)
@@ -35,7 +38,8 @@ Browser testing,"- [ ] Edge
 - [ ] Firefox (OS X)
 - [ ] Firefox (Windows)
 - [ ] Safari (iOS)
-- [ ] Safari (iOS, in-app)",
+- [ ] Safari (iOS, in-app)
+- [ ] NPR One (iOS/Android, in-app)",
 Automated performance tests,Lighthouse (accessibility and performance),
 Accessibility testing,"Works in screen reader, does not violate WCAG 2.1",
 Update master sitemaps index and redeploy,Instructions and a script for generating/publishing the sitemap are checked into workinprivate (`generate_sitemap.sh`).,Post-launch

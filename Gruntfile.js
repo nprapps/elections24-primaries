@@ -9,7 +9,6 @@ module.exports = function(grunt) {
     "state",
     "json",
     "csv",
-    "markdown",
     "archieml",
     "elex"
   ]);

@@ -13,32 +13,32 @@
 /*
  * Fonts
  */
-@gotham: 'Gotham SSm', Helvetica, Arial, sans-serif;
-@knockout: 'Knockout 31 4r','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@lato: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@sourceSansPro: 'Source Sans Pro','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @serif: Georgia, "Times New Roman", Times, serif;
 
-.gotham() {
-  font-family: @gotham;
+.lato() {
+  font-family: @lato;
   font-weight: normal;
+  letter-spacing: 0.025em;
 }
 
-// Normal Knockout
-.knockout() {
-  font-family: @knockout;
-  font-weight: normal;
+.sourceSansPro() {
+  font-family: @sourceSansPro;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-// Knockout, uppercased
-.knockout-upper() {
-  .knockout();
+.sourceSansPro-upper() {
+  .sourceSansPro();
   text-transform: uppercase;
 }
 
-// Knockout for headings
-.knockout-header() {
-  .knockout-upper();
+.sourceSansPro-header() {
+  .sourceSansPro-upper();
   letter-spacing: 0.05em;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
 

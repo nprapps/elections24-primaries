@@ -6,18 +6,21 @@
 @param [label] - not usually visible in dashboard, defaults to title or URL
 */
 
+var DataConsent = require('./data-consent');
+
 var DIMENSION_PARENT_URL = 'dimension1';
 var DIMENSION_PARENT_HOSTNAME = 'dimension2';
 var DIMENSION_PARENT_INITIAL_WIDTH = 'dimension3';
 
 var a = document.createElement("a");
-var DataConsent = require('./data-consent');
 
 var slug = window.location.pathname.replace(/^\/|\/$/g, "");
 
 var track = function(eventAction, eventLabel, eventValue) {
+
   // Bail early if opted out of Performance and Analytics consent groups
   if (!DataConsent.hasConsentedTo(DataConsent.PERFORMANCE_AND_ANALYTICS)) return;
+
   
   var event = {
     eventAction,

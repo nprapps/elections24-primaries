@@ -32,6 +32,9 @@
   </head>
   <body>
     <script>
+      window.PROJECT_ANALYTICS = <%= JSON.stringify(json.project.analytics || {}) %>;
+    </script>
+    <script>
       document.body.classList.add(new URL(window.location).searchParams.get("theme"));
     </script>
 

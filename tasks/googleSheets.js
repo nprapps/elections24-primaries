@@ -13,7 +13,7 @@ var path = require("path");
 var { google } = require("googleapis");
 var api = google.sheets("v4");
 
-var { authenticate } = require("./googleauth");
+var { authenticate } = require("./googleAuth");
 
 var camelCase = function(str) {
   return str.replace(/[^\w]+(\w)/g, function(all, match) {
@@ -94,10 +94,14 @@ module.exports = function(grunt) {
             if (type) {
               switch (type) {
                 case "number":
+                case "numeric":
+                case "int":
+                case "float":
                   obj[key] = value * 1;
                   break;
 
                 case "boolean":
+                case "bool":
                   obj[key] = !!value;
                   break;
 

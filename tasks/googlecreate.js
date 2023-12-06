@@ -1,5 +1,5 @@
 var { google } = require("googleapis");
-var { authenticate } = require("./googleauth");
+var { authenticate } = require("./googleAuth");
 var opn = require("opn");
 
 module.exports = function(grunt) {
@@ -33,8 +33,12 @@ module.exports = function(grunt) {
     var result = await drive.files.create({ resource: { name, mimeType }});
     var file = result.data;
 
-    if (!config[type]) config[type] = [];
-    config[type].push(file.id);
+    if (!config[type]) config[type] = type == "docs" ? {} : [];
+    if (type == docs) {
+      config.docs[name] = file.id;
+    } else {
+      config.sheets.push(file.id);
+    } 
     grunt.file.write("project.json", JSON.stringify(config, null, 2));
 
     opn(`https://drive.google.com/open?id=${file.id}`)
