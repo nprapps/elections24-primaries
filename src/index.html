@@ -47,7 +47,7 @@
       </div>
 
       <div class="main">
-        <h1>2020 Election Calendar</h1>
+        <h1>2024 Election Calendar</h1>
 
         <a class="jump-to-past" href="#past-months">See past months &darr;</a>
 
@@ -55,6 +55,7 @@
           var { races, nonraces, strings } = grunt.data.json;
           // make a copy
           races = races.filter(r => !r.feedOnly && r.office != "R");
+          races = [] // temporarily working without AP data
           var { formatAPDate, formatTime, groupBy, inDays } = require("../src/js/components/utils");
           // normalize events
           var monthNames = " January February March April May June July August September October November December".split(" ");
@@ -64,13 +65,13 @@
             n.month = m;
             n.day = d;
             n.days = inDays(n.date);
-            n.dateText = formatAPDate(new Date(y, m - 1, d)).replace(/, 2020/, "");
+            n.dateText = formatAPDate(new Date(y, m - 1, d)).replace(/, 2024/, "");
 
             if (n.date_end) {
               var [mEnd, dEnd, yEnd] = n.date_end.split("/");
               n.monthEnd = mEnd;
               n.dayEnd = dEnd;
-              n.dateTextEnd = formatAPDate(new Date(yEnd, mEnd - 1, dEnd)).replace(/, 2020/, "");
+              n.dateTextEnd = formatAPDate(new Date(yEnd, mEnd - 1, dEnd)).replace(/, 2024/, "");
             }
 
             // add to the events
@@ -98,7 +99,7 @@
               month: m,
               day: d,
               days: r.days,
-              dateText: formatAPDate(new Date(y, m - 1, d)).replace(/, 2020/, ""),
+              dateText: formatAPDate(new Date(y, m - 1, d)).replace(/, 2024/, ""),
               category: "Vote",
               title: strings[r.state] + " primaries",
               races: [r],
