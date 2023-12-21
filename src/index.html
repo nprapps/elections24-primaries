@@ -47,7 +47,7 @@
 
         <a class="jump-to-past" href="#past-months">See past months &darr;</a>
 
-        <%= t.include("partials/_calendargraphic.html") %>
+        <%= t.include("partials/_calendarGraphic.html") %>
 
         <%
           var { races, nonraces, strings } = grunt.data.json;
@@ -148,7 +148,7 @@
               <% } %>
             </div>
 
-              <div class="category <%= classify(event.category) %>"><span class="pill"><%= event.category %></span></div>
+              <div class="category <%= classify(event.category) %>"><span class="pill"></span></div>
 
               <div class="content">
                 <div class="title"><%= event.title %></div>

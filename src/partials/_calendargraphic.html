@@ -1,10 +1,43 @@
-<% 
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
-months.forEach((function(month, i) {
+<%
+	const matrix = require("calendar-matrix")
+	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+
+	let calendar_data = {}
+	months.forEach(function(month, i) {
+		calendar_data[month] = matrix(2024, i)
+	})
 %>
 
-<div class="calendar-graphic__month">
-<%= month %>
-</div>
+<div class="cg__viewport">
+	<div class="cg__flexbox">
+	<% 
+	months.forEach(function(month, i) {
+	%>
 
-<% })) %>
+	<div class="cg__month-container">
+		<h3 class="cg__month-hed"><%= month %></h3>
+		<div class="cg__month-rectangle">
+			<% calendar_data[month].forEach(function(week) { %>
+				<% week.forEach(function(day) { %>
+					<% if (day < 0) { %>
+						<div class="cg__square cg__square--not-a-day"></div>
+					<% } else { %>
+						<div class="cg__square cg__square--regular-day"></div>
+					<% } %>
+				<% }) %>
+			<% }) %>
+			<% if (calendar_data[month].length === 5) { %>
+				<% [...Array(7).keys()].forEach(function(day) { %>
+					<div class="cg__square cg__square--not-a-day"></div>
+				<% }) %>
+			<% } %>
+		</div>
+	</div>
+
+	<div class="cg__month-container">
+
+	</div>
+
+	<% }) %>
+	</div>
+</div>
