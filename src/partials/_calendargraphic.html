@@ -1,15 +1,14 @@
 <%
 	const { groupBy } = require("../src/js/components/utils");
-
 	const matrix = require("calendar-matrix")
+
 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+	const event_dates = groupBy(events, "date")
 
 	let calendar_data = {}
 	months.forEach(function(month, i) {
 		calendar_data[month] = matrix(2024, i)
 	})
-
-	const event_dates = groupBy(events, "date")
 %>
 
 <div class="cg__viewport">
@@ -39,10 +38,6 @@
 				<% }) %>
 			<% } %>
 		</div>
-	</div>
-
-	<div class="cg__month-container">
-
 	</div>
 
 	<% }) %>

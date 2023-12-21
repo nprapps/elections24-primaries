@@ -51,7 +51,6 @@
           var { races, nonraces, strings } = grunt.data.json;
           // make a copy
           races = races.filter(r => !r.feedOnly && r.office != "R");
-          races = [] // temporarily working without AP data
           var { formatAPDate, formatTime, groupBy, inDays } = require("../src/js/components/utils");
           // normalize events
           var monthNames = " January February March April May June July August September October November December".split(" ");
