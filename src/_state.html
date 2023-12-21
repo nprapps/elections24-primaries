@@ -164,7 +164,7 @@ var getDescriptors = function(item) {
             </h2>
 
             <% var partial = row.race.caucus ? "caucus" : row.race.element ? "random" : row.race.office %>
-            <%= t.include(`statePartials/_${partial}.html`, { row }) %>
+            <%# t.include(`statePartials/_${partial}.html`, { row }) %>
 
           </div>
 

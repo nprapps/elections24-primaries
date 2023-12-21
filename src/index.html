@@ -42,14 +42,12 @@
 
     <main class="calendar">
 
-      <div class="side-ad" aria-hidden="true">
-        <google-ad></google-ad>
-      </div>
-
       <div class="main">
         <h1>2024 Election Calendar</h1>
 
         <a class="jump-to-past" href="#past-months">See past months &darr;</a>
+
+        <%= t.include("partials/_calendargraphic.html") %>
 
         <%
           var { races, nonraces, strings } = grunt.data.json;
