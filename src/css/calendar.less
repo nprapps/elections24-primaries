@@ -88,14 +88,6 @@ main.calendar {
   }
 
   .category {
-    @media @mobile {
-      margin-left: 11px;
-      float: right;
-    }
-
-    @media @mobile-above {
-      flex: 0 0 80px;
-    }
 
     .pill {
       text-align: center;
@@ -108,26 +100,15 @@ main.calendar {
       font-weight: bold;
       line-height: 1;
       -webkit-font-smoothing: antialiased;
-      margin: 0 0 5px 0;
+      margin: 0 5px 5px 0;
       height: 20px;
       width: 20px;
     }
 
-    &.vote .pill { background: #bb77c7; }
-    &.event .pill { background: #eaaa61; }
-    &.finance .pill { background: #92c777; }
-    &.debate .pill { background: @true; }
+    &.vote .pill { background: #4D787A; }
+    &.event .pill { background: #92701B; }
+    &.debate .pill { background: #923546; }
   }
-  // in case we want to be "extra" about the later debates
-  // .event-row[data-timestamp="1601352000000"],
-  // .event-row[data-timestamp="1602043200000"],
-  // .event-row[data-timestamp="1602734400000"],
-  // .event-row[data-timestamp="1603339200000"] {
-  //   .category.debate .pill {
-  //     background-color: @true;
-  //     background: linear-gradient(90deg, @rigorous 0%, @true 100%);
-  //   }
-  // }
 
   .content {
     @media @mobile {

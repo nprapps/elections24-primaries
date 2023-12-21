@@ -47,8 +47,6 @@
 
         <a class="jump-to-past" href="#past-months">See past months &darr;</a>
 
-        <%= t.include("partials/_calendarGraphic.html") %>
-
         <%
           var { races, nonraces, strings } = grunt.data.json;
           // make a copy
@@ -117,6 +115,11 @@
               event.title = strings[r.state] + " caucuses";
             }
           }
+        %>
+
+        <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
+
+        <%
           var byMonth = groupBy(events, "month");
           Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
         %>

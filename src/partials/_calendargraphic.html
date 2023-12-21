@@ -1,4 +1,6 @@
 <%
+	const { groupBy } = require("../src/js/components/utils");
+
 	const matrix = require("calendar-matrix")
 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
 
@@ -6,21 +8,26 @@
 	months.forEach(function(month, i) {
 		calendar_data[month] = matrix(2024, i)
 	})
+
+	const event_dates = groupBy(events, "date")
 %>
 
 <div class="cg__viewport">
 	<div class="cg__flexbox">
-	<% 
-	months.forEach(function(month, i) {
-	%>
+	<% months.forEach(function(month, i) { %>
 
 	<div class="cg__month-container">
 		<h3 class="cg__month-hed"><%= month %></h3>
 		<div class="cg__month-rectangle">
 			<% calendar_data[month].forEach(function(week) { %>
-				<% week.forEach(function(day) { %>
-					<% if (day < 0) { %>
+				<% 
+				week.forEach(function(day) { 
+					let date = i+1 + "/" + day + "/2024"
+					if (day < 0) { 
+				%>
 						<div class="cg__square cg__square--not-a-day"></div>
+					<% } else if (event_dates[date]) { %>
+						<div class="cg__square cg__square--event-day"></div>
 					<% } else { %>
 						<div class="cg__square cg__square--regular-day"></div>
 					<% } %>
