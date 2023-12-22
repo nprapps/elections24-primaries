@@ -1,6 +1,5 @@
 main.calendar {
-  @dateWidth: 6em;
-
+  @dateWidth: 3.5em;
   .lato();
   max-width: 900px;
   margin: auto;
@@ -16,6 +15,10 @@ main.calendar {
     @media @mobile-above {
       font-size: 2.3em;
     }
+  }
+
+  .month {
+    margin-top: 1.5em;
   }
 
   h2 {
@@ -37,12 +40,10 @@ main.calendar {
   }
 
   .event-row {
-    @media @mobile-above {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
     .date {
       font-size: 0.9em;
@@ -81,26 +82,26 @@ main.calendar {
     &.debate .pill { background: #923546; }
   }
 
-  .content {
 
-    .title {
-      font-size: 1.1em;
-      margin-bottom: 1px;
-    }
-    .desc,
-    .links {
+  .title {
+    font-size: 1.1em;
+    margin-bottom: 1px;
+  }
+  .desc {
+    margin-bottom: 0.5em;
+  }
+  .links {
+    margin-left: auto;
+    color: var(--secondary);
+
+    a:not([href]) {
       color: var(--secondary);
-      font-size: 0.9em;
-      margin-bottom: 3px;
+      cursor: arrow;
 
-      a:not([href]) {
-        color: var(--secondary);
-        cursor: arrow;
-
-        &:hover { opacity: 1; }
-      }
+      &:hover { opacity: 1; }
     }
   }
+
 
   #past-months {
     display: none;
