@@ -3,7 +3,7 @@ var fs = require("fs").promises;
 
 var reportCache = {};
 
-var endpoint = "https://api.ap.org/v2/reports";
+var endpoint = "https://api.ap.org/v3/reports";
 var baseParams = {
   apiKey: process.env.AP_API_KEY,
   format: "json"
