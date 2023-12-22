@@ -24,11 +24,11 @@ var monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var inDays = function(dateString) {
   var [m, d, y] = dateString.split("/").map(Number);
   var days = 0;
-  var elapsedYears = y - 2020;
+  var elapsedYears = y - 2024;
   for (var i = 0; i < elapsedYears; i++) {
     days += i % 4 == 0 ? 366 : 365;
   }
-  var lengths = (y - 2020) % 4 == 0 ? leapLengths : monthLengths;
+  var lengths = (y - 2024) % 4 == 0 ? leapLengths : monthLengths;
   for (var i = 0; i < m - 1; i++) {
     days += lengths[i];
   }
@@ -40,7 +40,7 @@ var inDates = function(days) {
   var m = 0;
   while (days) {
     if (days <= monthLengths[m]) {
-      return `${m + 1}/${days}/2020`;
+      return `${m + 1}/${days}/2024`;
     }
     days -= monthLengths[m++];
   }
