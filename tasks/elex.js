@@ -104,7 +104,8 @@ module.exports = function(grunt) {
 
     console.log(`Found races: ${races.length ? races.map(r => r.filename).join(", ") : "none"}`);
 
-    var test = grunt.option("test");
+    var test = grunt.option("APtest");
+
     var offline = grunt.option("offline");
     var live = !grunt.option("archive");
     var overrides = {
