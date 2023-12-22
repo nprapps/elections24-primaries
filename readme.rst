@@ -42,7 +42,7 @@ This particular project includes some special tasks:
 * ``elex`` - Loads data from the AP and outputs result JSON files into ``build/data``. You should have ``$AP_API_KEY`` set in your environment. This task has several command-line flags:
 
   * ``--date=M/D/YYYY`` - sets the date for which the rig should grab results. Defaults to the current date if not provided. It will pull anything within a day back of this date (meaning that by default it will grab today's and yesterday's races).
-  * ``--test`` - request test numbers from the AP.
+  * ``--APtest`` - request test numbers from the AP.
   * ``--offline`` - use cached data if we have it. Obviously, you need to run this against the API at least once before you can try this.
   * ``--archive`` - mark all exported results as non-live.
 
