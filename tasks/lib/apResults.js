@@ -5,10 +5,9 @@ var crypto = require("crypto");
 
 var etags = {};
 
-var resultsURL = "https://api.ap.org/v2/elections/";
+var resultsURL = "https://api.ap.org/v3/elections/";
 var resultsParams = {
-  apikey: process.env.AP_API_KEY,
-  format: "JSON"
+  format: "JSON",
 };
 
 var apDate = function(d) {
@@ -108,7 +107,7 @@ var redeemTicket = async function(ticket, options) {
       // throw err;
     }
   } else {
-    var headers = {};
+    var headers = {"x-api-key": process.env.AP_API_KEY};
     if (etags[tag]) headers["If-None-Match"] = etags[tag];
     try {
       if (!!options.test) {

@@ -3,7 +3,7 @@ var fs = require("fs").promises;
 
 var reportCache = {};
 
-var endpoint = "https://api.ap.org/v2/reports";
+var endpoint = "https://api.ap.org/v3/reports";
 var baseParams = {
   apiKey: process.env.AP_API_KEY,
   format: "json"
@@ -12,7 +12,8 @@ var baseParams = {
 var getAPIData = async function(url, ...params) {
   var response = await axios({
     url,
-    params: Object.assign({}, baseParams, ...params)
+    params: Object.assign({}, baseParams, ...params),
+    headers: {"x-api-key": process.env.AP_API_KEY}
   });
   return response.data;
 };
