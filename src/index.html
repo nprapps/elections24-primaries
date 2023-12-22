@@ -60,13 +60,11 @@
             n.month = m;
             n.day = d;
             n.days = inDays(n.date);
-            n.dateText = formatAPDate(new Date(y, m - 1, d)).replace(/, 2024/, "");
 
             if (n.date_end) {
               var [mEnd, dEnd, yEnd] = n.date_end.split("/");
               n.monthEnd = mEnd;
               n.dayEnd = dEnd;
-              n.dateTextEnd = formatAPDate(new Date(yEnd, mEnd - 1, dEnd)).replace(/, 2024/, "");
             }
 
             // add to the events
@@ -94,7 +92,6 @@
               month: m,
               day: d,
               days: r.days,
-              dateText: formatAPDate(new Date(y, m - 1, d)).replace(/, 2024/, ""),
               category: "Vote",
               title: strings[r.state] + " primaries",
               races: [r],
@@ -143,11 +140,7 @@
 
           <div class="event-row index-<%= i%> " data-days="<%= event.days %>">
             <div class="date">
-              <% if (event.date_prose) { %>
-                <%= event.date_prose %>
-              <% } else { %>
-                <%= event.dateText %><% if (event.dateTextEnd) { %>-<%= event.dateTextEnd %><% } %>
-              <% } %>
+                <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
             </div>
 
               <div class="category <%= classify(event.category) %>"><span class="pill"></span></div>

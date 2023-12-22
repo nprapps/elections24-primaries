@@ -6,26 +6,6 @@ main.calendar {
   margin: auto;
   padding: 44px 15px;
 
-  .side-ad {
-    display: none;
-  }
-
-  @media (min-width: 1200px) {
-    max-width: 1200px;
-    display: flex;
-
-    .main {
-      flex: 1 1 900px;
-    }
-
-    .side-ad {
-      display: block;
-      flex: 0 0 300px;
-      margin-left: 45px;
-      order: 2;
-    }
-  }
-
   h1 {
     font-size: 1.6em;
     font-weight: bold;
@@ -43,7 +23,6 @@ main.calendar {
     border-bottom: 1px solid #303030;
   }
 
-
   a, a:link, a:visited {
     color: var(--link);
     text-decoration: none;
@@ -58,7 +37,6 @@ main.calendar {
   }
 
   .event-row {
-
     @media @mobile-above {
       display: flex;
       align-items: flex-start;
@@ -91,15 +69,8 @@ main.calendar {
 
     .pill {
       text-align: center;
-      color: var(--background);
       background: var(--accent);
-      padding: 6px 7px 5px 7px;
       display: inline-block;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      font-weight: bold;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
       margin: 0 5px 5px 0;
       height: 20px;
       width: 20px;
@@ -111,13 +82,6 @@ main.calendar {
   }
 
   .content {
-    @media @mobile {
-      margin-left: calc(@dateWidth + 10px);
-    }
-
-    @media @mobile-above {
-      flex: 1;
-    }
 
     .title {
       font-size: 1.1em;
@@ -138,10 +102,6 @@ main.calendar {
     }
   }
 
-  .month + .month {
-    margin-top: 22px;
-  }
-
   #past-months {
     display: none;
     margin-top: 55px;
@@ -157,13 +117,6 @@ main.calendar {
   }
 
   .jump-to-past {
-    .sourceSansPro-header();
-    font-size: .9em;
-    padding: 4px 10px;
-    background-color: var(--shaded);
-    border-radius: 4px;
-    margin-top: -3px;
-    float: right;
     display: none;
 
     &.show {
