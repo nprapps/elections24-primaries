@@ -1,4 +1,7 @@
 @button_size: 40px;
+@breakpoint: 1025px;
+@month_width: 165px;
+@month_margin: 20px;
 
 .cg__wrapper {
 	position: relative;
@@ -24,26 +27,35 @@
 	top: calc(50% - @button_size / 2);
 	transition: box-shadow 0.25s ease;
 	width: @button_size;
+	&:hover {
+		box-shadow: 0px 0px 4px 0px #000;
+	}
 	&.hidden {
-		display: none;
+		visibility: hidden;
 	}
 	&.shown {
-		display: block;
+		visibility: shown;
 	}
 }
 
 #cg__prev-button {
-	left: -(@button_size + 15);
-	transform: rotate(180deg)
+	left: 10px;
+	transform: rotate(180deg);
+	@media (min-width: @breakpoint) {
+		left: -(@button_size + 15);
+	}
 }
 
 #cg__next-button {
-	right: -(@button_size + 15);
+	right: 10px;
+	@media (min-width: @breakpoint) {
+		right: -(@button_size + 15);
+	}	
 }
 
 .cg__flexbox {
 	display: flex;
-	width: 2200px;
+	width: @month_width * 12 - @month_margin;
 }
 
 .cg__month-hed {
@@ -53,17 +65,20 @@
 }
 
 .cg__month-container {
-	margin-right: 20px;
+	margin-right: @month_margin;
 	&:last-child {
 		margin-right: 0;
 	}
-	scroll-snap-align: start;
+	scroll-snap-align: center;
+	@media (min-width: @breakpoint) {
+		scroll-snap-align: start;
+	}
 }
 
 .cg__month-rectangle {
 	display: flex;
 	flex-wrap: wrap;
-	width: 165px;
+	width: @month_width;
 }
 
 .cg__square {
