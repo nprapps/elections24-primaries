@@ -1,12 +1,30 @@
+.cg__button {
+	height: 30px;
+	width: 100px;
+	border: 1px solid blue;
+	font-size: 20px;
+	margin: 10px;
+	&.shown {
+		display: block;
+	}
+	&.hidden {
+		display: none;
+	}
+}
+
 .cg__viewport {
 	width: 100%;
-	overflow: auto;
+	overflow-x: scroll;
 	margin-bottom: 40px;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	scroll-snap-type: x mandatory;
 }
 
 .cg__flexbox {
 	display: flex;
-	width: 2260px;
+	width: 2200px;
 }
 
 .cg__month-hed {
@@ -20,6 +38,7 @@
 	&:last-child {
 		margin-right: 0;
 	}
+	scroll-snap-align: start;
 }
 
 .cg__month-rectangle {
