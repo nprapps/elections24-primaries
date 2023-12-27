@@ -10,39 +10,41 @@
 		calendar_data[month] = matrix(2024, i)
 	})
 %>
-<div class="cg__button" id="cg__prev-button">< prev</div>
-<div class="cg__button" id="cg__next-button">next ></div>
 
-<div class="cg__viewport">
-	<div class="cg__flexbox">
-	<% months.forEach(function(month, i) { %>
+<div class="cg__wrapper">
+	<div class="cg__button" id="cg__prev-button"></div>
+	<div class="cg__button" id="cg__next-button"></div>
+	<div class="cg__viewport">
+		<div class="cg__flexbox">
+		<% months.forEach(function(month, i) { %>
 
-	<div class="cg__month-container">
-		<h3 class="cg__month-hed"><%= month %></h3>
-		<div class="cg__month-rectangle">
-			<% calendar_data[month].forEach(function(week) { %>
-				<% 
-				week.forEach(function(day) { 
-					let date = i+1 + "/" + day + "/2024"
-					if (day < 0) { 
-				%>
+		<div class="cg__month-container">
+			<h3 class="cg__month-hed"><%= month %></h3>
+			<div class="cg__month-rectangle">
+				<% calendar_data[month].forEach(function(week) { %>
+					<% 
+					week.forEach(function(day) { 
+						let date = i+1 + "/" + day + "/2024"
+						if (day < 0) { 
+					%>
+							<div class="cg__square cg__square--not-a-day"></div>
+						<% } else if (event_dates[date]) { %>
+							<div class="cg__square cg__square--event-day"></div>
+						<% } else { %>
+							<div class="cg__square cg__square--regular-day"></div>
+						<% } %>
+					<% }) %>
+				<% }) %>
+				<% if (calendar_data[month].length === 5) { %>
+					<% [...Array(7).keys()].forEach(function(day) { %>
 						<div class="cg__square cg__square--not-a-day"></div>
-					<% } else if (event_dates[date]) { %>
-						<div class="cg__square cg__square--event-day"></div>
-					<% } else { %>
-						<div class="cg__square cg__square--regular-day"></div>
-					<% } %>
-				<% }) %>
-			<% }) %>
-			<% if (calendar_data[month].length === 5) { %>
-				<% [...Array(7).keys()].forEach(function(day) { %>
-					<div class="cg__square cg__square--not-a-day"></div>
-				<% }) %>
-			<% } %>
+					<% }) %>
+				<% } %>
+			</div>
 		</div>
-	</div>
 
-	<% }) %>
+		<% }) %>
+		</div>
 	</div>
 </div>
 
