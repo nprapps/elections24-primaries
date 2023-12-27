@@ -28,14 +28,16 @@
 	transition: box-shadow 0.25s ease;
 	width: @button_size;
 	z-index: 1;
-	&:hover {
-		box-shadow: 0px 0px 4px 0px #000;
-	}
 	&.hidden {
 		visibility: hidden;
 	}
 	&.shown {
 		visibility: shown;
+	}
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 0px 0px 4px 0px #000;
+		}
 	}
 }
 

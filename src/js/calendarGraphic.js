@@ -60,3 +60,7 @@ next_button.addEventListener("click", scroll_to_next_month)
 calendar_element.addEventListener("scrollend", show_or_hide_buttons)
 
 scroll_to_month(current_month)
+if (current_month === 0) {
+		prev_button.classList.remove("shown")
+		prev_button.classList.add("hidden")
+}
