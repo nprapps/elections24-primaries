@@ -1,3 +1,7 @@
+@import "NPRSans";
+@import "NPRSerif";
+@import "SourceSansPro";
+
 /*
  * Media queries
  */
@@ -12,35 +16,55 @@
 
 /*
  * Fonts
- */
-@lato: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@sourceSansPro: 'Source Sans Pro','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@serif: Georgia, "Times New Roman", Times, serif;
+ */ 
+@sans: 'NPRSans', @sans-base;
+@serif: 'NPRSerif', @serif-base;
+@condensed: 'Source Sans Pro', @sans-base;
 
-.lato() {
-  font-family: @lato;
+@sans-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@serif-base: Georgia, "Times New Roman", Times, serif;
+
+// commenting this out for now but we may need a decent condensed font later
+// @sourceSansPro: 'Source Sans Pro','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+// @sourceSansPro: @nprSans;
+
+.sans() {
+  font-family: @sans;
   font-weight: normal;
-  letter-spacing: 0.025em;
-}
-
-.sourceSansPro() {
-  font-family: @sourceSansPro;
-  font-weight: 600;
   letter-spacing: 0.01em;
 }
 
-.sourceSansPro-upper() {
-  .sourceSansPro();
-  text-transform: uppercase;
+.serif() {
+  font-family: @serif;
+  font-weight: normal;
+  font-kerning: normal;
+  letter-spacing: 0.02em;
 }
 
-.sourceSansPro-header() {
-  .sourceSansPro-upper();
+// small headings
+.nprSans-header() {
+  .sans();
+  text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: bold;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
+
+// saving in case we need it later
+// .sourceSansPro() {
+//   font-family: @sourceSansPro;
+//   font-weight: 600;
+//   letter-spacing: 0.01em;
+// }
+
+// .sourceSansPro-header() {
+//   .sourceSansPro-upper();
+//   text-transform: uppercase;
+//   letter-spacing: 0.05em;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+
 
 /*
  * Colors

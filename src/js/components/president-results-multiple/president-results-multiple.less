@@ -9,7 +9,7 @@ president-results-multiple {
     --primary-width: 104px;
   }
 
-  .lato();
+  .sans();
   display: block;
   width: 100%;
   font-size: var(--font-size);
@@ -33,7 +33,7 @@ president-results-multiple {
   }
 
   &[test]::before {
-    .sourceSansPro();
+    .sans();
     display: block;
     padding: 8px 16px;
     margin-bottom: 8px;
@@ -55,7 +55,7 @@ president-results-multiple {
     margin-bottom: 13px;
 
     h3 {
-      .lato();
+      .sans();
       font-size: 16px;
       font-weight: bold;
       text-transform: uppercase;
@@ -91,7 +91,8 @@ president-results-multiple {
     }
 
     nav {
-      .sourceSansPro-header();
+      // .sourceSansPro-header();
+      .nprSans-header();
       font-size: 13px;
 
       ul {
@@ -141,7 +142,8 @@ president-results-multiple {
       .state,
       .dels,
       .reporting {
-        .sourceSansPro-header();
+        // .sourceSansPro-header();
+        .nprSans-header();
         color: var(--secondary);
       }
 
@@ -268,7 +270,8 @@ president-results-multiple {
     }
 
     .polls {
-      .sourceSansPro-header();
+      // .sourceSansPro-header();
+      .nprSans-header();
       background-color: var(--shaded);
       color: var(--secondary);
       font-size: 1em;
@@ -309,7 +312,7 @@ president-results-multiple {
     display: none;
 
     button {
-      .lato();
+      .sans();
       background-color: var(--shaded);
       border: none;
       border-radius: 4px;
@@ -328,7 +331,8 @@ president-results-multiple {
       }
     }
     .prompt {
-      .sourceSansPro-header();
+      // .sourceSansPro-header();
+      .nprSans-header();
       color: var(--secondary);
       font-size: 12px;
       text-align: center;
