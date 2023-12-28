@@ -50,7 +50,7 @@ county-map {
     }
 
     .name {
-      .lato();
+      .sans();
       font-weight: bold;
     }
 
@@ -58,7 +58,7 @@ county-map {
     .reporting,
     .result {
       font-size: .9rem;
-      .sourceSansPro();
+      .sans();
       color: #787878;
 
       &:empty { display: none; }
@@ -117,7 +117,7 @@ county-map {
     line-height: 1em;
 
     .name {
-      font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+      font-family: @sans;
       font-weight: normal;
       font-size: 0.9em;
       display: inline-block;
@@ -132,7 +132,7 @@ county-map {
   }
 
   .label {
-    font-family: 'sourceSansPro 31 4r','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: @sans;
     font-weight: normal;
     color: #787878;
     letter-spacing: 0.025em;
