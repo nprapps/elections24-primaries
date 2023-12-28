@@ -1,21 +1,62 @@
+@dateWidth: 3.5em;
+
+.calendar__hed {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--foreground);
+  margin: 0 0 1em 0;
+  line-height: 1.2;
+
+  @media @mobile-above {
+    font-size: 2.3em;
+  }
+}
+
+.calendar__square {
+  width: 20px;
+  height: 20px;
+}
+
+.calendar__square--both {
+  background: @blue;
+  overflow: hidden;
+  position: relative;
+}
+
+.calendar__square--both::before {
+  background: @red;
+  bottom: 100%;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: 100% 100%;
+  transform: rotate(-45deg);
+  width: 150%;
+}
+
+.calendar__square--gop {
+  background: @red;
+}
+
+.calendar__square--dem {
+  background: @blue;
+}
+
+.calendar__square--neither {
+  background: @yellow;
+}
+
+.cl__square {
+  margin-right: 4px;
+}
+
 main.calendar {
-  @dateWidth: 3.5em;
   .lato();
   max-width: 900px;
   margin: auto;
   padding: 44px 15px;
-
-  h1 {
-    font-size: 1.6em;
-    font-weight: bold;
-    color: var(--foreground);
-    margin: 0 0 1em 0;
-    line-height: 1.2;
-
-    @media @mobile-above {
-      font-size: 2.3em;
-    }
-  }
 
   .month {
     margin-top: 1.5em;
@@ -65,23 +106,6 @@ main.calendar {
       opacity: 1;
     }
   }
-
-  .category {
-
-    .pill {
-      text-align: center;
-      background: var(--accent);
-      display: inline-block;
-      margin: 0 5px 5px 0;
-      height: 20px;
-      width: 20px;
-    }
-
-    &.vote .pill { background: #4D787A; }
-    &.event .pill { background: #92701B; }
-    &.debate .pill { background: #923546; }
-  }
-
 
   .title {
     font-size: 1.1em;

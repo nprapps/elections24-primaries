@@ -1,5 +1,5 @@
 @button_size: 40px;
-@breakpoint: 1025px;
+@cg_breakpoint: 1025px;
 @month_width: 165px;
 @month_margin: 20px;
 
@@ -48,14 +48,14 @@
 #cg__prev-button {
 	left: 10px;
 	transform: rotate(180deg);
-	@media (min-width: @breakpoint) {
+	@media (min-width: @cg_breakpoint) {
 		left: -(@button_size + 15);
 	}
 }
 
 #cg__next-button {
 	right: 10px;
-	@media (min-width: @breakpoint) {
+	@media (min-width: @cg_breakpoint) {
 		right: -(@button_size + 15);
 	}	
 }
@@ -77,7 +77,7 @@
 		margin-right: 0;
 	}
 	scroll-snap-align: center;
-	@media (min-width: @breakpoint) {
+	@media (min-width: @cg_breakpoint) {
 		scroll-snap-align: start;
 	}
 }
