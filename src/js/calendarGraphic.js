@@ -1,7 +1,11 @@
 const prev_button = document.querySelector("#cg__prev-button")
 const next_button = document.querySelector("#cg__next-button")
 const calendar_element = document.querySelector(".cg__viewport")
-const month_width = 185
+const visual_month_width = 165,
+  margin = 20,
+  month_width = visual_month_width + margin,
+  breakpoint = 1025,
+  scroll_width = month_width * 12 - margin
 const today = new Date()
 let calendar_element_width = calendar_element.getBoundingClientRect().width
 let current_month
@@ -13,7 +17,11 @@ if (today.getFullYear() === 2024) {
 }
 
 const scroll_to_month = function(month) {
-	calendar_element.scroll(month * month_width, 0)
+	if (window.innerWidth > breakpoint) {
+		calendar_element.scroll(month * month_width, 0)
+	} else {
+		calendar_element.scroll(month * month_width - 60, 0)
+	}
 }
 
 const scroll_to_position = function(position) {
@@ -41,7 +49,7 @@ const show_or_hide_buttons = function() {
 		prev_button.classList.add("hidden")
 		next_button.classList.remove("hidden")
 		next_button.classList.add("shown")
-	} else if (position === 2200 - calendar_element_width) {
+	} else if (position === scroll_width - calendar_element_width) {
 		prev_button.classList.remove("hidden")
 		prev_button.classList.add("shown")
 		next_button.classList.remove("shown")
@@ -57,7 +65,7 @@ const show_or_hide_buttons = function() {
 window.addEventListener("resize", recalculate_calendar_element_width)
 prev_button.addEventListener("click", scroll_to_previous_month)
 next_button.addEventListener("click", scroll_to_next_month)
-calendar_element.addEventListener("scrollend", show_or_hide_buttons)
+calendar_element.addEventListener("scroll", show_or_hide_buttons)
 
 scroll_to_month(current_month)
 if (current_month === 0) {

@@ -15,12 +15,16 @@
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
 	width: 100%;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .cg__button {
 	background: white url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDkgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNy41IDcuOTkzMUwxIDE0Ljk4NjIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=) no-repeat center center;
 	border-radius: @button_size;
 	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+	cursor: pointer;
 	font-size: 20px;
 	height: @button_size;
 	position: absolute;
