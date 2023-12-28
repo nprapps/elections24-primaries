@@ -9,15 +9,15 @@ iowa-widget {
   --accent-fade: var(--dem-fade);
 
   position: relative;
-  .lato();
+  .sans();
   font-size: var(--font-size);
 
   &[test]::before {
+    .sans();
     display: block;
     padding: 8px 16px;
     margin-bottom: 8px;
     text-align: center;
-    .sourceSansPro();
     background: black;
     color: white;
     border-radius: 20px;
@@ -76,7 +76,8 @@ iowa-widget {
     }
 
     .thead {
-      .sourceSansPro-header();
+      // .condensed-header();
+      .sans-header();
       color: var(--secondary);
 
       .sde {
@@ -225,7 +226,8 @@ iowa-widget {
     font-family: inherit;
     font-weight: inherit;
     color: inherit;
-    .sourceSansPro-header();
+    // .condensed-header();
+    .sans-header();
     text-transform: uppercase;
     font-size: 1em;
     letter-spacing: 0.01em;
@@ -260,7 +262,8 @@ iowa-widget {
   .full-results {
     display: none;
     color: var(--link);
-    .sourceSansPro-header();
+    // .condensed-header();
+    .sans-header();
     text-decoration: none;
 
     &:hover, &:active {

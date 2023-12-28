@@ -53,7 +53,7 @@
 }
 
 main.calendar {
-  .lato();
+  .sans();
   max-width: 900px;
   margin: auto;
   padding: 44px 15px;
@@ -142,6 +142,13 @@ main.calendar {
   }
 
   .jump-to-past {
+    .sans-header();
+    font-size: .9em;
+    padding: 4px 10px;
+    background-color: var(--shaded);
+    border-radius: 4px;
+    margin-top: -3px;
+    float: right;
     display: none;
 
     &.show {
