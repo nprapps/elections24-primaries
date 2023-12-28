@@ -24,10 +24,6 @@
 @sans-base: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @serif-base: Georgia, "Times New Roman", Times, serif;
 
-// commenting this out for now but we may need a decent condensed font later
-// @sourceSansPro: 'Source Sans Pro','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-// @sourceSansPro: @nprSans;
-
 .sans() {
   font-family: @sans;
   font-weight: normal;
@@ -41,29 +37,26 @@
   letter-spacing: 0.02em;
 }
 
+.condensed() {
+  font-family: @condensed;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 // small headings
-.nprSans-header() {
+.sans-header() {
   .sans();
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
-
-// saving in case we need it later
-// .sourceSansPro() {
-//   font-family: @sourceSansPro;
-//   font-weight: 600;
-//   letter-spacing: 0.01em;
-// }
-
-// .sourceSansPro-header() {
-//   .sourceSansPro-upper();
-//   text-transform: uppercase;
-//   letter-spacing: 0.05em;
-//   -webkit-font-smoothing: antialiased;
-// }
-
+.condensed-header() {
+  .condensed();
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  -webkit-font-smoothing: antialiased;
+}
 
 
 /*
