@@ -9,7 +9,7 @@ nevada-widget {
   --accent-fade: var(--dem-fade);
 
   position: relative;
-  .lato();
+  .sans();
   font-size: var(--font-size);
 
   &[test]::before {
@@ -17,7 +17,7 @@ nevada-widget {
     padding: 8px 16px;
     margin-bottom: 8px;
     text-align: center;
-    .sourceSansPro();
+    .sans();
     background: black;
     color: white;
     border-radius: 20px;
@@ -76,7 +76,8 @@ nevada-widget {
     }
 
     .thead {
-      .sourceSansPro-header();
+    // .condensed-header();
+    .sans-header();
       color: var(--secondary);
 
       .ccd {
@@ -232,7 +233,8 @@ nevada-widget {
     font-family: inherit;
     font-weight: inherit;
     color: inherit;
-    .sourceSansPro-header();
+    // .condensed-header();
+    .sans-header();
     text-transform: uppercase;
     font-size: 1em;
     letter-spacing: 0.01em;
@@ -267,7 +269,8 @@ nevada-widget {
   .full-results {
     display: none;
     color: var(--link);
-    .sourceSansPro-header();
+    // .condensed-header();
+    .sans-header();
     text-decoration: none;
 
     &:hover, &:active {
