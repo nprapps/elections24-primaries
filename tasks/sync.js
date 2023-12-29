@@ -40,8 +40,6 @@ module.exports = function (grunt) {
     var remoteFiles = await s3.ls(config.bucket, remotePath);
     var localFiles = await ls(localPath);
 
-    console.log(remoteFiles);
-
     var downloads = [];
     var uploads = [];
 
@@ -138,8 +136,8 @@ module.exports = function (grunt) {
       config = project.s3[target];
     }
 
-    var options = grunt.option.keys();
-    var direction = options.push ? "push" : options.pull ? pull : false;
+    var options = grunt.option.keys;
+    var direction = options.push ? "push" : options.pull ? "pull" : false;
     sync(config, direction).then(done);
   });
 };
