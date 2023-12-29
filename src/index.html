@@ -8,7 +8,7 @@
   };
 
   const get_party_class = function(party_string) {
-    if (party_string === "Dem, GOP") {
+    if (party_string === "Dem, GOP" || party_string === "GOP, Dem") {
       return "both"
     } else if (party_string === "Dem") {
       return "dem"
@@ -140,16 +140,33 @@
             Object.keys(byDay).sort((a, b) => a - b).forEach(function(d) {
               var day = byDay[d];
               day.sort(function(a, b) {
-                var aIndex = a.link ? 0 : 1;
-                var bIndex = b.link ? 0 : 1;
-                if (aIndex == bIndex) {
-                  return a.title < b.title ? -1 : 1;
-                }
-                return aIndex - bIndex;
+                if (b.category === "Label") {
+                  return 1
+                } else {
+                  var aIndex = a.link ? 0 : 1;
+                  var bIndex = b.link ? 0 : 1;
+                  if (aIndex == bIndex) {
+                    return a.title < b.title ? -1 : 1;
+                  }
+                  return aIndex - bIndex;
+                  }
               })
               day.forEach(function(event, i) {
+                if (event.category === "Label") {
           %>
-          <div class="event-row index-<%= i%> " data-days="<%= event.days %>">
+          <div class="event-row index-<%= i%>" data-days="<%= event.days %>">
+            <div class="date">
+              <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+            </div>
+            <h4 class="calendar__day-label"><%= event.title %></h4>
+            <% if (event.link) { %>
+              <a class="coverage-link" href="<%= event.link %>">NPR coverage</a>
+            <% } %>
+          </div>
+          <%
+                } else {
+          %>
+          <div class="event-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="date">
               <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
             </div>
@@ -177,7 +194,8 @@
             </div>
           </div>
           <%
-                }); //event
+                  }
+                }); // event
               }); // day
           %>
           </section>
