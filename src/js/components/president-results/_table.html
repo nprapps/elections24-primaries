@@ -20,7 +20,7 @@
     <div class="row-wrapper <%= data.fold.indexOf(c.last) > -1 ? "shown" : "foldable" %>" role="presentation">
       <div class="tr candidate <%= classes.join(" ") %> <% if (!c.mugshot) { %>noimg<% } %>" role="row">
         <div aria-hidden="true" class="td flourishes">
-          <div class="mugshot <% if (!c.mugshot) { %>noimg<% } %>" style="background-image: url(<%= c.mugshot || "" %>)"></div>
+          <div class="mugshot <% if (!c.mugshot) { %>noimg<% } %>" style="background-image: url(../<%= c.mugshot || "" %>)"></div>
           <% if (c.votes) { %>
           <div class="bar-container">
             <div class="bar" style="width: <%= data.highest ? c.percentage / data.highest * 75 : 0 %>%"></div>
