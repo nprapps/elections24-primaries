@@ -51,7 +51,7 @@
     </script>
 
     <%= t.include("partials/_nav.html") %>
-
+    <div id="ad-centerstage-wrap"></div>
     <main class="calendar">
 
       <div class="main">
@@ -215,7 +215,7 @@
         </div>
       </div> <!-- the content div -->
     </main>
-
+    <div id="ad-secondary-wrap"></div>
     <%= t.include("partials/_footer.html", { prefix: "states/" }) %>
     <script>
     window.PROJECT_ANALYTICS = <%= JSON.stringify(json.project.analytics || {}) %>;
