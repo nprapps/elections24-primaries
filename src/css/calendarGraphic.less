@@ -1,0 +1,111 @@
+@button_size: 40px;
+@cg_breakpoint: 1025px;
+@month_width: 165px;
+@month_margin: 20px;
+
+.cg__wrapper {
+	position: relative;
+}
+
+.cg__viewport {
+	-webkit-overflow-scrolling: touch;
+	margin-bottom: 40px;
+	overflow-x: scroll;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	width: 100%;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.cg__button {
+	background: white url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDkgMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNy41IDcuOTkzMUwxIDE0Ljk4NjIiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=) no-repeat center center;
+	border-radius: @button_size;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25);
+	cursor: pointer;
+	font-size: 20px;
+	height: @button_size;
+	position: absolute;
+	top: calc(50% - @button_size / 2);
+	transition: box-shadow 0.25s ease;
+	width: @button_size;
+	z-index: 1;
+	&.hidden {
+		visibility: hidden;
+	}
+	&.shown {
+		visibility: shown;
+	}
+	@media (hover: hover) {
+		&:hover {
+			box-shadow: 0px 0px 4px 0px #000;
+		}
+	}
+}
+
+#cg__prev-button {
+	left: 10px;
+	transform: rotate(180deg);
+	@media (min-width: @cg_breakpoint) {
+		left: -(@button_size + 15);
+	}
+}
+
+#cg__next-button {
+	right: 10px;
+	@media (min-width: @cg_breakpoint) {
+		right: -(@button_size + 15);
+	}	
+}
+
+.cg__flexbox {
+	display: flex;
+	width: @month_width * 12 - @month_margin;
+}
+
+.cg__month-hed {
+	border-bottom: 1px solid #303030;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.cg__month-container {
+	margin-right: @month_margin;
+	&:last-child {
+		margin-right: 0;
+	}
+	scroll-snap-align: center;
+	@media (min-width: @cg_breakpoint) {
+		scroll-snap-align: start;
+	}
+}
+
+.cg__month-rectangle {
+	display: flex;
+	flex-wrap: wrap;
+	width: @month_width;
+}
+
+.cg__square {
+	height: 20px;
+	margin-bottom: 4px;
+	margin-right: 4px;
+	width: 20px;
+	&:nth-child(7n) {
+		margin-right: 0;
+	}
+}
+
+.cg__square--not-a-day {
+	border: 1px solid #f0f0f0;
+}
+
+.cg__square--event-day {
+	background-color: #4D787A;
+}
+
+.cg__square--regular-day {
+	background-color: #ccc;
+}

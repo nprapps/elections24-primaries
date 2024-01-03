@@ -1,0 +1,73 @@
+<%
+	const { groupBy } = require("../src/js/components/utils");
+	const matrix = require("calendar-matrix")
+
+	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+	const event_dates = groupBy(events, "date")
+
+	let calendar_data = {}
+	months.forEach(function(month, i) {
+		calendar_data[month] = matrix(2024, i)
+	})
+
+	let parties_by_date = {}
+	Object.keys(event_dates).forEach(date => {
+		let this_days_parties = [],
+			party_class = ""
+		event_dates[date].forEach(event => {
+			if (event.party) {
+				this_days_parties.push(event.party.split(", "))
+			}
+		})
+		this_days_parties = this_days_parties.flat()
+		if (this_days_parties.includes("Dem") && this_days_parties.includes("GOP")) {
+			party_class = "both"
+		} else if (this_days_parties.includes("Dem")) {
+			party_class = "dem"
+		} else if (this_days_parties.includes("GOP")) {
+			party_class = "gop"
+		} else {
+			party_class = "neither"
+		}
+		parties_by_date[date] = party_class
+	})
+%>
+
+<div class="cg__wrapper">
+	<div class="cg__button" id="cg__prev-button"></div>
+	<div class="cg__button" id="cg__next-button"></div>
+	<div class="cg__viewport">
+		<div class="cg__flexbox">
+		<% months.forEach(function(month, i) { %>
+
+		<div class="cg__month-container">
+			<h3 class="cg__month-hed"><%= month %></h3>
+			<div class="cg__month-rectangle">
+				<% calendar_data[month].forEach(function(week) { %>
+					<% 
+					week.forEach(function(day) { 
+						let date = i+1 + "/" + day + "/2024"
+						if (day < 0) { 
+					%>
+							<div class="calendar__square cg__square cg__square--not-a-day"></div>
+						<% } else if (event_dates[date]) { %>
+							<div class="calendar__square cg__square calendar__square--<%= parties_by_date[date] %>"></div>
+						<% } else { %>
+							<div class="calendar__square cg__square cg__square--regular-day"></div>
+						<% } %>
+					<% }) %>
+				<% }) %>
+				<% if (calendar_data[month].length === 5) { %>
+					<% [...Array(7).keys()].forEach(function(day) { %>
+						<div class="cg__square cg__square--not-a-day"></div>
+					<% }) %>
+				<% } %>
+			</div>
+		</div>
+
+		<% }) %>
+		</div>
+	</div>
+</div>
+
+<script src="calendarGraphic.js" async></script>
