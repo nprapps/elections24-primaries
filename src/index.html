@@ -132,7 +132,7 @@
           Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
         %>
 
-        <section class="month" data-month="<%= m %>">
+        <section class="cl__month" data-month="<%= m %>">
 
           <h2><%= monthNames[m] %></h2>
           <%
@@ -154,31 +154,39 @@
               day.forEach(function(event, i) {
                 if (event.category === "Label") {
           %>
-          <div class="event-row index-<%= i%>" data-days="<%= event.days %>">
-            <div class="date">
-              <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+          <div class="cl__event-row index-<%= i%>" data-days="<%= event.days %>">
+            <div class="cl__date-border">
+              <div class="cl__date">
+                <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+              </div>
             </div>
-            <h4 class="calendar__day-label"><%= event.title %></h4>
+            <% if (event.title) { %>
+              <h4 class="cl__day-label"><%= event.title %></h4>
+            <% } %>
             <% if (event.link) { %>
-              <a class="coverage-link" href="<%= event.link %>">NPR coverage</a>
+              <a class="coverage-link" href="<%= event.link %>">Read NPR coverage</a>
             <% } %>
           </div>
           <%
                 } else {
           %>
-          <div class="event-row index-<%= i%>" data-days="<%= event.days %>">
-            <div class="date">
-              <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+          <div class="cl__event-row cl__non-label-row index-<%= i%>" data-days="<%= event.days %>">
+            <div class="cl__event-row__left-side">
+              <div class="cl__date-border">
+                <div class="cl__date">
+                  <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                </div>
+              </div>
+              <div class="cl__event-row__mobile-row">
+                <div class="calendar__square cl__square calendar__square--<%= get_party_class(event.party) %>">
+                </div>
+                <p class="cl__title"><%= event.title %></p>
+              </div>
             </div>
-            <div class="calendar__square cl__square calendar__square--<%= get_party_class(event.party) %>">
-            </div>
-            <div>
-              <div class="title"><%= event.title %></div>
-              <div class="desc"><%= event.description %></div>
-            </div>
-            <div class="links">
+            <div class="cl__desc"><%= event.description %></div>
+            <div class="cl__links">
               <% if (event.link) { %>
-              <a class="coverage-link" href="<%= event.link %>">NPR coverage</a>
+              <a class="coverage-link" href="<%= event.link %>">Read NPR coverage</a>
               <% } %>
               <% if (event.link && event.races) { %>
               <span class="results-label">

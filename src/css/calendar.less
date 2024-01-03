@@ -1,4 +1,6 @@
-@dateWidth: 3.5em;
+@date_width: 40px;
+@calendar_square_width: 20px;
+@cl_square_margin: 5px;
 
 .calendar__hed {
   font-size: 2em;
@@ -13,8 +15,8 @@
 }
 
 .calendar__square {
-  width: 20px;
-  height: 20px;
+  width: @calendar_square_width;
+  height: @calendar_square_width;
 }
 
 .calendar__square--both {
@@ -48,16 +50,100 @@
   background: @yellow;
 }
 
-.cl__square {
-  margin-right: 4px;
+.cl__date-border {
+  @media (@mobile) {
+    border-top: 1px solid #ccc;
+    height: 0px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    display: none;
+    .index-0 & {
+      display: block;
+    }
+  }
 }
 
-.calendar__day-label {
-  margin: 2px 0 5px;
+.cl__date {
+  background: #fff;
+  opacity: 0;
+  top: -10px;
+  white-space: nowrap;
+  @media (@mobile) {
+    position: absolute;
+    padding-right: 5px;
+  }
+  @media (@mobile-above) {
+    width: @date_width;
+  }
+  .index-0 & {
+    opacity: 1;
+  }
+}
+
+.cl__square {
+  flex-shrink: 0;
+  margin-right: @cl_square_margin;
+}
+
+.cl__day-label {
+  line-height: 1;
+  margin: 2px 6px 0 0;
 }
 
 .cl__month {
   margin-top: 1.5em;
+}
+
+.cl__event-row {
+  margin: 6px 0;
+  @media (@mobile-above) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.cl__non-label-row {
+  justify-content: space-between;
+}
+
+.cl__event-row__left-side {
+  @media (@mobile-above) {
+    display: flex;
+  }
+}
+
+.cl__event-row__mobile-row {
+  display: flex;
+}
+
+.cl__title {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.cl__desc {
+  @media (@mobile) {
+    margin-left: @calendar_square_width + @cl_square_margin;
+  }
+  @media (@mobile-above) {
+    padding-left: @date_width + @calendar_square_width + @cl_square_margin;
+    order: 2;
+    width: 100%;
+  }
+}
+
+.cl__links {
+  margin-left: @calendar_square_width + @cl_square_margin;
+  color: var(--secondary);
+
+  a:not([href]) {
+    color: var(--secondary);
+    cursor: arrow;
+
+    &:hover { opacity: 1; }
+  }
 }
 
 main.calendar {
@@ -75,61 +161,6 @@ main.calendar {
     color: var(--link);
     text-decoration: none;
   }
-
-  a:hover, a:active, a:focus {
-    opacity: 0.7;
-  }
-
-  .event-row + h2 {
-    margin-top: 33px;
-  }
-
-  .event-row {
-    align-content: flex-start;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    .date {
-      font-size: 0.9em;
-      opacity: 0;
-      white-space: nowrap;
-      margin-bottom: 6px;
-      padding-top: 2px;
-
-      @media @mobile {
-        float: left;
-      }
-
-      @media @mobile-above {
-        flex: 0 0 @dateWidth;
-      }
-    }
-
-    &.index-0 .date {
-      opacity: 1;
-    }
-  }
-
-  .title {
-    font-size: 1.1em;
-    margin-bottom: 1px;
-  }
-  .desc {
-    margin-bottom: 0.5em;
-  }
-  .links {
-    margin-left: auto;
-    color: var(--secondary);
-
-    a:not([href]) {
-      color: var(--secondary);
-      cursor: arrow;
-
-      &:hover { opacity: 1; }
-    }
-  }
-
 
   #past-months {
     display: none;
