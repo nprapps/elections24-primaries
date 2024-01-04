@@ -3,7 +3,41 @@
 	const matrix = require("calendar-matrix")
 
 	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
-	const event_dates = groupBy(events, "date")
+
+	const get_dates_in_range = function(start_date_string, end_date_string) {
+	  let date = new Date(start_date_string);
+	  let end_date = new Date(end_date_string)
+	  let dates = [];
+	  while (date <= end_date) {
+	    dates.push(new Date(date));
+	    date.setDate(date.getDate() + 1);
+	  }
+	  return dates;
+	}
+
+	let events_for_calendar_graphic = Array.from(events)
+
+	events.forEach(event => {
+		if (event.date_end.length > 1) {
+			let dates_in_range = get_dates_in_range(event.date, event.date_end)
+			dates_in_range.shift()
+			dates_in_range.forEach(date => {
+				let new_event = {
+					date: (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear(),
+					date_end: '',
+					category: event.category,
+			    state: event.state,
+			    title: event.title,
+			    description: event.description,
+			    link: event.link,
+			    party: event.party
+				}
+				events_for_calendar_graphic.push(new_event)
+			})
+		}
+	})
+
+	const event_dates = groupBy(events_for_calendar_graphic, "date")
 
 	let calendar_data = {}
 	months.forEach(function(month, i) {
