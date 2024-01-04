@@ -1,13 +1,13 @@
 # This file defines a systemd service that runs the liveblog build process
 # To set up:
-# 1. Copy this file to /etc/systemd/system/liveblog.service
-# 2. Start the service with `sudo systemctl start liveblog`
-# 3. Halt it with `sudo systemctl stop liveblog`
-# 4. Get info with `sudo systemctl status liveblog`
-# 5. Follow logs with `journalctl -a -u liveblog.service -f`
+# 1. Copy this file to /etc/systemd/system/elections24-primaries.service
+# 2. Start the service with `sudo systemctl start elections24-primaries`
+# 3. Halt it with `sudo systemctl stop elections24-primaries`
+# 4. Get info with `sudo systemctl status elections24-primaries`
+# 5. Follow logs with `journalctl -a -u elections24-primaries.service -f`
 
 [Unit]
-Description=NPR Primary Results 2020
+Description=NPR Primary Results 2024
 StartLimitIntervalSec=0
 
 [Service]

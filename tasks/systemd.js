@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       GOOGLE_OAUTH_CLIENT_ID: null,
       GOOGLE_OAUTH_CONSUMER_SECRET: null,
       AP_API_KEY: null,
-      NODE_VERSION: 12
+      NODE_VERSION: 21
     }
     for (var v in env) {
       if (env[v] === null) {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     var envString = Object.keys(env).map(k => `Environment=${k}="${env[k]}"`).join("\n");
     template = template.replace("%ENV%", envString);
 
-    grunt.file.write("elections20-primaries.service", template);
+    grunt.file.write("elections24-primaries.service", template);
 
   });
 };
