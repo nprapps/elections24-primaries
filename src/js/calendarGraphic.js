@@ -1,3 +1,5 @@
+const { inDays } = require("./components/utils");
+const $ = require("./lib/qsa");
 const prev_button = document.querySelector("#cg__prev-button")
 const next_button = document.querySelector("#cg__next-button")
 const calendar_element = document.querySelector(".cg__viewport")
@@ -14,6 +16,26 @@ if (today.getFullYear() === 2024) {
 	current_month = today.getMonth()
 } else {
 	current_month = 0
+}
+
+const current_day_of_year = inDays([today.getMonth() + 1, today.getDate(), today.getFullYear()].join("/"))
+const here = new URL(window.location.href)
+
+if (!here.searchParams.has("eternal")) {
+  $("div[data-days]").forEach(function(element) {
+    let element_day = element.dataset.days
+    if (element_day > current_day_of_year) {
+      element.classList.add("future")
+    }
+  })
+
+  $("a[data-days]").forEach(function(element) {
+  	let element_day = element.dataset.days
+  	if (element_day > current_day_of_year) {
+ 			element.removeAttribute("href")
+ 			element.setAttribute("aria-disabled", "true")
+  	}
+  })
 }
 
 const scroll_to_month = function(month) {

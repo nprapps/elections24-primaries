@@ -166,7 +166,7 @@
               <h4 class="cl__day-label"><%= event.title %></h4>
             <% } %>
             <% if (event.link) { %>
-              <a class="coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+              <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
             <% } %>
           </div>
           <%
@@ -188,15 +188,15 @@
             <div class="cl__desc"><%= event.description %></div>
             <div class="cl__links">
               <% if (event.link) { %>
-              <a class="coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+              <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
               <% } %>
               <% if (event.link && event.races) { %>
-              <span class="results-label">
+              <span class="cl__results-label">
               |
               </span>
               <% }%>
               <% if (event.races && event.races.length) { %>
-              <span class="results-label">Results:</span>
+              <span class="cl__results-label">Results:</span>
                 <%= event.races.map(r => `
                   <a href="states/${r.state}.html#date=${r.date}&office=${r.office}${r.special ? "&special=true" : ""}" data-days="${r.days}">
                   ${strings[r.office]}${r.special || r.general || r.runoff ? " - " + getDescriptors(r) : ""}</a>`).join(", ") %>
