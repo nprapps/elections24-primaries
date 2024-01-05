@@ -18,7 +18,7 @@
 	let events_for_calendar_graphic = Array.from(events)
 
 	events.forEach(event => {
-		if (event.date_end.length > 1) {
+		if (event.date_end && event.date_end.length > 1) {
 			let dates_in_range = get_dates_in_range(event.date, event.date_end)
 			dates_in_range.shift()
 			dates_in_range.forEach(date => {
