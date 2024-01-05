@@ -6,7 +6,7 @@
     },
     "live": {
       "bucket": "apps.npr.org",
-      "path": "elections24-primaries"
+      "path": "primary-election-results-2024"
     }
   },
   "styles": {
