@@ -23,9 +23,9 @@
     "src/js/embeds/super-tuesday.js": "build/embeds/super-tuesday.js",
     "src/js/embeds/custom.js": "build/embeds/custom.js"
   },
-  "title": "2024 Primary Results",
+  "title": "2024 Primary Election Results",
   "description": "",
-  "url": "https://apps.npr.org/elections24-primaries/",
+  "url": "https://apps.npr.org/primary-election-results-2024/",
   "image": "assets/primaries_logo.jpg",
   "analytics": {
     "topicIDs": [],

@@ -12,7 +12,8 @@ var { seo, strings } = grunt.data.json;
 var metadata = {
   project: Object.assign({}, grunt.data.json.project, {
     title: seo.stateTitle.replace(/%state%/g, stateFull),
-    description: seo["description" + state]
+    description: seo["description" + state],
+    statePath: "states/" + state + ".html"
   })
 };
 %>
