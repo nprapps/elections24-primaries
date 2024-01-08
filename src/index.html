@@ -162,7 +162,7 @@
           %>
           <div class="cl__event-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="cl__date-border">
-              <div class="cl__date">
+              <div class="cl__date cl__date--mobile-only">
                 <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
               </div>
             </div>
@@ -176,9 +176,9 @@
           <%
                 } else {
           %>
-          <div class="cl__event-row cl__non-label-row index-<%= i%>" data-days="<%= event.days %>">
+          <div class="cl__event-row cl__non-label-row index-<%= day.some(e => e.category === 'Label') ? i - 1 : i %>" data-days="<%= event.days %>">
             <div class="cl__event-row__left-side">
-              <div class="cl__date-border">
+              <div class="cl__date-border <%= day.some(e => e.category === 'Label') ? 'hidden' : '' %>">
                 <div class="cl__date">
                   <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
                 </div>

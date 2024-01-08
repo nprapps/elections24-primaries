@@ -60,7 +60,7 @@
     margin-bottom: 16px;
     position: relative;
     display: none;
-    .index-0 & {
+    .index-0 &:not(.hidden) {
       display: block;
     }
   }
@@ -80,6 +80,15 @@
   }
   .index-0 & {
     opacity: 1;
+    &.hidden {
+      opacity: 0;
+    }
+  }
+}
+
+.cl__date--mobile-only {
+  @media (@mobile-above) {
+    visibility: hidden;
   }
 }
 
@@ -90,7 +99,12 @@
 
 .cl__day-label {
   line-height: 1;
-  margin: 2px 6px 0 0;
+  @media (@mobile) {
+    margin: 18px 6px 10px 0;
+  }
+  @media (@mobile-above) {
+    margin: 10px 0 2px 0;
+  }
 }
 
 .cl__month {
@@ -118,7 +132,6 @@
 
 .cl__event-row__mobile-row {
   display: flex;
-  margin: 2px 0;
 }
 
 .cl__title {
