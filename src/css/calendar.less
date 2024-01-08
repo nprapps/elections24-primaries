@@ -1,4 +1,4 @@
-@date_width: 40px;
+@date_width: 80px;
 @calendar_square_width: 20px;
 @cl_square_margin: 5px;
 
@@ -15,8 +15,10 @@
 }
 
 .calendar__square {
+  height: @calendar_square_width;  
+  position: relative;
+  top: 1px;
   width: @calendar_square_width;
-  height: @calendar_square_width;
 }
 
 .calendar__square--both {
@@ -54,8 +56,8 @@
   @media (@mobile) {
     border-top: 1px solid #ccc;
     height: 0px;
-    margin-top: 20px;
-    margin-bottom: 12px;
+    margin-top: 22px;
+    margin-bottom: 16px;
     position: relative;
     display: none;
     .index-0 & {
@@ -116,6 +118,7 @@
 
 .cl__event-row__mobile-row {
   display: flex;
+  margin: 2px 0;
 }
 
 .cl__title {

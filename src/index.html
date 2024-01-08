@@ -1,4 +1,7 @@
 <%
+  const daysOfWeek = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."]
+  const { formatAPDate, parseNPRDate, formatTime, groupBy, inDays } = require("../src/js/components/utils");
+
   var classify = function(str) {
     return str
       .toLowerCase()
@@ -65,15 +68,16 @@
           var { races, nonraces, strings } = grunt.data.json;
           // make a copy
           races = races.filter(r => !r.feedOnly && r.office != "R");
-          var { formatAPDate, formatTime, groupBy, inDays } = require("../src/js/components/utils");
           // normalize events
           var monthNames = " January February March April May June July August September October November December".split(" ");
           var events = [];
           nonraces.forEach(function(n) {
             var [m, d, y] = n.date.split("/");
+            const numerical_day_of_week = parseNPRDate(n.date).getDay()
             n.month = m;
             n.day = d;
             n.days = inDays(n.date);
+            n.day_of_week = daysOfWeek[numerical_day_of_week];
 
             if (n.date_end) {
               var [mEnd, dEnd, yEnd] = n.date_end.split("/");
@@ -159,7 +163,7 @@
           <div class="cl__event-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="cl__date-border">
               <div class="cl__date">
-                <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
               </div>
             </div>
             <% if (event.title) { %>
@@ -176,7 +180,7 @@
             <div class="cl__event-row__left-side">
               <div class="cl__date-border">
                 <div class="cl__date">
-                  <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                  <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
                 </div>
               </div>
               <div class="cl__event-row__mobile-row">

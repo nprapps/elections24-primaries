@@ -1,4 +1,5 @@
 var apMonths = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ];
+var daysOfWeek = ["Sun.", "Mon.", "Tue.", "Wed.", "Thu.", "Fri.", "Sat."]
 
 var timezones = [
   { re: /\(eastern/i, zone: "ET" },
