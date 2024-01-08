@@ -22,7 +22,7 @@ states.forEach(function(s) {
 });
 
 var onFormChange = function() {
-  var prefix = "https://apps.npr.org/elections20-primaries/";
+  var prefix = "https://apps.npr.org/primary-election-results-2024/";
   var formData = {};
   $("select, input", form).forEach(function(input) {
     var name = input.name;
