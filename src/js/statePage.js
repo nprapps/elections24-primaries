@@ -30,7 +30,8 @@ var currentDay = inDays([now.getMonth() + 1, now.getDate(), now.getFullYear()].j
 console.log(`Currently on day ${currentDay} of 2024`);
 var here = new URL(window.location.href);
 if (here.searchParams.has("embedded")) {
-  var guest = Sidechain.registerGuest();
+  
+  var guest = Sidechain.Sidechain.registerGuest();
 }
 
 // disable future navigation items

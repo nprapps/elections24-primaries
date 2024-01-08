@@ -11,7 +11,7 @@ require("../components/delegate-total");
 
 var search = new URLSearchParams(window.location.search);
 
-var guest = Sidechain.registerGuest();
+var guest = Sidechain.Sidechain.registerGuest();
 
 var placeholder = $.one(".placeholder");
 
