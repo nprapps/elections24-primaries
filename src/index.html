@@ -160,7 +160,7 @@
               day.forEach(function(event, i) {
                 if (event.category === "Label") {
           %>
-          <div class="cl__event-row index-<%= i%>" data-days="<%= event.days %>">
+          <div class="cl__event-row cl__label-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="cl__date-border">
               <div class="cl__date cl__date--mobile-only">
                 <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
@@ -170,7 +170,11 @@
               <h4 class="cl__day-label"><%= event.title %></h4>
             <% } %>
             <% if (event.link) { %>
-              <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+              <% if (event.link_text) { %>
+                <a class="cl__coverage-link" href="<%= event.link %>"><%= event.link_text %></a>
+              <% } else { %>
+                <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+              <% } %>
             <% } %>
           </div>
           <%
@@ -189,7 +193,7 @@
                 <p class="cl__title"><%= event.title %></p>
               </div>
             </div>
-            <div class="cl__desc"><%= event.description %></div>
+            <div class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></div>
             <div class="cl__links">
               <% if (event.link) { %>
               <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>

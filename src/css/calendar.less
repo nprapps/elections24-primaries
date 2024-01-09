@@ -67,11 +67,11 @@
 }
 
 .cl__date {
-  background: #fff;
   opacity: 0;
   top: -10px;
   white-space: nowrap;
   @media (@mobile) {
+    background: #fff;
     position: absolute;
     padding-right: 5px;
   }
@@ -100,10 +100,10 @@
 .cl__day-label {
   line-height: 1;
   @media (@mobile) {
-    margin: 18px 6px 10px 0;
+    margin: 18px 6px 6px 0;
   }
   @media (@mobile-above) {
-    margin: 10px 0 2px 0;
+    margin: 10px 6px 2px 0;
   }
 }
 
@@ -117,6 +117,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    &:not(.cl__label-row):hover {
+      background: #efefef;
+    }
+
   }
 }
 
@@ -140,6 +144,7 @@
 }
 
 .cl__desc {
+
   @media (@mobile) {
     margin-left: @calendar_square_width + @cl_square_margin;
   }
@@ -148,23 +153,34 @@
     order: 2;
     width: 100%;
   }
+  &.shown {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 .cl__links {
   margin-left: @calendar_square_width + @cl_square_margin;
   color: var(--secondary);
-
   a:not([href]) {
     color: var(--secondary);
     cursor: arrow;
 
     &:hover { opacity: 1; }
   }
+  @media (@mobile) {
+    margin-bottom: 14px;
+  }
 }
 
 .cl__coverage-link {
   .future & {
     display: none;
+  }
+  .cl__label-row & {
+    @media (@mobile-above) {
+      margin-top: 7px;
+    }
   }
 }
 
