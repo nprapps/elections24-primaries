@@ -193,7 +193,7 @@
                 <p class="cl__title"><%= event.title %></p>
               </div>
             </div>
-            <div class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></div>
+            <p class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></p>
             <div class="cl__links">
               <% if (event.link) { %>
               <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
