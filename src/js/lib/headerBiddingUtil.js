@@ -44,7 +44,6 @@ function requestBids (adModels) {
       BIDDING_TIMEOUT
     )
     const configs = createSlotConfigs(adModels)
-
     // keep track of which bids are completed
     const completed = {
       openwrap: false,

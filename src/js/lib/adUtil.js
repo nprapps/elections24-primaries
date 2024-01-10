@@ -1,5 +1,5 @@
 const throttle = require ('./throttle.js')
-const HeaderBidding = require ('./HeaderBiddingUtil')
+const HeaderBidding = require ('./headerBiddingUtil')
 
 const permutiveWaitTime = 500
 const MOBILE_VIEWPORT_WIDTH = '728px'
@@ -151,10 +151,8 @@ function setInitialExpectedAdCount (targetEl) {
  */
 function onAdSlotProcessed (adModel) {
     log(`GoogleDfp: slot processed '${adModel.id}'`)
-    log(initialExpectedAdCount)
 
   const doTheBidding = models => {
-    log(HeaderBidding)
     if (ownerName === 'NPR') {
       HeaderBidding.initializeApsTag()
       HeaderBidding.requestBids(models)
@@ -194,6 +192,7 @@ function onAdSlotProcessed (adModel) {
  * @param {Array} [bidData]
  */
 function prepareSlotsAndSendRequest (adModels, bidData = []) {
+
   window.googletag.cmd.push(() => {
     // prepare the slots
     adModels.forEach(model => {

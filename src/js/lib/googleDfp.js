@@ -3,7 +3,7 @@
 
 // import { EVENT_HISTORY_RENDERED } from '../util/HistoryManager'
 const { removeAd, shouldRenderAd, slotAlreadyExists } = require('./adUtil')
-const AdModel = require('./AdModel')
+const AdModel = require('./adModel')
 
 const AD_SELECTOR = '.GoogleDfpAd'
 
