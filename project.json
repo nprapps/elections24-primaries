@@ -21,16 +21,17 @@
     "src/js/statePage.js": "build/states/state.js",
     "src/js/embeds/legacy-embeds.js": "build/embeds/legacy.js",
     "src/js/embeds/super-tuesday.js": "build/embeds/super-tuesday.js",
-    "src/js/embeds/custom.js": "build/embeds/custom.js"
+    "src/js/embeds/custom.js": "build/embeds/custom.js",
+    "src/js/lib/sidechain.js": "build/sidechain.js"
   },
   "title": "2024 Primary Election Results",
   "description": "",
   "url": "https://apps.npr.org/primary-election-results-2024/",
   "image": "assets/primaries_logo.jpg",
   "analytics": {
-    "topicIDs": [],
-    "primaryTopic": "",
-    "secondaryTopics": []
+    "topicIDs": [1014,139482413,468096283,1088064557,1176907617,1197733670],
+    "primaryTopic": "elections",
+    "secondaryTopics": ["p139482413",1014]
   },
   "sheets": ["1O9eh7yU5eaK55R4KROdiF_B_I42urTIQllwVOtrhO0M"],
   "docs": {},

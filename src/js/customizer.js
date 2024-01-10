@@ -6,10 +6,13 @@ var races = require("races.sheet.json");
 
 var form = $.one("form");
 var preview = $.one("side-chain");
-var embed = $.one("textarea");
+var embedPym = $.one("textarea#pym");
+var embedSidechain = $.one("textarea#sidechain");
 
 var stateSelect = $.one("form .state");
 var raceSelect = $.one(`form [name="race"]`);
+
+var stateShown = "IA"; // specify a state to be highlighted first
 
 var states = [...new Set(races.map(r => r.state))].sort();
 states.forEach(function(s) {
@@ -66,15 +69,22 @@ var onFormChange = function() {
     }
   }
   var idParts = [stateSelect.value, race, date || "state", formData.district];
-  var embedHTML = `<p
+
+  var embedPymHTML = `<p
   data-pym-loader
   data-child-src="${url.toString()}"
   id="responsive-embed-${idParts.filter(p => p).join("-").replace(/\//g, "-")}">
     Loading...
 </p>
 <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>`;
-  embedHTML = embedHTML.replace(/\</g, "&lt;").replace(/[\n\s]+/g, " ");
-  embed.innerHTML = embedHTML
+  embedPymHTML = embedPymHTML.replace(/\</g, "&lt;").replace(/[\n\s]+/g, " ");
+  embedPym.innerHTML = embedPymHTML;
+
+  var embedSidechainHTML = `<side-chain src="${url.toString()}"></side-chain>
+  <script src="https://apps.npr.org/primary-election-results-2024/sidechain.js"></script>`;
+  embedSidechainHTML = embedSidechainHTML.replace(/\</g, "&lt;").replace(/[\n\s]+/g, " ");
+  embedSidechain.innerHTML = embedSidechainHTML;
+
   preview.setAttribute("src", url.toString().replace(prefix, ""));
 }
 
@@ -96,7 +106,14 @@ var onStateChange = function() {
     option.innerHTML = `${r.date} - ${strings[r.office]}`;
     raceSelect.appendChild(option);
   });
+
   onFormChange();
 };
 stateSelect.addEventListener("change", onStateChange);
 onStateChange();
+
+// default drop-down to a particular state
+if (typeof(stateShown) != "undefined") {
+  stateSelect.value = stateShown;
+  stateSelect.dispatchEvent(new Event('change')); 
+}
