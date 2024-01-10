@@ -67,6 +67,7 @@
 }
 
 .cl__date {
+  font-size: 14px;
   opacity: 0;
   top: -10px;
   white-space: nowrap;
@@ -114,6 +115,7 @@
 .cl__event-row {
   margin: 6px 0;
   @media (@mobile-above) {
+    align-items: baseline;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -139,12 +141,12 @@
 }
 
 .cl__title {
-  font-size: 1.1em;
+  font-size: 16px;
   margin: 0;
 }
 
 .cl__desc {
-  font-size: 1em;
+  font-size: 14px;
   margin: 0;
   @media (@mobile) {
     margin-left: @calendar_square_width + @cl_square_margin;
@@ -162,7 +164,7 @@
 
 .cl__links {
   color: var(--secondary);
-  font-size: 1em;
+  font-size: 14px;
   margin-left: @calendar_square_width + @cl_square_margin;
   a:not([href]) {
     color: var(--secondary);
