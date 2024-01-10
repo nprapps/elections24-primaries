@@ -12,6 +12,8 @@ var embedSidechain = $.one("textarea#sidechain");
 var stateSelect = $.one("form .state");
 var raceSelect = $.one(`form [name="race"]`);
 
+var stateShown = "IA"; // specify a state to be highlighted first
+
 var states = [...new Set(races.map(r => r.state))].sort();
 states.forEach(function(s) {
   var full = strings[s];
@@ -104,7 +106,14 @@ var onStateChange = function() {
     option.innerHTML = `${r.date} - ${strings[r.office]}`;
     raceSelect.appendChild(option);
   });
+
   onFormChange();
 };
 stateSelect.addEventListener("change", onStateChange);
 onStateChange();
+
+// default drop-down to a particular state
+if (typeof(stateShown) != "undefined") {
+  stateSelect.value = stateShown;
+  stateSelect.dispatchEvent(new Event('change')); 
+}
