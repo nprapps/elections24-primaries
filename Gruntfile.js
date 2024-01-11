@@ -28,6 +28,12 @@ module.exports = function(grunt) {
     "less",
     "template"
   ]);
+  grunt.registerTask("safe", "Build without AP data (for deploying updates to production without overwriting remote datafiles)", [
+    "clean",
+    "static",
+    "cleandata"
+  ]);  
+  grunt.registerTask("")
   grunt.registerTask("ap", "Get AP data", ["state", "json", "elex"]);
   grunt.registerTask("serve", "Start the dev server", ["connect:dev", "watch"]);
   grunt.registerTask("default", ["clean", "static", "serve"]);

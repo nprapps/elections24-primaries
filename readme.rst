@@ -50,6 +50,8 @@ This particular project includes some special tasks:
 
 To get started with Iowa data, run ``grunt --date=1/15/2024``
 
+To republish the live site without touching the remote AP data files, run ``grunt safe publish:live --results-only``
+
 There are also three tasks that are related to testing the app in "persistent" mode (i.e., running with regular updates and either displaying them locally or publishing them).
 
 * ``local`` - Run the rig as a local preview server, without live reload, but with results pulled from AP every 15 seconds
