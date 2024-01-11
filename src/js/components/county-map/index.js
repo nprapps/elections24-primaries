@@ -168,7 +168,7 @@ class CountyMap extends ElementBase {
       var path = this.svg.querySelector(`[id="fips-${fips}"]`);
       path.classList.add("painted");
       var pigment = palette[top.id];
-      var hitThreshold = r.reportingPercentage > 25;
+      var hitThreshold = r.eevp > 25;
       var paint = "#bbb";
       if (hitThreshold) {
         paint = pigment ? pigment.color : "#bbb"
@@ -211,7 +211,7 @@ class CountyMap extends ElementBase {
     var result = this.fipsLookup[fips];
     if (result) {
       var candText = "";
-      if (result.reportingPercentage > 25) {
+      if (result.eevp > 25) {
         var leadingCandidate = result.candidates[0];
         var prefix = leadingCandidate.winner ? "Winner: " : "Leading: ";
         var candText = prefix + leadingCandidate.last + " (" + (leadingCandidate.percentage || 0).toFixed(1) + "%)";
@@ -220,11 +220,21 @@ class CountyMap extends ElementBase {
       var countyDisplay = result.county.replace(/\s[a-z]/g, match =>
         match.toUpperCase()
       );
+
+      var eevp_string = ""
+      if (result.eevp > 0 && result.eevp < 1) {
+        eevp_string = "<1";
+      } else if (result.eevp > 99 && result.eevp < 100) {
+        eevp_string = ">99";
+      } else {
+        eevp_string = result.eevp.toFixed(0).toString();
+      }
+
       tooltip.innerHTML = `
         <div class="name">${countyDisplay}</div>
         <div class="pop">Pop. ${result.population.toLocaleString()}</div>
         <div class="result">${ candText }</div>
-        <div class="reporting">${result.reportingPercentage.toFixed(1)}% reporting</div>
+        <div class="reporting">${eevp_string}% results in</div>
       `;
     }
 

@@ -159,19 +159,16 @@ class ResultsTable extends ElementBase {
     elements.updated.innerHTML = updateString;
 
     // adjust reporting numbers
-    var reportingString = "";
+    var reportingString = "", eevp_string = "";
     if (typeof eevp == "number") {
-      reportingString = `${eevp.toFixed(0)}% results in`;
-    } else {
-      if (reporting > 0 && reportingPercentage < 1) {
-        reportingPercentage = "<1";
-      } else if (reporting < precincts && reportingPercentage > 99 && reportingPercentage < 100) {
-        reportingPercentage = ">99";
+      if (eevp > 0 && eevp < 1) {
+        eevp_string = "<1";
+      } else if (eevp > 99 && eevp < 100) {
+        eevp_string = ">99";
       } else {
-        reportingPercentage = reportingPercentage.toFixed(0);
+        eevp_string = eevp.toFixed(0);
       }
-
-      reportingString = `${reportingPercentage}% of precincts reporting`;
+      reportingString = `${eevp_string}% results in`;
     }
     elements.reporting.innerHTML = reportingString;
     if (candidates.length < 2 ) elements.reporting.style.display = "none";
