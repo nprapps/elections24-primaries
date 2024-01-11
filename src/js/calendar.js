@@ -1,55 +1,25 @@
 require("./ads");
 require("./analytics")
-// var $ = require("./lib/qsa");
 
-// var events = $("[data-days]");
+const { inDays } = require("./components/utils");
+const $ = require("./lib/qsa");
+const today = new Date()
+const here = new URL(window.location.href)
+const current_day_of_year = inDays([today.getMonth() + 1, today.getDate(), today.getFullYear()].join("/"))
 
-// var { inDays } = require("./components/utils");
+if (!here.searchParams.has("eternal")) {
+  $("div[data-days]").forEach(function(element) {
+    let element_day = element.dataset.days
+    if (element_day > current_day_of_year) {
+      element.classList.add("future")
+    }
+  })
 
-// var now = new Date();
-// var days = inDays([now.getMonth() + 1, now.getDate(), now.getFullYear()].join("/"));
-// events.forEach(function(event) {
-//   var eventDays = event.dataset.days;
-//   if (eventDays > days) {
-//     var links = $(".links [href]", event);
-//     links.forEach(a => a.removeAttribute("href"));
-//     var resultsLabel = $(".results-label", event);
-//     resultsLabel.forEach(a => a.remove());
-//     var coverageLink = $(".coverage-link", event);
-//     coverageLink.forEach(a => a.remove());
-//   }
-// });
-
-// // also get rid of links for future results inside of past events
-// // time is bad and increasingly meaningless 
-// $("a[data-days]").forEach(function(a) {
-//   var aDays = a.dataset.days;
-//   if (aDays > days) {
-//     a.removeAttribute("href");
-//   }
-// });
-// // if we removed all the future results links inside of a past event,
-// // ditch the results label too
-// $(".links").forEach(function(links) {
-//   var contained = links.querySelectorAll("[href]");
-//   var resultsLabel = links.querySelector(".results-label");
-//   if (!contained.length && resultsLabel) {
-//     resultsLabel.remove();
-//   }
-// })
-
-// var months = $("section.month");
-// var pastMonths = months.filter(function(section) {
-//   var month = section.dataset.month;
-//   var thisMonth = now.getMonth() + 1;
-//   return month < thisMonth;
-// });
-
-// if (pastMonths.length) {
-//   var previousLink = $.one("a.jump-to-past");
-//   previousLink.classList.add("show");
-
-//   var previousContainer = $.one("#past-months");
-//   previousContainer.classList.add("show");
-//   pastMonths.forEach(p => previousContainer.appendChild(p));
-// }
+  $("a[data-days]").forEach(function(element) {
+  	let element_day = element.dataset.days
+  	if (element_day > current_day_of_year) {
+ 			element.removeAttribute("href")
+ 			element.setAttribute("aria-disabled", "true")
+  	}
+  })
+}
