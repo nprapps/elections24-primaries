@@ -1,10 +1,14 @@
 Special code for homepage use
 -----------------------------
 
+Options:
 * [Liveblog headlines](#liveblog-headlines)
 * [Liveblog headlines with live audio button](#liveblog-headlines-with-live-audio-button)
 * [Election results table](#election-results-table)
+* [Banner headline above a lead image](#banner-headline-above-a-lead-image)
 
+
+------
 
 ### Liveblog headlines
 
@@ -115,3 +119,71 @@ If the homepage card is using the special label in the upper left ("live", "deve
 <p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=C&data=IA_P_1_15_2024_All&party=GOP&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FIA.html" id="responsive-embed-IA-C-1-15-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 ```
+
+----
+
+### Banner headline above a lead image
+
+```
+<!-- big banner headline with photo -->
+
+<!-- UPDATE LINK AND HEADLINE TEXT -->
+<div id="election-banner-headline">
+  <div class="bug"><a href="https://www.npr.org/sections/elections/"><img src="https://media.npr.org/assets/elections24/logo-2024.svg" alt="Elections 2024"></a></div>
+  <h1><a href="TKTKTK URL">TKTKTK Big Hed Here</a></h1>
+</div>
+
+<figure class="head-image" id="election-banner-image">
+  <div class="bucketwrap homeLarge">
+    <div class="imagewrap has-source-dimensions" data-crop-type="wide" style="
+        --source-width: 3000;
+        --source-height: 1687;
+      ">
+      <a href="TKTK URL" data-metrics="{&quot;action&quot;:&quot;Click Story 8&quot;}">
+        <picture>
+          <source srcset="TKTKTK -- the webp default" class="img" type="image/webp">
+          <source srcset="TKTKTK -- the jpg fallback" class="img" type="image/jpeg">
+          <img src="TKTKTK -- the jpg fallback" class="img" alt="The Latest On Afghanistan" loading="lazy">
+        </picture>
+      </a>
+    </div>
+    <div class="credit-caption">
+      <span class="credit" aria-label="Image credit">
+        Photo credit goes here
+      </span>
+    </div>
+  </div>
+</figure>
+
+<style type="text/css">
+  #election-banner-headline { padding-top: 22px; }
+  #election-banner-headline h1 {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'NPR Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    margin: 0 0 20px 0;
+  }
+  @media screen and (min-width: 500px) {
+    #election-banner-headline h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    #election-banner-headline h1 { font-size: 64px; }
+  }
+  #election-banner-headline a { color: #333; }
+  #election-banner-headline a:hover, #election-banner-headline a:active { color: #bccae5; }
+  #election-banner-headline .bug { text-align: center; }
+  #election-banner-headline .bug img {
+    width: auto;
+    height: 20px;
+    display: inline-block;
+  }
+  #election-banner-image .credit {
+    display: block; text-align: right; font-size: 1.2rem; padding: 3px 1px 0 0; line-height: 1.5; letter-spacing: .02em; color: #767676;
+  }
+</style>
