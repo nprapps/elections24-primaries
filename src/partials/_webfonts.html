@@ -1,10 +1,6 @@
 <!-- webfonts -->
 <script>
 /*
-COMMENTING THIS OUT FOR NOW BUT WE MAY NEED IT LATER
-*/
-
-/*
  * Copyright 2013 Small Batch, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -51,17 +47,17 @@ function Fa(a){var b=a.split(":");a=b[0];if(b[1]){for(var c=b[1].split(","),b=[]
 Z.prototype.D=function(a,b){var c=v(this.c),d=(this.d.api||"fast.fonts.com/jsapi").replace(/^.*http(s?):(\/\/)?/,"");return c+"//"+d+"/"+a+".js"+(b?"?v="+b:"")};Z.prototype.load=function(a){a(this.m)};T("monotype",function(a,b){var c=(new C(navigator.userAgent,document)).parse();return new Z(c,b,a)});function $(a,b){this.c=a;this.d=b;this.m=[]}$.prototype.D=function(a){var b=v(this.c);return(this.d.api||b+"//use.typekit.net")+"/"+a+".js"};
 $.prototype.v=function(a,b){var c=this.d.id,d=this.d,e=this.c.u,f=this;c?(e.__webfonttypekitmodule__||(e.__webfonttypekitmodule__={}),e.__webfonttypekitmodule__[c]=function(c){c(a,d,function(a,c,d){for(var e=0;e<c.length;e+=1){var g=d[c[e]];if(g)for(var Q=0;Q<g.length;Q+=1)f.m.push(new H(c[e],g[Q]));else f.m.push(new H(c[e]))}b(a)})},x(this.c,this.D(c),function(a){a&&b(l)},2E3)):b(l)};$.prototype.load=function(a){a(this.m)};T("typekit",function(a,b){return new $(b,a)});window.WebFontConfig&&U.load(window.WebFontConfig);
 })(this,document);
-// WebFont.load({
-//   custom: {
-//     families: [
-//       'Lato:n4,n9,i4,i9',
-//       'Source+Sans+Pro:n6'
-//     ],
-//     urls: [
-//       'https://s.npr.org/templates/css/fonts/Lato.css',
-//       'https://s.npr.org/templates/css/fonts/SourceSansPro.css'
-//     ]
-//   },
-//   timeout: 10000
-// });
+WebFont.load({
+  custom: {
+    families: [
+      'NPRSans:n4,n9,i4,i9',
+      'NPRSerif:n4,n7,i4,i7'
+    ],
+    urls: [
+      'https://s.npr.org/templates/css/fonts/NPRSans.css',
+      'https://s.npr.org/templates/css/fonts/NPRSerif.css'
+    ]
+  },
+  timeout: 10000
+});
 </script>
