@@ -132,9 +132,6 @@ function slotAlreadyExists (id) {
 function setInitialExpectedAdCount (targetEl) {
   const adElements = targetEl.querySelectorAll('ps-google-dfp-ad')
 
-
-  
-
   // count the number of static ads on the page. Ignore the ad injection placeholder
   adElements.forEach(el => {
     const ancestorEl = el.parentElement.parentElement
@@ -282,8 +279,8 @@ function isValidHeaderBiddingSize (size) {
  * @returns {boolean}
  */
 function shouldRenderAd (ad) {
-  const currentWindowSize = getMediaQuery()
   
+  const currentWindowSize = getMediaQuery()
   if (
     ad.id === 'googleAdRR' &&
     (currentWindowSize === 'mq-xs' ||
@@ -330,7 +327,7 @@ function generateDynamicAdId () {
  * @param {googletag.events} event - slotRenderEnded event from googletag
  */
 function onSlotRenderEnded (event) {
-
+  
   const slotId = event.slot.getSlotElementId()
   const adSlot = document.getElementById(slotId)
 

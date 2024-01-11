@@ -91,7 +91,7 @@ class AdModel {
     let closestHiddenWindowWidth = -1 // only applies if greater than zero
     let closestVisibleWindowWidth = -1 // only applies if greater than zero
     const currentWindowWidth = window.innerWidth
-
+    
     // Ad Size Mapping. Maps ad sizes to screen sizes to handle responsive ads
     if (
       this.adSizeMapString !== '' &&
@@ -136,6 +136,7 @@ class AdModel {
               this.adSizesForHeaderBidding = [] // reset this in case we had populated it in a previous iteration
               adSizes.forEach(
                 function (size) {
+                  
                   if (isValidHeaderBiddingSize(size)) {
                     this.adSizesForHeaderBidding.push(size)
                   }
@@ -174,6 +175,7 @@ class AdModel {
       closestHiddenWindowWidth > closestVisibleWindowWidth
     ) {
       const ad = document.querySelector(`#${this.id}`)
+      console.log(ad)
       ad.setAttribute('data-ad-size-map-hidden', true) // to check in DOM
     }
   }
