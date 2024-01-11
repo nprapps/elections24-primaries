@@ -54,7 +54,7 @@
     </script>
     <%= t.include("partials/_nav.html") %>
 
-    <ps-google-dfp-ad id="ad-centerstage-wrap"><div class="GoogleDfpAd" id="centerstage-ad" data-slot-sizes="[[728, 90], [300, 250]]" data-is-fluid="true"  data-slot-Name="6735/n6735.NPR/news_politics_elections" data-slot-adSizeMap="[[[300,250], [300,250]], [[300,250], [300,250]]]"></div><span class="GoogleDfpAd-placeholder"></span></ps-google-dfp-ad>
+    <div id="ad-centerstage-wrap" class="has-sponsorship"><ps-google-dfp-ad id="ad-centerstage-inner"><div class="GoogleDfpAd" id="centerstage-ad" data-slot-sizes="[[728, 90], [300, 250]]" data-is-fluid="true"  data-slot-Name="6735/n6735.NPR/news_politics_elections" data-slot-adSizeMap="[[[300,250], [300,250]], [[300,250], [300,250]]]"><span class="GoogleDfpAd-placeholder"></span></div></ps-google-dfp-ad></div>
 
     <main class="calendar">
 
@@ -225,7 +225,7 @@
       </div> <!-- the content div -->
     </main>
 
-    <ps-google-dfp-ad id="ad-secondary-wrap"><div id="secondary-ad" class="GoogleDfpAd" data-slot-sizes="[[728, 90], [300, 250]]" data-is-fluid="true"  data-slot-Name="6735/n6735.NPRSecondary/news_politics_elections" data-slot-adSizeMap="[[[300,250], [300,250]], [[300,250], [300,250]]]"></div><span class="GoogleDfpAd-placeholder"></span></ps-google-dfp-ad>
+    <div id="ad-secondary-wrap" class="has-sponsorship"><ps-google-dfp-ad id="secondary-ad-inner"><div id="secondary-ad" class="GoogleDfpAd" data-slot-sizes="[[728, 90], [300, 250]]" data-is-fluid="true"  data-slot-Name="6735/NPRSecondary/news_politics_elections" data-slot-adSizeMap="[[[300,250], [300,250]], [[300,250], [300,250]]]"><span class="GoogleDfpAd-placeholder"></span></div></ps-google-dfp-ad></div>
 
     <%= t.include("partials/_footer.html", { prefix: "states/" }) %>
     <script>
