@@ -27,7 +27,7 @@
   "title": "2024 Primary Election Results",
   "description": "",
   "url": "https://apps.npr.org/primary-election-results-2024/",
-  "image": "assets/primaries_logo.jpg",
+  "image": "assets/synced/2024-primaries.jpg",
   "analytics": {
     "topicIDs": [1014,139482413,468096283,1088064557,1176907617,1197733670],
     "primaryTopic": "elections",
