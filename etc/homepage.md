@@ -17,13 +17,13 @@ The new `theme=2024` parameter makes the “2024” branding appear next to the 
 **Monday Jan. 15**
 
 ```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20Updates:%202024%20Elections&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 ```
 
 **Tuesday Jan. 16**
 
 ```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus-results.rss&link=https://www.npr.org/live-updates/iowa-caucus-results&headline=Latest%20Updates:%202024%20Elections&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus-results.rss&link=https://www.npr.org/live-updates/iowa-caucus-results&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 ```
 
 ------
@@ -57,7 +57,7 @@ Note: Someone from News Apps will need to change the references to `story1223407
 <!-- end audio module for program stream -->
 
 <!-- headlines module -->
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20Updates:%202024%20Elections&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 
 <style>
   #res472586072.bucketwrap.resaudio {
