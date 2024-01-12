@@ -37,7 +37,7 @@ var metadata = {
 
     <%= t.include("partials/_nav.html", { prefix: "../" }) %>
 
-    <div id="ad-centerstage-wrap" class="has-sponsorship remove-embedded"><ps-google-dfp-ad id="ad-centerstage-inner"><div class="GoogleDfpAd" id="centerstage-ad" data-slot-sizes="[[300, 250], [728, 90], [970,250]]" data-is-fluid="true"  data-slot-Name="6735/n6735.NPR/news_politics_elections" data-slot-adSizeMap="[[[1024,768], [970,250]], [[300,250], [300,250]], [[769,400],[728,90]]]"><span class="GoogleDfpAd-placeholder"></span></div></ps-google-dfp-ad></div>
+    <%= t.include("partials/_ad.html", {id: "ad-centerstage"}) %>
 
     <main>
 
@@ -182,7 +182,8 @@ var getDescriptors = function(item) {
 
     </main>
 
-    <div id="ad-secondary-wrap" class="has-sponsorship remove-embedded"><ps-google-dfp-ad id="secondary-ad-inner"><div id="secondary-ad" class="GoogleDfpAd" data-slot-sizes="[[300, 250], [728, 90], [970,250]]" data-is-fluid="true"  data-slot-Name="6735/NPRSecondary/news_politics_elections" data-slot-adSizeMap="[[[1024,768], [970,250]], [[300,250], [300,250]], [[769,400],[728,90]]]"></div><span class="GoogleDfpAd-placeholder"></span></div></ps-google-dfp-ad></div>
+    <%= t.include("partials/_ad.html", {id: "ad-secondary"}) %>
+
 
     <%= t.include("partials/_footer.html", { prefix: "" }) %>
 

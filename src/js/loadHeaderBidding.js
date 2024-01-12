@@ -1,15 +1,49 @@
 const { initializeAdConfigVariables } = require("./lib/adUtil");
 const {registerPSGoogleDfpAd} = require("./lib/googleDfp")
 
+var setAdSlots = function() {
+    var mobile = false;
+    var adIds = ["ad-centerstage", "ad-secondary"]
+
+    var adAttribs = {"ad-centerstage": {"slotID": "n6735.NPR", "mobileSlotID": "n6735.nprmobile"}, "ad-secondary": {"slotID": "NPRSecondary", "mobileSlotID": "NPRMobileSecondary"}}
+
+    if (window.innerWidth <= 650) {
+      mobile = true;
+    }
+    
+    adIds.forEach(id => {
+      const ad = document.getElementById(id)
+
+      if (mobile) {
+        var slotID = adAttribs[id]["mobileSlotID"]
+        var slotSizes = "[[300, 250], [320,50]]"
+        var slotAdSizeMap = "[[[300,250], [300,250]],[[300,50], [300,50]]]"
+      }
+      else {
+        var slotID = adAttribs[id]["slotID"]
+        var slotSizes = "[[970,250], [728, 90], [300, 250]]"
+        var slotAdSizeMap = "[[[1024,768], [970,250]], [[769,400],[728,90]], [[300,250], [300,250]]]"
+      }
+
+      var slotName = `6735/${slotID}/news_politics_elections`;
+
+      ad.setAttribute("data-slot-name", slotName)
+      ad.setAttribute("data-slot-sizes", slotSizes)
+      ad.setAttribute("data-slot-adSizeMap", slotAdSizeMap)
+    });
+        
+}
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       initializeAdConfigVariables(document)
+      setAdSlots()
       registerPSGoogleDfpAd()
 
     })
   } else {
     initializeAdConfigVariables(document)
+    setAdSlots()
     registerPSGoogleDfpAd()
 
   }
