@@ -158,19 +158,26 @@ class ResultsTable extends ElementBase {
     )}`;
     elements.updated.innerHTML = updateString;
 
-    // adjust reporting numbers
-    var reportingString = "", eevp_string = "";
-    if (typeof eevp == "number") {
-      if (eevp > 0 && eevp < 1) {
-        eevp_string = "<1";
-      } else if (eevp > 99 && eevp < 100) {
-        eevp_string = ">99";
+    var reporting_string = ""
+    if (result.eevp) {
+      if (result.eevp > 0 && result.eevp < 1) {
+        reporting_string = "<1% of results in";
+      } else if (result.eevp > 99 && result.eevp < 100) {
+        reporting_string = ">99% of results in";
       } else {
-        eevp_string = eevp.toFixed(0);
+        reporting_string = result.eevp.toFixed(0).toString() + "% of results in";
       }
-      reportingString = `${eevp_string}% results in`;
+    } else if (result.reportingPercentage) {
+      if (result.reportingPercentage > 0 && result.reportingPercentage < 1) {
+        reporting_string = "<1% precincts reporting";
+      } else if (result.reportingPercentage > 99 && result.reportingPercentage < 100) {
+        reporting_string = ">99% precincts reporting";
+      } else {
+        reporting_string = result.reportingPercentage.toFixed(0).toString() + "% precincts reporting";
+      }
     }
-    elements.reporting.innerHTML = reportingString;
+
+    elements.reporting.innerHTML = reporting_string;
     if (candidates.length < 2 ) elements.reporting.style.display = "none";
   }
 

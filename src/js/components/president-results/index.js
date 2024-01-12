@@ -52,7 +52,7 @@ class PresidentResults extends ElementBase {
 
     var result = data.results[0]; // only one for president
     var { caucus } = data;
-    var { candidates, precincts, reporting, reportingPercentage, updated } = result;
+    var { candidates, precincts, reporting, eevp, updated } = result;
 
     // copy the array before mutating
     candidates = candidates.slice();
@@ -131,12 +131,12 @@ class PresidentResults extends ElementBase {
 
     // adjust reporting numbers
 
-    if (reporting > 0 && reportingPercentage < 1) {
-      reportingPercentage = "<1";
-    } else if (reporting < precincts && reportingPercentage > 99 && reportingPercentage < 100) {
-      reportingPercentage = ">99";
+    if (reporting > 0 && eevp < 1) {
+      eevp = "<1";
+    } else if (reporting < precincts && eevp > 99 && eevp < 100) {
+      eevp = ">99";
     } else {
-      reportingPercentage = reportingPercentage.toFixed(0);
+      eevp = eevp.toFixed(0);
     }
     var updated = new Date(updated);
     var updateString = `as of ${formatTime(updated)} on ${formatAPDate(
@@ -144,7 +144,7 @@ class PresidentResults extends ElementBase {
     )}`;
     elements.updated.innerHTML = updateString;
 
-    var reportingString = `${reportingPercentage}% of precincts reporting`;
+    var reportingString = `${eevp}% of results in`;
     elements.reporting.innerHTML = reportingString;
 
   }

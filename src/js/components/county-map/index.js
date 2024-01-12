@@ -157,6 +157,7 @@ class CountyMap extends ElementBase {
         hasVotes = true;
       }
       this.fipsLookup[r.fips] = r;
+      r.results_in = r.eevp ? r.eevp : r.reportingPercentage
     });
 
     var lookup = {};
@@ -168,7 +169,7 @@ class CountyMap extends ElementBase {
       var path = this.svg.querySelector(`[id="fips-${fips}"]`);
       path.classList.add("painted");
       var pigment = palette[top.id];
-      var hitThreshold = r.eevp > 25;
+      var hitThreshold = r.results_in > 25;
       var paint = "#bbb";
       if (hitThreshold) {
         paint = pigment ? pigment.color : "#bbb"
@@ -211,7 +212,7 @@ class CountyMap extends ElementBase {
     var result = this.fipsLookup[fips];
     if (result) {
       var candText = "";
-      if (result.eevp > 25) {
+      if (result.results_in > 25) {
         var leadingCandidate = result.candidates[0];
         var prefix = leadingCandidate.winner ? "Winner: " : "Leading: ";
         var candText = prefix + leadingCandidate.last + " (" + (leadingCandidate.percentage || 0).toFixed(1) + "%)";
@@ -221,20 +222,30 @@ class CountyMap extends ElementBase {
         match.toUpperCase()
       );
 
-      var eevp_string = ""
-      if (result.eevp > 0 && result.eevp < 1) {
-        eevp_string = "<1";
-      } else if (result.eevp > 99 && result.eevp < 100) {
-        eevp_string = ">99";
-      } else {
-        eevp_string = result.eevp.toFixed(0).toString();
+      var reporting_string = ""
+      if (result.eevp) {
+        if (result.eevp > 0 && result.eevp < 1) {
+          reporting_string = "<1% of results in";
+        } else if (result.eevp > 99 && result.eevp < 100) {
+          reporting_string = ">99% of results in";
+        } else {
+          reporting_string = result.eevp.toFixed(0).toString() + "% of results in";
+        }
+      } else if (result.reportingPercentage) {
+        if (result.reportingPercentage > 0 && result.reportingPercentage < 1) {
+          reporting_string = "<1% precincts reporting";
+        } else if (result.reportingPercentage > 99 && result.reportingPercentage < 100) {
+          reporting_string = ">99% precincts reporting";
+        } else {
+          reporting_string = result.reportingPercentage.toFixed(0).toString() + "% precincts reporting";
+        }
       }
 
       tooltip.innerHTML = `
         <div class="name">${countyDisplay}</div>
         <div class="pop">Pop. ${result.population.toLocaleString()}</div>
         <div class="result">${ candText }</div>
-        <div class="reporting">${eevp_string}% results in</div>
+        <div class="reporting">${reporting_string}</div>
       `;
     }
 
