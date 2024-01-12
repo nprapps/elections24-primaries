@@ -36,14 +36,14 @@ var setAdSlots = function() {
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      initializeAdConfigVariables(document)
       setAdSlots()
+      initializeAdConfigVariables(document)
       registerPSGoogleDfpAd()
 
     })
   } else {
-    initializeAdConfigVariables(document)
     setAdSlots()
+    initializeAdConfigVariables(document)
     registerPSGoogleDfpAd()
 
   }
