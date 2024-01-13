@@ -18,8 +18,6 @@ var setAdSlots = function() {
         var slotID = adAttribs[id]["mobileSlotID"]
         var slotSizes = "[[320,50],[300, 250]]"
         var slotAdSizeMap = "[[[650,250], [320,50]],[[300,250], [300,250]]]"
-        // var slotSizes = "[[320,50], [300, 250]]"
-        // var slotAdSizeMap = "[[[320,50], [320,50]],[[300,250], [300,250]]]"
       }
       else {
         var slotID = adAttribs[id]["slotID"]
