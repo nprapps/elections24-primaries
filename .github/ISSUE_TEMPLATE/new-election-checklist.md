@@ -34,6 +34,7 @@ Seamus pages
 - [ ] If needed, create [state shape promo image](https://github.com/nprapps/elections24-primaries/issues/47). Add to [promo images folder](https://drive.google.com/drive/u/1/folders/1FCj47_lohCPI-kaU0R5NalQZLXKcAnml).
 - [ ] Liveblog redirects: Add liveblog headlines embed and "live updates" promo image
 - [ ] Results redirects: Add results embed and state promo image
+- [ ] Request redirects from onlinetech/sysadmins
 
 Mobile apps
 - [ ] Coordinate with mobile team that they have the correct embeds (remember that the liveblog headlines module for mobile additionally uses the `pjax=false` param)
