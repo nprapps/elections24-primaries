@@ -2,7 +2,7 @@
 name: New election checklist
 about: A boilerplate set of tasks for each election date
 title: 'Election checklist: [STATE or DATE]'
-labels: ''
+labels: 'Priority: High'
 assignees: ''
 
 ---
@@ -37,3 +37,6 @@ Seamus pages
 
 Mobile apps
 - [ ] Coordinate with mobile team that they have the correct embeds (remember that the liveblog headlines module for mobile additionally uses the `pjax=false` param)
+
+On election day
+- [ ] Add liveblog link to results site topnav and footer
