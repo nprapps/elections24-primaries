@@ -1,4 +1,5 @@
 require("./ads");
+require("./analytics")
 var $ = require("./lib/qsa");
 var Sidechain = require("@nprapps/sidechain");
 var track = require("./lib/tracking");
