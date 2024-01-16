@@ -1,11 +1,7 @@
 var DataConsent = require('./lib/data-consent');
 var googleAnalyticsAlreadyInitialized = false;
 
-console.log("analytics.js loaded");
-
 var setupGoogleAnalytics = function() {
-  console.log("DataConsent.hasConsentedTo(DataConsent.PERFORMANCE_AND_ANALYTICS)", DataConsent.hasConsentedTo(DataConsent.PERFORMANCE_AND_ANALYTICS));
-
   // Bail early if opted out of Performance and Analytics consent groups
   if (!DataConsent.hasConsentedTo(DataConsent.PERFORMANCE_AND_ANALYTICS)) return;
 
