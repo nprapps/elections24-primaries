@@ -25,7 +25,7 @@ states.forEach(function(s) {
 });
 
 var onFormChange = function() {
-  var prefix = "https://apps.npr.org/primary-election-results-2024/";
+  var prefix = PROJECT_URL;
   var formData = {};
   $("select, input", form).forEach(function(input) {
     var name = input.name;
@@ -81,7 +81,7 @@ var onFormChange = function() {
   embedPym.innerHTML = embedPymHTML;
 
   var embedSidechainHTML = `<side-chain src="${url.toString()}"></side-chain>
-  <script src="https://apps.npr.org/primary-election-results-2024/sidechain.js"></script>`;
+  <script src="${ PROJECT_URL }sidechain.js"></script>`;
   embedSidechainHTML = embedSidechainHTML.replace(/\</g, "&lt;").replace(/[\n\s]+/g, " ");
   embedSidechain.innerHTML = embedSidechainHTML;
 
