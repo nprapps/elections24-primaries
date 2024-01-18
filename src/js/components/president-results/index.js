@@ -51,7 +51,7 @@ class PresidentResults extends ElementBase {
     var elements = this.illuminate();
 
     var result = data.results[0]; // only one for president
-    var { caucus } = data;
+    var { caucus, footnote } = data;
     var { candidates, precincts, reporting, eevp, updated } = result;
 
     // copy the array before mutating
@@ -146,6 +146,11 @@ class PresidentResults extends ElementBase {
 
     var reportingString = `${eevp}% of results in`;
     elements.reporting.innerHTML = reportingString;
+
+    // add footnote if one exists (specified in `footnotes` sheet)
+    if (footnote) {
+      elements.footnote.innerHTML = `Note: ${ footnote }`;
+    }
 
   }
 
