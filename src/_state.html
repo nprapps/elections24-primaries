@@ -156,7 +156,7 @@ var getDescriptors = function(item) {
 
             <% var partial = row.race.caucus ? "caucus" : row.race.element ? "random" : row.race.office %>
             <%= t.include(`statePartials/_${partial}.html`, { row }) %>
-
+            <span class="page-timestamp"></span>
           </div>
 
           <% if (row.race.office != "H" && !row.race.stateOnly) { %>

@@ -205,6 +205,6 @@ document.body.addEventListener("updatedtime", function(e) {
     lastUpdate = updated;
     var date = new Date(updated);
     console.log("New timestamp:", date);
-    updateSpan.innerHTML = `, last updated ${formatAPDate(date)}, ${formatTime(date)}`;
+    updateSpan.innerHTML = `Source: AP (as of ${formatAPDate(date)}, ${formatTime(date)})`;
   }
 });
