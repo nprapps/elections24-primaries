@@ -5,6 +5,7 @@ Options:
 * [Liveblog headlines](#liveblog-headlines)
 * [Liveblog headlines with live audio button](#liveblog-headlines-with-live-audio-button)
 * [Election results table](#election-results-table)
+* [Election results table with live audio button](#election-results-table-with-live-audio-button)
 * [Banner headline above a lead image](#banner-headline-above-a-lead-image)
 
 
@@ -17,13 +18,13 @@ The new `theme=2024` parameter makes the “2024” branding appear next to the 
 **Monday Jan. 15**
 
 ```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&limit=all&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 ```
 
 **Tuesday Jan. 16**
 
 ```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus-results.rss&link=https://www.npr.org/live-updates/iowa-caucus-results&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus-results.rss&link=https://www.npr.org/live-updates/iowa-caucus-results&headline=Latest%20election%20updates&limit=all&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 ```
 
 ------
@@ -118,6 +119,87 @@ If the homepage card is using the special label in the upper left ("live", "deve
 <div style="padding-top: 20px;">
 <p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=C&data=IA_P_1_15_2024_All&party=GOP&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FIA.html" id="responsive-embed-IA-C-1-15-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
+```
+
+### Election results table with live audio button
+
+**Iowa GOP Caucuses**
+
+If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
+
+```
+<!-- results plus live audio button --> 
+
+<div class="election-results-wrapper" style="padding-top: 20px;">
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=C&data=IA_P_1_15_2024_All&party=GOP&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FIA.html" id="responsive-embed-IA-C-1-15-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+</div>
+
+<!-- audio module for program stream -->
+<article id="res472586072" class="bucketwrap resaudio stream-module secondary" aria-label="audio-module">
+    <div class="audio-module">
+        <div class="audio-module-controls-wrap" data-stream-audio='{"uid":"472557877:472586072","available":true,"audioUrl":"https:\/\/npr-ice.streamguys1.com\/live.mp3","storyUrl":"","title":"NPR Program Stream","type":"stream","subtype":"other"}' data-audio-metrics='[]'>
+            <div class="audio-module-controls">
+                <button class="audio-module-listen">
+                    <b class="audio-module-listen-inner">
+                        <b class="audio-module-listen-icon icn-play"></b>
+                        <b class="audio-module-listen-text">
+                            <b class="audio-module-cta">Listen</b>
+                        </b>f
+                    </b>
+                </button>
+            </div>
+        </div>
+    </div>
+</article>
+<!-- end audio module for program stream -->
+
+<style>
+  .election-results-wrapper {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+
+  /* custom text inside the "play" button */
+  #res472586072.bucketwrap.resaudio .audio-module-listen-inner:after {
+    content: 'Listen to NPR live coverage';
+
+    font-size: 1.4rem;
+    font-family: "NPRSans",sans-serif;
+    color: #fff;
+    line-height: 1;
+  }
+
+  /* hide default text inside the "play" button */
+  #res472586072.bucketwrap.resaudio .audio-module-cta {
+    display: none;
+  }
+
+  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
+  #story1223407223.hp-item.has-status:not(.hp-item-basic) .story-text {
+    padding-top: 0;
+  }
+
+  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
+  #story1223407223 .bucketwrap.statichtml { padding-top: 5px; }
+
+  @media screen and (min-width: 768px) {
+    #res472586072 {
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
+
+    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
+    #story1223407223 .bucketwrap.statichtml {
+      padding-top: 5px;
+    }
+
+    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
+    #story1223407223.hp-item.volume-high.has-status.no-image .story-text {
+        padding-top: 20px;
+    }
+  }
+</style>
 ```
 
 ----
