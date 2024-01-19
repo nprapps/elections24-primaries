@@ -15,16 +15,8 @@ Options:
 
 The new `theme=2024` parameter makes the “2024” branding appear next to the headline. More: [Liveblog headlines widget repo and documentation](https://github.com/nprapps/liveblog-headlines)
 
-**Monday Jan. 15**
-
 ```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&limit=all&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
-```
-
-**Tuesday Jan. 16**
-
-```
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus-results.rss&link=https://www.npr.org/live-updates/iowa-caucus-results&headline=Latest%20election%20updates&limit=all&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/election-2024-nh-primary-results.rss&link=https://www.npr.org/live-updates/election-2024-nh-primary-results&headline=Latest%20election%20updates&limit=all&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 ```
 
 ------
@@ -32,8 +24,6 @@ The new `theme=2024` parameter makes the “2024” branding appear next to the 
 ### Liveblog headlines with live audio button
 
 Note: Someone from News Apps will need to change the references to `story1223407223` in this snippet to match the actual homepage card it will be attached to.
-
-**Monday Jan. 15**
 
 ```
 <!-- live audio button plus liveblog headlines widget --> 
@@ -58,7 +48,7 @@ Note: Someone from News Apps will need to change the references to `story1223407
 <!-- end audio module for program stream -->
 
 <!-- headlines module -->
-<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/iowa-caucus.rss&link=https://www.npr.org/live-updates/iowa-caucus&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/liveblog-headlines/?feed=https://www.npr.org/live-updates/election-2024-nh-primary-results.rss&link=https://www.npr.org/live-updates/election-2024-nh-primary-results&headline=Latest%20election%20updates&theme=2024" id="liveblog-headlines-elections24"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 
 <style>
   #res472586072.bucketwrap.resaudio {
@@ -111,19 +101,19 @@ Note: Someone from News Apps will need to change the references to `story1223407
 
 ### Election results table
 
-**Iowa GOP Caucuses**
+**New Hampshire Primaries (GOP and Dem)**
 
 If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
 
 ```
 <div style="padding-top: 20px;">
-<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=C&data=IA_P_1_15_2024_All&party=GOP&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FIA.html" id="responsive-embed-IA-C-1-15-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=NH_P_1_23_2024_All&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FNH.html" id="responsive-embed-NH-P-1-23-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 ```
 
 ### Election results table with live audio button
 
-**Iowa GOP Caucuses**
+**New Hampshire Primaries (GOP and Dem)**
 
 If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
 
@@ -131,7 +121,7 @@ If the homepage card is using the special label in the upper left ("live", "deve
 <!-- results plus live audio button --> 
 
 <div class="election-results-wrapper" style="padding-top: 20px;">
-<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=C&data=IA_P_1_15_2024_All&party=GOP&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FIA.html" id="responsive-embed-IA-C-1-15-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=NH_P_1_23_2024_All&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FNH.html" id="responsive-embed-NH-P-1-23-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 
 <!-- audio module for program stream -->
