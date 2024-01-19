@@ -61,8 +61,18 @@ class PresidentPrimary extends ElementBase {
 
     elements.chatter.innerHTML = chatter || "";
     elements.footnote.innerHTML = footnote || "";
+    
+    var partyDisplayOrder = ["GOP","Dem"]
 
-    races.sort((a, b) => a.party < b.party ? -1 : 1 );
+    function sortParty(parties,displayOrder) {
+      const orderIndexes = displayOrder.slice(0).reverse();
+      return parties.sort((a,b) => {
+        var aI = -orderIndexes.indexOf(a.party)
+        var bI = -orderIndexes.indexOf(b.party)
+        return aI - bI
+      })
+    }
+    sortParty(races,partyDisplayOrder)
 
     var pairs = mapToElements(elements.results, races, "president-results");
     pairs.forEach(([data, child]) => {

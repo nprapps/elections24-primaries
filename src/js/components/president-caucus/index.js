@@ -66,7 +66,17 @@ class PresidentCaucus extends ElementBase {
     if (!this.cache) return;
     var { races, chatter, footnote } = this.cache;
 
-    races.sort((a, b) => a.party < b.party ? -1 : 1 );
+    var partyDisplayOrder = ["GOP","Dem"]
+
+    function sortParty(parties,displayOrder) {
+      const orderIndexes = displayOrder.slice(0).reverse();
+      return parties.sort((a,b) => {
+        var aI = -orderIndexes.indexOf(a.party)
+        var bI = -orderIndexes.indexOf(b.party)
+        return aI - bI
+      })
+    }
+    sortParty(races,partyDisplayOrder)
 
     elements.chatter.innerHTML = chatter || "";
     elements.footnote.innerHTML = footnote || "";
