@@ -13,7 +13,9 @@ Administrative
 
 Results
 - [ ] Make sure races are represented correctly in the site config
+- [ ] Account for any special conditions unique to this race (test AP testing advisories)
 - [ ] Test results on staging
+- [ ] Coordinate state page intro text with Wash Desk
 - [ ] If this is a multi-state election: Create any needed custom results embeds, and think through how they'd play on the homepage and liveblog
 
 Station comms
@@ -37,7 +39,8 @@ Seamus pages
 - [ ] Request redirects from onlinetech/sysadmins
 
 Mobile apps
-- [ ] Coordinate with mobile team that they have the correct embeds (remember that the liveblog headlines module for mobile additionally uses the `pjax=false` param)
+- [ ] Coordinate with mobile team that they have the correct embeds (Note: In our standard embed code, change it from a `p` tag to a `div`. Also, if they decide to use the liveblog headlines module, make sure to add the `pjax=false` param to the path.)
 
 On election day
+- [ ] Add liveblog link to the `nonraces` sheet in the config, `link` field
 - [ ] Add liveblog link to results site topnav and footer
