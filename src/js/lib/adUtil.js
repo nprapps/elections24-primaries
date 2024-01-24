@@ -148,7 +148,6 @@ function setInitialExpectedAdCount (targetEl) {
  */
 function onAdSlotProcessed (adModel) {
     log(`GoogleDfp: slot processed '${adModel.id}'`)
-
   const doTheBidding = models => {
     if (ownerName === 'NPR') {
       HeaderBidding.initializeApsTag()

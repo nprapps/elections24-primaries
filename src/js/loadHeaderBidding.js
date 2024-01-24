@@ -17,12 +17,12 @@ var setAdSlots = function() {
       if (mobile) {
         var slotID = adAttribs[id]["mobileSlotID"]
         var slotSizes = "[[320,50],[300, 250]]"
-        var slotAdSizeMap = "[[[650,250], [320,50]],[[300,250], [300,250]]]"
+        var slotAdSizeMap = "[[[650,250], [300,250], [320,50]],[[300,250], [300,250]]]"
       }
       else {
         var slotID = adAttribs[id]["slotID"]
         var slotSizes = "[[970,250], [728, 90], [300, 250]]"
-        var slotAdSizeMap = "[[[1024,768], [970,250]], [[769,400],[728,90]], [[300,250], [300,250]]]"
+        var slotAdSizeMap = "[[[1024,768], [300, 250],[728, 90],[970, 250]], [[769,400],[300, 250],[728,90]], [[300,250], [300,250]]]"
       }
 
       var slotName = `6735/${slotID}/news_politics_elections`;

@@ -136,7 +136,6 @@ class AdModel {
               this.adSizesForHeaderBidding = [] // reset this in case we had populated it in a previous iteration
               adSizes.forEach(
                 function (size) {
-                  
                   if (isValidHeaderBiddingSize(size)) {
                     this.adSizesForHeaderBidding.push(size)
                   }
@@ -175,7 +174,6 @@ class AdModel {
       closestHiddenWindowWidth > closestVisibleWindowWidth
     ) {
       const ad = document.querySelector(`#${this.id}`)
-      console.log(ad)
       ad.setAttribute('data-ad-size-map-hidden', true) // to check in DOM
     }
   }
@@ -187,10 +185,10 @@ class AdModel {
     const mapping = window.googletag.sizeMapping()
     Object.keys(this.sizeMapping).forEach(key => {
       // key is of the form '728x1' and needs to be turned into [728, 1]
-      const viewportSize = key.split(',', 0)
+      const viewportSize = key.split(',')
       if (viewportSize.length) {
         const viewportSizeArray = viewportSize.map(i => parseInt(i))
-        mapping.addSize(viewportSizeArray, this.sizeMapping[key])
+        mapping.addSize(viewportSizeArray, ...this.sizeMapping[key])
       }
     })
     this.slot.defineSizeMapping(mapping.build())
