@@ -131,8 +131,8 @@ class PresidentCaucus extends ElementBase {
 
       toggleAttribute(child, "hidden", party && data.party != party);
       toggleAttribute(child, "test", isTest);
-
-      var readableParty = data.party == "Dem" ? "Democratic" : data.party;
+      
+      var readableParty = data.party == "Dem" ? "Democratic" : data.party == "GOP" ? "Republican" : data.party;
       var contestType = data.caucus || data.type == "Caucus" ? "caucus" : "primary";
       var headline = `${strings[data.state + "-AP"]} ${readableParty} ${contestType}`;
 
