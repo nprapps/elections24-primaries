@@ -39,11 +39,11 @@ class DelegateTotal extends ElementBase {
   }
 
   load(data) {
-    var { needed, candidates } = data.sum.parties.Dem;
+    var { needed, candidates } = data.sum.parties.GOP;
     var timestamp = new Date(data.sum.updated);
     var updated = `As of ${formatTime(timestamp)} on ${formatAPDate(timestamp)}`;
 
-    var numShown = 3;
+    var numShown = 2;
     if (this.getAttribute("shown")) {
       numShown = this.getAttribute("shown");
     }
