@@ -82,6 +82,7 @@
               var [mEnd, dEnd, yEnd] = n.date_end.split("/");
               n.monthEnd = mEnd;
               n.dayEnd = dEnd;
+              n.endDateDayOfWeek = daysOfWeek[parseNPRDate(n.date_end).getDay()]
             }
 
             // add to the events
@@ -162,7 +163,7 @@
           <div class="cl__event-row cl__label-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="cl__date-border">
               <div class="cl__date cl__date--mobile-only">
-                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
               </div>
             </div>
             <% if (event.title) { %>
@@ -183,7 +184,7 @@
             <div class="cl__event-row__left-side">
               <div class="cl__date-border <%= day.some(e => e.category === 'Label') ? 'hidden' : '' %>">
                 <div class="cl__date">
-                  <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                  <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
                 </div>
               </div>
               <div class="cl__event-row__mobile-row">
