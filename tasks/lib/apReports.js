@@ -3,9 +3,8 @@ var fs = require("fs").promises;
 
 var reportCache = {};
 
-var endpoint = "https://api.ap.org/v3/reports";
+var endpoint = "https://api.ap.org/v3/reports/";
 var baseParams = {
-  apiKey: process.env.AP_API_KEY,
   format: "json"
 };
 
@@ -133,7 +132,7 @@ var getDelegates = async function(params = {}) {
   console.log("Getting reports...");
   var latest = {};
   links.reports.forEach(function(link) {
-    var updated = Date.parse(link.updated);
+    var updated = Date.parse(link.lastUpdated);
     var [type, name] = link.title.split(/\s*\/\s*/g);
     name = name.replace("del", "");
     var url = link.id;
@@ -151,7 +150,7 @@ var getDelegates = async function(params = {}) {
       report = reportCache[url];
     } else {
       console.log(`Loading report from AP (${url})`);
-      report = reportCache[url] = await getAPIData(url, params)
+      report = reportCache[url] = await getAPIData(endpoint + url, params)
     }
     for (var k in report) {
       var prop = k.replace(/del/, "").toLowerCase();

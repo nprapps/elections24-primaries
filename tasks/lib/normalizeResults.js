@@ -79,6 +79,7 @@ module.exports = function(resultArray, overrides) {
           var precincts = ru.precinctsTotal;
           var reporting = ru.precinctsReporting;
           var reportingPercentage = ru.precinctsReportingPct;
+          var eevp = ru.eevp;
 
           var candidates = ru.candidates.map(adjustCandidate);
 

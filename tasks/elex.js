@@ -154,6 +154,12 @@ module.exports = function(grunt) {
               var copy = {};
               for (var k in race) copy[k] = race[k];
               copy.results = race.results[geo];
+
+              // append footnote if one exists in the spreadsheet
+              if (typeof(grunt.data.json.footnotes[race.id]) != "undefined") {
+                copy.footnote = grunt.data.json.footnotes[race.id];
+              }
+
               return copy;
             });
           }
@@ -187,7 +193,7 @@ module.exports = function(grunt) {
                 var county = grunt.data.json.fips[result.fips];
                 if (county) {
                   result.county = county.name;
-                  result.population = county.population;
+                  result.population = parseInt(county.population.replaceAll(",", ""));
                 }
               })
             });

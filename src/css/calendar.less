@@ -196,9 +196,10 @@
 
 main.calendar {
   .sans();
-  max-width: 900px;
+  max-width: 980px;
   margin: auto;
-  padding: 44px 15px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 
   h2 {
     margin: 0 0 .5em 0;
@@ -222,6 +223,12 @@ main.calendar {
     &.show {
       display: block;
     }
+  }
+
+  @media (max-width: 1010px) {
+    max-width: 1010px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .jump-to-past {

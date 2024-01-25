@@ -1,4 +1,3 @@
-require("./ads");
 require("./analytics")
 
 const { inDays } = require("./components/utils");

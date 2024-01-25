@@ -13,9 +13,10 @@
 }
 
 main {
-  max-width: 900px;
+  max-width: 980px;
   margin: auto;
-  padding: 24px 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   min-height: 600px;
 
   .embedded & {
@@ -26,8 +27,10 @@ main {
     display: none;
   }
 
-  @media (min-width: 980px) {
-    max-width: 980px;
+  @media (max-width: 1010px) {
+    max-width: 1010px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -281,4 +284,10 @@ president-results, results-table {
   .source-line {
     display: none;
   }
+}
+
+.page-timestamp {
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--secondary);
 }

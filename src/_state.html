@@ -11,7 +11,7 @@ Things passed into this page:
 var { seo, strings } = grunt.data.json;
 var metadata = {
   project: Object.assign({}, grunt.data.json.project, {
-    title: seo.stateTitle.replace(/%state%/g, stateFull),
+    title: seo["stateTitle" + state] ? seo["stateTitle" + state] : seo.stateTitle.replace(/%state%/g, stateFull),
     description: seo["description" + state],
     statePath: "states/" + state + ".html"
   })
@@ -37,7 +37,7 @@ var metadata = {
 
     <%= t.include("partials/_nav.html", { prefix: "../" }) %>
 
-    <div id="ad-centerstage-wrap"></div>
+    <%= t.include("partials/_ad.html", {id: "ad-centerstage"}) %>
 
     <main>
 
@@ -156,7 +156,7 @@ var getDescriptors = function(item) {
 
             <% var partial = row.race.caucus ? "caucus" : row.race.element ? "random" : row.race.office %>
             <%= t.include(`statePartials/_${partial}.html`, { row }) %>
-
+            <span class="page-timestamp"></span>
           </div>
 
           <% if (row.race.office != "H" && !row.race.stateOnly) { %>
@@ -182,12 +182,25 @@ var getDescriptors = function(item) {
 
     </main>
 
-    <div id="ad-secondary-wrap"></div>
+    <%= t.include("partials/_ad.html", {id: "ad-secondary"}) %>
+
 
     <%= t.include("partials/_footer.html", { prefix: "" }) %>
-
+    <script>
+      window.PROJECT_ANALYTICS = <%= JSON.stringify(json.project.analytics || {}) %>;
+    </script>
     <script src="state.js" async></script>
     <%= t.include("partials/_analytics.html") %>
     <%= t.include("partials/_sponsorship.html", { "production": json.project.production }) %>
+<script class="remove-embedded" src="../loadHeaderBidding.js" async></script>
+<script>
+  if (here.searchParams.has("embedded")) {
+    ads = document.querySelectorAll('.remove-embedded')
+    console.log(ads)
+    ads.forEach(element => {
+      element.remove()
+    });
+  }
+</script>
   </body>
 </html>
