@@ -34,8 +34,13 @@ var onFormChange = function() {
     } else {
       formData[name] = input.value;
     }
+
   });
   var [race, file, date] = formData.race.split(":");
+  if (race == "P" && formData.party == "GOP") {
+    var delegatesCheckbox = document.getElementById('delegates')
+    delegatesItem.hidden = false;
+  }
   var url;
   form.dataset.type = formData.type;
   if (formData.type == "page") {
