@@ -18,7 +18,7 @@
     } else if (party_string === "GOP") {
       return "gop"
     } else {
-      return "neither"
+      return "yellow"
     }
   }
 
@@ -61,7 +61,7 @@
       <div class="main">
         <h1 class="calendar__hed">2024 Election Calendar</h1>
 
-        <a class="jump-to-past" href="#past-months">See past months &darr;</a>
+        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
 
         <%
           var { races, nonraces, strings } = grunt.data.json;
@@ -132,6 +132,16 @@
         %>
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
+
+        <div class="calendar__legend">
+          <span class="calendar__legend-text">Presidential events:</span>
+          <span class="calendar__square calendar__square--dem"></span><span class="calendar__legend-text">Democrats</span>
+          <span class="calendar__square calendar__square--gop"></span><span class="calendar__legend-text">Republicans</span>
+          <span class="calendar__square calendar__square--both"></span><span class="calendar__legend-text">Both</span>
+          <hr>
+          <span class="calendar__square calendar__square--yellow"></span><span class="calendar__legend-text">State primaries & special elections</span>
+          <span class="calendar__square calendar__square--gray"></span><span class="calendar__legend-text">Debates</span>
+        </div>
 
         <%
           var byMonth = groupBy(events, "month");
