@@ -86,7 +86,7 @@ class PresidentPrimary extends ElementBase {
       toggleAttribute(child, "hidden", party && data.party != party);
       toggleAttribute(child, "test", isTest);
       
-      var partyText = data.party == "Dem" ? "Democratic" : data.party;
+      var partyText = data.party == "Dem" ? "Democratic" : data.party == "GOP" ? "Republican" : data.party;
       var headline = `${strings[data.state + "-AP"]} ${partyText} primary`;
 
       if (host == "statepage") {

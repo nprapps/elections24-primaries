@@ -95,7 +95,7 @@ class StandardPrimary extends ElementBase {
         if (max) child.setAttribute("max", max);
 
         var readableParty = general ? "" : 
-          data.party == "Dem" ? "Democratic" : data.party || "Open";
+          data.party == "Dem" ? "Democratic" : data.party == "GOP" ? "Republican" : data.party || "Open";
         var readableOffice = strings[race.office];
         var typeCode = "";
         if (this.cache.general) typeCode += "G";
