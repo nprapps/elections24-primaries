@@ -7,9 +7,13 @@ require("../components/president-primary");
 require("../components/president-caucus");
 require("../components/standard-primary");
 require("../components/house-primary");
-require("../components/delegate-total");
+
 
 var search = new URLSearchParams(window.location.search);
+
+if (search.has("delegates")) {
+  require("../components/delegate-total");
+}
 
 var guest = Sidechain.Sidechain.registerGuest();
 

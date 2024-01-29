@@ -228,7 +228,7 @@
 
     <%= t.include("partials/_ad.html", {id: "ad-secondary"}) %>
 
-    <%= t.include("partials/_footer.html", { prefix: "states/" }) %>
+    <%= t.include("partials/_footer.html", { prefix: "states/", showPhotoCredits: false }) %>
     <script>
     window.PROJECT_ANALYTICS = <%= JSON.stringify(json.project.analytics || {}) %>;
     </script>

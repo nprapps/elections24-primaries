@@ -3,6 +3,28 @@
   if (typeof prefix == "undefined") {
     prefix = "";
   }
+
+  function removeDuplicates(array) {
+    return [...new Set(array)];
+  }
+
+  function createString(array) {
+    let string = ""
+    array.forEach((d, i) => {
+      string += d
+      if (i < array.length - 2) {
+        string += ", "
+      } else if (i === array.length - 2) {
+        string += " and "
+      }
+    })
+    return string
+  }
+
+  const mugs = grunt.data.json.mugs
+  const candidates = Object.keys(grunt.data.json.mugs)
+  const photoCreditArray = removeDuplicates(candidates.map(c => mugs[c].credit))
+  const photoCredits = createString(photoCreditArray)
 %>
 
 <footer class="mega-nav" role="contentinfo">
@@ -45,6 +67,9 @@
     <div class="credits">
       <h3>Credits</h3>
       <p><%= grunt.data.json.strings["credits"] %></p>
+      <% if (showPhotoCredits) { %>
+        <p>Photos by <%= photoCredits %></p>
+      <% } %>
       <p> Sources: Electoral results from the AP. Population data are 2017-2022 ACS 5-year estimates. Candidates receiving less than 1% support not shown individually. The percentage of results in is <a href="https://www.ap.org/about/our-role-in-elections/counting-the-vote">an estimate from the AP</a>.</p>
     </div>
 
