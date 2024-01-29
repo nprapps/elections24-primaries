@@ -132,17 +132,7 @@
         %>
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
-
-        <div class="calendar__legend">
-          <span class="calendar__legend-text">Presidential events:</span>
-          <span class="calendar__square calendar__square--dem"></span><span class="calendar__legend-text">Democrats</span>
-          <span class="calendar__square calendar__square--gop"></span><span class="calendar__legend-text">Republicans</span>
-          <span class="calendar__square calendar__square--both"></span><span class="calendar__legend-text">Both</span>
-          <hr>
-          <span class="calendar__square calendar__square--yellow"></span><span class="calendar__legend-text">State primaries & special elections</span>
-          <span class="calendar__square calendar__square--gray"></span><span class="calendar__legend-text">Debates</span>
-        </div>
-
+        
         <%
           var byMonth = groupBy(events, "month");
           Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
