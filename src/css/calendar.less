@@ -1,4 +1,4 @@
-@date_width: 80px;
+@date_width: 120px;
 @calendar_square_width: 20px;
 @cl_square_margin: 5px;
 
@@ -14,11 +14,28 @@
   }
 }
 
+.calendar__legend {
+  font-size: 16px;
+  line-height: 1;
+  hr {
+    border: 0.5px dotted #333;
+  }
+}
+
+.calendar__legend-text {
+  margin-right: 6px;
+}
+
 .calendar__square {
   height: @calendar_square_width;  
   position: relative;
   top: 1px;
   width: @calendar_square_width;
+  .calendar__legend & {
+    display: inline-block;
+    margin-right: 3px;
+    top: 4px;
+  }
 }
 
 .calendar__square--both {
@@ -48,8 +65,27 @@
   background: @blue;
 }
 
-.calendar__square--neither {
+.calendar__square--yellow {
   background: @yellow;
+}
+
+.calendar__square--gray {
+  background: #666;
+}
+
+.calendar__legend-item {
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  &.dem {
+    background-color: @blue;
+  }
+  &.gop {
+    background-color: @red;
+  }
 }
 
 .cl__date-border {

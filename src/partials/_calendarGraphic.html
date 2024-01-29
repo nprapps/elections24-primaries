@@ -2,7 +2,9 @@
 	const { groupBy } = require("../src/js/components/utils");
 	const matrix = require("calendar-matrix")
 
-	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+	const today_js = new Date()
+	const today_string = (today_js.getMonth() + 1) + "/" + today_js.getDate() + "/"  + today_js.getFullYear()
 
 	const get_dates_in_range = function(start_date_string, end_date_string) {
 	  let date = new Date(start_date_string);
@@ -80,14 +82,15 @@
 				<% calendar_data[month].forEach(function(week) { %>
 					<% 
 					week.forEach(function(day) { 
-						let date = i+1 + "/" + day + "/2024"
+						let date_string = i+1 + "/" + day + "/2024"
+						const today_class = today_string === date_string ? "today" : ""
 						if (day < 0) { 
 					%>
 							<div class="calendar__square cg__square cg__square--not-a-day"></div>
-						<% } else if (event_dates[date]) { %>
-							<div class="calendar__square cg__square calendar__square--<%= parties_by_date[date] %>"></div>
+						<% } else if (event_dates[date_string]) { %>
+							<div class="calendar__square cg__square calendar__square--<%= parties_by_date[date_string] %> <%= today_class %>"></div>
 						<% } else { %>
-							<div class="calendar__square cg__square cg__square--regular-day"></div>
+							<div class="calendar__square cg__square cg__square--regular-day <%= today_class %>"></div>
 						<% } %>
 					<% }) %>
 				<% }) %>

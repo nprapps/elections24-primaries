@@ -18,7 +18,7 @@
     } else if (party_string === "GOP") {
       return "gop"
     } else {
-      return "neither"
+      return "yellow"
     }
   }
 
@@ -61,7 +61,7 @@
       <div class="main">
         <h1 class="calendar__hed">2024 Election Calendar</h1>
 
-        <a class="jump-to-past" href="#past-months">See past months &darr;</a>
+        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
 
         <%
           var { races, nonraces, strings } = grunt.data.json;
@@ -82,6 +82,7 @@
               var [mEnd, dEnd, yEnd] = n.date_end.split("/");
               n.monthEnd = mEnd;
               n.dayEnd = dEnd;
+              n.endDateDayOfWeek = daysOfWeek[parseNPRDate(n.date_end).getDay()]
             }
 
             // add to the events
@@ -131,7 +132,7 @@
         %>
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
-
+        
         <%
           var byMonth = groupBy(events, "month");
           Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
@@ -162,7 +163,7 @@
           <div class="cl__event-row cl__label-row index-<%= i%>" data-days="<%= event.days %>">
             <div class="cl__date-border">
               <div class="cl__date cl__date--mobile-only">
-                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
               </div>
             </div>
             <% if (event.title) { %>
@@ -183,7 +184,7 @@
             <div class="cl__event-row__left-side">
               <div class="cl__date-border <%= day.some(e => e.category === 'Label') ? 'hidden' : '' %>">
                 <div class="cl__date">
-                  <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %>-<%= event.dayEnd %><% } %>
+                  <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
                 </div>
               </div>
               <div class="cl__event-row__mobile-row">
