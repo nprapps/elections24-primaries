@@ -133,6 +133,13 @@
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
         
+        <span class="filter">
+          Showing 
+          <button id="dem-filter" class="filter-button filter-button--left">Democratic</button>
+          <button id="gop-filter" class="filter-button filter-button--right">Republican</button> presidential events
+          <button id="state-filter" class="filter-button filter-button--single">State-level events</button>
+        </div>
+
         <%
           var byMonth = groupBy(events, "month");
           Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
