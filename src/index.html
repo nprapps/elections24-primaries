@@ -11,11 +11,11 @@
   };
 
   const get_party_class = function(party_string) {
-    if (party_string === "Dem, GOP" || party_string === "GOP, Dem") {
+    if (party_string === "dem, gop" || party_string === "dem, gop, state") {
       return "both"
-    } else if (party_string === "Dem") {
+    } else if (party_string === "dem") {
       return "dem"
-    } else if (party_string === "GOP") {
+    } else if (party_string === "gop") {
       return "gop"
     } else {
       return "yellow"
@@ -64,13 +64,13 @@
         <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
 
         <%
-          var { races, nonraces, strings } = grunt.data.json;
+          var { races, nonraces_edit, strings } = grunt.data.json;
           // make a copy
           races = races.filter(r => !r.feedOnly && r.office != "R");
           // normalize events
           var monthNames = " January February March April May June July August September October November December".split(" ");
           var events = [];
-          nonraces.forEach(function(n) {
+          nonraces_edit.forEach(function(n) {
             var [m, d, y] = n.date.split("/");
             const numerical_day_of_week = parseNPRDate(n.date).getDay()
             n.month = m;
@@ -134,10 +134,20 @@
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
         
         <span class="filter">
-          Showing 
-          <button id="dem-filter" class="filter-button filter-button--left">Democratic</button>
-          <button id="gop-filter" class="filter-button filter-button--right">Republican</button> presidential events
-          <button id="state-filter" class="filter-button filter-button--single">State-level events</button>
+          Showing: 
+          <button value="dem" class="filter-button filter-button--left">
+            <span class="calendar__square calendar__square--dem"></span>
+            <span class="filter-button__text">Democratic</span>
+          </button>
+          <button value="gop" class="filter-button filter-button--right">
+            <span class="calendar__square calendar__square--gop"></span>
+            <span class="filter-button__text">Republican</span>
+          </button> 
+          presidential events
+          <button value="state" class="filter-button filter-button--single">
+            <span class="calendar__square calendar__square--yellow"></span>
+            <span class="filter-button__text">State-level events</span>
+          </button>
         </div>
 
         <%
