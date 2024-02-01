@@ -107,6 +107,10 @@ class PresidentPrimary extends ElementBase {
       child.setAttribute("headline", headline);
       child.render(data);
     });
+
+    let photoCreditString = ""
+
+    
   }
 
   static get template() {
@@ -114,6 +118,7 @@ class PresidentPrimary extends ElementBase {
 <div class="chatter" data-as="chatter"></div>
 <div class="results" data-as="results"></div>
 <p class="footnote" data-as="footnote"></p>
+<p class="photo-credit" data-as="photoCredit">president-primary photo credit</p>
     `
   }
 }

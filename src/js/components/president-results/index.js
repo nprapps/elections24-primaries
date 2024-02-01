@@ -53,6 +53,7 @@ class PresidentResults extends ElementBase {
     var result = data.results[0]; // only one for president
     var { caucus, footnote } = data;
     var { candidates, precincts, reporting, eevp, updated } = result;
+    let photoCreditString = ""
 
     // copy the array before mutating
     candidates = candidates.slice();
@@ -68,7 +69,9 @@ class PresidentResults extends ElementBase {
       c.percentage = c.percentage || 0;
       hasIncumbent = c.incumbent || hasIncumbent;
       called = !!c.winner || called;
+      c.credit = mugs[c.last] ? mugs[c.last].credit : "";
     });
+
     elements.incumbency.style.display = hasIncumbent ? "" : "none";
     // check for existing votes
     candidates.sort((a, b) => b.percentage - a.percentage);
@@ -112,6 +115,28 @@ class PresidentResults extends ElementBase {
       candidates = candidates.filter(c => c != others);
     }
 
+    var credits = candidates.filter(function(c) {
+      if (c.credit) {
+        return true
+      } else {
+        return false
+      }
+    })
+
+    credits.forEach(function(c, i) {
+      if (credits.length === 1) {
+        photoCreditString += "Photo by " + c.credit
+      } else {
+        if (i === 0) {
+          photoCreditString += "Photos by " + c.credit
+        } else if (i < credits.length - 1) {
+          photoCreditString += ", " + c.credit
+        } else if (i === credits.length - 1) {
+          photoCreditString += " and " + c.credit + "."
+        }
+      }
+    })
+
     var max = this.getAttribute("max") || defaultMax;
     var fold = candidates.slice(0, max).map(c => c.last);
 
@@ -152,6 +177,7 @@ class PresidentResults extends ElementBase {
       elements.footnote.innerHTML = `Note: ${ footnote }`;
     }
 
+    elements.photoCredit.innerHTML = "president-results: " + photoCreditString
   }
 
   static get template() {
