@@ -9,10 +9,14 @@ president-caucus {
     }
   }
 
-  .footnote {
-    font-size: .85em;
+  .footnote, .photo-credit {
+    font-size: 12px;
     font-style: italic;
     color: var(--secondary);
-    margin-top: 1em;
+    margin: 2px 0 0 0;
   }
+}
+
+body.standalone .photo-credit {
+  display: none;
 }

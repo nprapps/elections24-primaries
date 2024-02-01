@@ -153,6 +153,32 @@ class PresidentCaucus extends ElementBase {
       child.setAttribute("headline", headline);
       child.render(data);
     });
+
+    let credits = [], creditString = ""
+    races.forEach(race => {
+      let ap_candidates = race.results[0].candidates
+      ap_candidates.forEach(c => {
+        if (c.percentage > 1 && mugs[c.last]) {
+          credits.push(mugs[c.last].credit)
+        }
+      })
+    })
+    if (credits.length > 0) {
+      credits.forEach((c, i) => {
+        if (credits.length === 1) {
+          creditString += "Photo by " + c
+        } else {
+          if (i === 0) {
+            creditString += "Photos by " + c
+          } else if (i < credits.length - 1) {
+            creditString += ", " + c
+          } else if (i === credits.length - 1) {
+            creditString += " and " + c
+          }
+        }
+      })
+    }
+    elements.photoCredit.innerHTML = creditString
   }
 
   static get template() {
@@ -160,6 +186,7 @@ class PresidentCaucus extends ElementBase {
 <div class="chatter" data-as="chatter"></div>
 <div class="results" data-as="results"></div>
 <p class="footnote" data-as="footnote"></p>
+<p class="photo-credit" data-as="photoCredit"></p>
     `
   }
 }

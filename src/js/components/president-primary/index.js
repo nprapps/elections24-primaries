@@ -118,7 +118,6 @@ class PresidentPrimary extends ElementBase {
         }
       })
     })
-    console.log(credits)
     if (credits.length > 0) {
       credits.forEach((c, i) => {
         if (credits.length === 1) {
