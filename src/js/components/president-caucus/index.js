@@ -147,6 +147,15 @@ class PresidentCaucus extends ElementBase {
           resultsLink.innerHTML = "See county results &rsaquo;";
         }
       }
+      else {
+        if (href != "false") {
+          var search = new URLSearchParams("counties=true&office=P");
+          search.set("date", data.date);
+          search.set("party", data.party);
+          href = href + "#" + search.toString()
+          console.log(href)
+        }
+      }
 
       if (href && href != "false") child.setAttribute("href", href);
       if (max) child.setAttribute("max", max);
