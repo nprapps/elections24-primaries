@@ -53,6 +53,7 @@ class PresidentResults extends ElementBase {
     var result = data.results[0]; // only one for president
     var { caucus, footnote } = data;
     var { candidates, precincts, reporting, eevp, updated } = result;
+    let photoCreditString = ""
 
     // copy the array before mutating
     candidates = candidates.slice();
@@ -69,6 +70,7 @@ class PresidentResults extends ElementBase {
       hasIncumbent = c.incumbent || hasIncumbent;
       called = !!c.winner || called;
     });
+
     elements.incumbency.style.display = hasIncumbent ? "" : "none";
     // check for existing votes
     candidates.sort((a, b) => b.percentage - a.percentage);
@@ -151,7 +153,6 @@ class PresidentResults extends ElementBase {
     if (footnote) {
       elements.footnote.innerHTML = `Note: ${ footnote }`;
     }
-
   }
 
   static get template() {

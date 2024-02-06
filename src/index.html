@@ -59,9 +59,8 @@
     <main class="calendar">
 
       <div class="main">
-        <h1 class="calendar__hed">2024 Election Calendar</h1>
 
-        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
+        <h1 class="calendar__hed">2024 Election Calendar</h1>
 
         <%
           var { races, nonraces_edit, strings } = grunt.data.json;
@@ -132,6 +131,8 @@
         %>
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
+
+        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
         
         <span class="filter">
           Showing: 
@@ -238,7 +239,7 @@
           }); // month
         %>
         <div id="past-months">
-          <h2 class="section-header">Past events</h2>
+          <h2 class="section-header">Past months</h2>
         </div>
       </div> <!-- the content div -->
     </main>

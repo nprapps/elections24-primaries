@@ -193,7 +193,7 @@ module.exports = function(grunt) {
                 var county = grunt.data.json.fips[result.fips];
                 if (county) {
                   result.county = county.name;
-                  result.population = parseInt(county.population.replaceAll(",", ""));
+                  result.population = parseInt(county.population);
                 }
               })
             });
