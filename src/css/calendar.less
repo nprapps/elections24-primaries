@@ -28,22 +28,21 @@
 }
 
 .calendar__square--both {
-  background: @blue;
-  overflow: hidden;
-  position: relative;
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @blue;
+  border-bottom: (@calendar_square_width / 2) solid @blue;
+  border-left: (@calendar_square_width / 2) solid @red;
 }
 
-.calendar__square--both::before {
-  background: @red;
-  bottom: 100%;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  transform-origin: 100% 100%;
-  transform: rotate(-45deg);
-  width: 150%;
+.calendar__square--tricolor {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @blue;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @yellow;
 }
 
 .calendar__square--gop {
