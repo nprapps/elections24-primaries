@@ -19,15 +19,18 @@
   height: @calendar_square_width;  
   position: relative;
   width: @calendar_square_width;
-  .filter-button & {
+  .calendar__legend & {
     top: 5px;
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
   }
   .cl-month & {
     top: 1px;
   }
 }
 
-.calendar__square--both {
+.calendar__square--demgop {
   width: @calendar_square_width / 2;
   height: @calendar_square_width / 2;
   border-top: (@calendar_square_width / 2) solid @red;
@@ -41,6 +44,24 @@
   height: @calendar_square_width / 2;
   border-top: (@calendar_square_width / 2) solid @red;
   border-right: (@calendar_square_width / 2) solid @blue;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @yellow;
+}
+
+.calendar__square--demstate {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @blue;
+  border-right: (@calendar_square_width / 2) solid @blue;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @yellow;
+}
+
+.calendar__square--gopstate {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @red;
   border-bottom: (@calendar_square_width / 2) solid @yellow;
   border-left: (@calendar_square_width / 2) solid @yellow;
 }
@@ -59,33 +80,6 @@
 
 .calendar__square--gray {
   background: #666;
-}
-
-.filter-button {
-  background: #fff;
-  border: 1px solid #303030;
-  font-size: 14px;
-  height: 40px;
-  line-height: 35px;
-  padding: 0 15px;
-  &:hover .filter-button__text {
-    text-decoration: underline;
-  }
-}
-
-.filter-button--left {
-  border-radius: 20px 0 0 20px;
-  margin-left: 10px;
-  margin-right: -5px;
-}
-
-.filter-button--right {
-  border-radius: 0 20px 20px 0;
-}
-
-.filter-button--single {
-  border-radius: 20px;
-  margin-left: 10px;
 }
 
 .cl__date-border {

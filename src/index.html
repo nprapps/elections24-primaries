@@ -10,12 +10,18 @@
       .replace(/^-+|[^\w\-]|-+$/g, "");
   };
 
-  const get_party_class = function(party_string) {
-    if (party_string === "dem, gop" || party_string === "dem, gop, state") {
-      return "both"
-    } else if (party_string === "dem") {
+  const get_class = function(party, state) {
+    if (party === "Dem, GOP" && state === true) {
+      return "tricolor"
+    } else if (party === "Dem, GOP" && state === false) {
+      return "demgop"
+    } else if (party === "Dem" && state === true) {
+      return "demstate"
+    } else if (party === "Dem" && state === false) {
       return "dem"
-    } else if (party_string === "gop") {
+    } else if (party === "GOP" && state === true) {
+      return "gopstate"
+    } else if (party === "GOP" && state === false) {
       return "gop"
     } else {
       return "yellow"
@@ -87,6 +93,7 @@
             // add to the events
             events.push(n);
             // find matching races
+
             if (n.state) {
               n.races = [];
               races = races.filter(function(r) {
@@ -132,24 +139,16 @@
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
 
-        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
-        
-        <span class="filter">
-          Showing: 
-          <button value="dem" class="filter-button filter-button--left">
-            <span class="calendar__square calendar__square--dem"></span>
-            <span class="filter-button__text">Democratic</span>
-          </button>
-          <button value="gop" class="filter-button filter-button--right">
-            <span class="calendar__square calendar__square--gop"></span>
-            <span class="filter-button__text">Republican</span>
-          </button> 
-          presidential events
-          <button value="state" class="filter-button filter-button--single">
-            <span class="calendar__square calendar__square--yellow"></span>
-            <span class="filter-button__text">State-level events</span>
-          </button>
+        <div class="calendar__legend">
+          <span class="calendar__square calendar__square--dem"></span>
+          Democratic presidential events
+          <span class="calendar__square calendar__square--gop"></span>
+          Republican presidential events
+          <span class="calendar__square calendar__square--yellow"></span>
+          State-level events
         </div>
+
+        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
 
         <%
           var byMonth = groupBy(events, "month");
@@ -206,7 +205,7 @@
                 </div>
               </div>
               <div class="cl__event-row__mobile-row">
-                <div class="calendar__square cl__square calendar__square--<%= get_party_class(event.party) %>">
+                <div class="calendar__square cl__square calendar__square--<%= get_class(event.party, event.state_primary) %>">
                 </div>
                 <p class="cl__title"><%= event.title %></p>
               </div>
