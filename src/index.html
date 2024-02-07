@@ -69,13 +69,13 @@
         <h1 class="calendar__hed">2024 Election Calendar</h1>
 
         <%
-          var { races, nonraces_edit, strings } = grunt.data.json;
+          var { races, nonraces, strings } = grunt.data.json;
           // make a copy
           races = races.filter(r => !r.feedOnly && r.office != "R");
           // normalize events
           var monthNames = " January February March April May June July August September October November December".split(" ");
           var events = [];
-          nonraces_edit.forEach(function(n) {
+          nonraces.forEach(function(n) {
             var [m, d, y] = n.date.split("/");
             const numerical_day_of_week = parseNPRDate(n.date).getDay()
             n.month = m;
