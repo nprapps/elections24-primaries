@@ -1,3 +1,8 @@
+const queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+if (!urlParams.get("embedded")) {
+
 const { initializeAdConfigVariables } = require("./lib/adUtil");
 const {registerPSGoogleDfpAd} = require("./lib/googleDfp")
 
@@ -47,3 +52,4 @@ if (document.readyState === 'loading') {
     registerPSGoogleDfpAd()
 
   }
+}
