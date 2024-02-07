@@ -1,6 +1,10 @@
 <% if (!json.project.embedded) { %>
 <!-- Chartbeat bottom -->
 <script>
+  const queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+if (!urlParams.get("embedded")) {
 var _sf_async_config={
   uid:33583,
   domain:"npr.org",
@@ -16,5 +20,6 @@ var _sf_async_config={
   var oldonload = window.onload;
   window.onload = (typeof window.onload != 'function') ? loadChartbeat : function() { oldonload(); loadChartbeat(); };
 })();
+}
 </script>
 <% } %>
