@@ -19,14 +19,18 @@
   height: @calendar_square_width;  
   position: relative;
   width: @calendar_square_width;
-  .calendar__legend & {
-    top: 5px;
-    &:not(:first-child) {
-      margin-left: 10px;
-    }
-  }
   .cl-month & {
     top: 1px;
+  }
+}
+
+.legend-item {
+  white-space: nowrap;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+  .calendar__square {
+    top: 5px;
   }
 }
 
