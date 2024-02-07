@@ -10,12 +10,18 @@
       .replace(/^-+|[^\w\-]|-+$/g, "");
   };
 
-  const get_party_class = function(party_string) {
-    if (party_string === "Dem, GOP" || party_string === "GOP, Dem") {
-      return "both"
-    } else if (party_string === "Dem") {
+  const get_class = function(party, state) {
+    if (party === "Dem, GOP" && state === true) {
+      return "tricolor"
+    } else if (party === "Dem, GOP" && state === false) {
+      return "demgop"
+    } else if (party === "Dem" && state === true) {
+      return "demstate"
+    } else if (party === "Dem" && state === false) {
       return "dem"
-    } else if (party_string === "GOP") {
+    } else if (party === "GOP" && state === true) {
+      return "gopstate"
+    } else if (party === "GOP" && state === false) {
       return "gop"
     } else {
       return "yellow"
@@ -87,6 +93,7 @@
             // add to the events
             events.push(n);
             // find matching races
+
             if (n.state) {
               n.races = [];
               races = races.filter(function(r) {
@@ -132,98 +139,112 @@
 
         <%= t.include("partials/_calendarGraphic.html", {events: events}) %>
 
-        <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
-        
-        <%
-          var byMonth = groupBy(events, "month");
-          Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
-        %>
+        <div class="calendar__legend">
+          <span class="legend-item">
+            <span class="calendar__square calendar__square--dem"></span>
+            Democratic presidential events
+          </span>
+          <span class="legend-item">
+            <span class="calendar__square calendar__square--gop"></span>
+            Republican presidential events
+          </span>
+          <span class="legend-item">
+            <span class="calendar__square calendar__square--yellow"></span>
+            State-level events
+          </span>
+        </div>
 
-        <section class="cl__month" data-month="<%= m %>">
-
-          <h2><%= monthNames[m] %></h2>
+        <div>
+          <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
           <%
-            var byDay = groupBy(byMonth[m], "day");
-            Object.keys(byDay).sort((a, b) => a - b).forEach(function(d) {
-              var day = byDay[d];
-              day.sort(function(a, b) {
-                if (b.category === "Label") {
-                  return 1
-                } else {
-                  var aIndex = a.link ? 0 : 1;
-                  var bIndex = b.link ? 0 : 1;
-                  if (aIndex == bIndex) {
-                    return a.title < b.title ? -1 : 1;
-                  }
-                  return aIndex - bIndex;
-                  }
-              })
-              day.forEach(function(event, i) {
-                if (event.category === "Label") {
+            var byMonth = groupBy(events, "month");
+            Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
           %>
-          <div class="cl__event-row cl__label-row index-<%= i%>" data-days="<%= event.days %>">
-            <div class="cl__date-border">
-              <div class="cl__date cl__date--mobile-only">
-                <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
-              </div>
-            </div>
-            <% if (event.title) { %>
-              <h4 class="cl__day-label"><%= event.title %></h4>
-            <% } %>
-            <% if (event.link) { %>
-              <% if (event.link_text) { %>
-                <a class="cl__coverage-link" href="<%= event.link %>"><%= event.link_text %></a>
-              <% } else { %>
-                <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
-              <% } %>
-            <% } %>
-          </div>
-          <%
-                } else {
-          %>
-          <div class="cl__event-row cl__non-label-row index-<%= day.some(e => e.category === 'Label') ? i - 1 : i %>" data-days="<%= event.days %>">
-            <div class="cl__event-row__left-side">
-              <div class="cl__date-border <%= day.some(e => e.category === 'Label') ? 'hidden' : '' %>">
-                <div class="cl__date">
+          <section class="cl__month" data-month="<%= m %>">
+            <h2><%= monthNames[m] %></h2>
+            <%
+              var byDay = groupBy(byMonth[m], "day");
+              Object.keys(byDay).sort((a, b) => a - b).forEach(function(d) {
+                var day = byDay[d];
+                day.sort(function(a, b) {
+                  if (b.category === "Label") {
+                    return 1
+                  } else {
+                    var aIndex = a.link ? 0 : 1;
+                    var bIndex = b.link ? 0 : 1;
+                    if (aIndex == bIndex) {
+                      return a.title < b.title ? -1 : 1;
+                    }
+                    return aIndex - bIndex;
+                    }
+                })
+                day.forEach(function(event, i) {
+                  if (event.category === "Label") {
+            %>
+            <div class="cl__event-row cl__label-row index-<%= i%>" data-days="<%= event.days %>">
+              <div class="cl__date-border">
+                <div class="cl__date cl__date--mobile-only">
                   <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
                 </div>
               </div>
-              <div class="cl__event-row__mobile-row">
-                <div class="calendar__square cl__square calendar__square--<%= get_party_class(event.party) %>">
+              <% if (event.title) { %>
+                <h4 class="cl__day-label"><%= event.title %></h4>
+              <% } %>
+              <% if (event.link) { %>
+                <% if (event.link_text) { %>
+                  <a class="cl__coverage-link" href="<%= event.link %>"><%= event.link_text %></a>
+                <% } else { %>
+                  <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+                <% } %>
+              <% } %>
+            </div>
+            <%
+                  } else {
+            %>
+            <div class="cl__event-row cl__non-label-row index-<%= day.some(e => e.category === 'Label') ? i - 1 : i %>" data-days="<%= event.days %>">
+              <div class="cl__event-row__left-side">
+                <div class="cl__date-border <%= day.some(e => e.category === 'Label') ? 'hidden' : '' %>">
+                  <div class="cl__date">
+                    <%= event.day_of_week%> <%= event.day %><% if (event.dayEnd) { %> – <%= event.endDateDayOfWeek %> <%= event.dayEnd %><% } %>
+                  </div>
                 </div>
-                <p class="cl__title"><%= event.title %></p>
+                <div class="cl__event-row__mobile-row">
+                  <div class="calendar__square cl__square calendar__square--<%= get_class(event.party, event.state_primary) %>">
+                  </div>
+                  <p class="cl__title"><%= event.title %></p>
+                </div>
+              </div>
+              <p class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></p>
+              <div class="cl__links">
+                <% if (event.link) { %>
+                <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+                <% } %>
+                <% if (event.link && event.races) { %>
+                <span class="cl__results-label">
+                |
+                </span>
+                <% }%>
+                <% if (event.races && event.races.length) { %>
+                <span class="cl__results-label">Results:</span>
+                  <%= event.races.map(r => `
+                    <a href="states/${r.state}.html#date=${r.date}&office=${r.office}${r.special ? "&special=true" : ""}" data-days="${r.days}">
+                    ${strings[r.office]}${r.special || r.general || r.runoff ? " - " + getDescriptors(r) : ""}</a>`).join(", ") %>
+                <% } %>
               </div>
             </div>
-            <p class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></p>
-            <div class="cl__links">
-              <% if (event.link) { %>
-              <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
-              <% } %>
-              <% if (event.link && event.races) { %>
-              <span class="cl__results-label">
-              |
-              </span>
-              <% }%>
-              <% if (event.races && event.races.length) { %>
-              <span class="cl__results-label">Results:</span>
-                <%= event.races.map(r => `
-                  <a href="states/${r.state}.html#date=${r.date}&office=${r.office}${r.special ? "&special=true" : ""}" data-days="${r.days}">
-                  ${strings[r.office]}${r.special || r.general || r.runoff ? " - " + getDescriptors(r) : ""}</a>`).join(", ") %>
-              <% } %>
-            </div>
-          </div>
-          <%
-                  }
-                }); // event
-              }); // day
+            <%
+                    }
+                  }); // event
+                }); // day
+            %>
+            </section>
+            <%
+            }); // month
           %>
-          </section>
-          <%
-          }); // month
-        %>
-        <div id="past-months">
-          <h2 class="section-header">Past months</h2>
-        </div>
+          <div id="past-months">
+            <h2 class="section-header">Past months</h2>
+          </div>
+        </div> <!-- the calendar list div -->
       </div> <!-- the content div -->
     </main>
 

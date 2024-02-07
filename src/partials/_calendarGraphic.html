@@ -52,16 +52,33 @@
 			if (event.party) {
 				this_days_parties.push(event.party.split(", "))
 			}
+			if (event.state_primary === true) {
+				this_days_parties.push("state")
+			}
 		})
 		this_days_parties = this_days_parties.flat()
 		if (this_days_parties.includes("Dem") && this_days_parties.includes("GOP")) {
-			party_class = "both"
+			if (this_days_parties.includes("state")) {
+				party_class = "tricolor"
+			} else {
+				party_class = "demgop"
+			}
 		} else if (this_days_parties.includes("Dem")) {
-			party_class = "dem"
+			if (this_days_parties.includes("state")) {
+				party_class = "demstate"
+			} else {
+				party_class = "dem"
+			}
 		} else if (this_days_parties.includes("GOP")) {
-			party_class = "gop"
+			if (this_days_parties.includes("state")) {
+				party_class = "gopstate"
+			} else {
+				party_class = "gop"
+			}
+		} else if (this_days_parties.includes("state")) {
+			party_class = "yellow"
 		} else {
-			party_class = "neither"
+			party_class = ""
 		}
 		parties_by_date[date] = party_class
 	})

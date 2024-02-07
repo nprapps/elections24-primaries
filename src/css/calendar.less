@@ -14,47 +14,60 @@
   }
 }
 
-.calendar__legend {
-  font-size: 16px;
-  line-height: 1;
-  hr {
-    border: 0.5px dotted #333;
-  }
-}
-
-.calendar__legend-text {
-  margin-right: 6px;
-}
-
 .calendar__square {
+  display: inline-block;
   height: @calendar_square_width;  
   position: relative;
-  top: 1px;
   width: @calendar_square_width;
-  .calendar__legend & {
-    display: inline-block;
-    margin-right: 3px;
-    top: 4px;
+  .cl-month & {
+    top: 1px;
   }
 }
 
-.calendar__square--both {
-  background: @blue;
-  overflow: hidden;
-  position: relative;
+.legend-item {
+  white-space: nowrap;
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+  .calendar__square {
+    top: 5px;
+  }
 }
 
-.calendar__square--both::before {
-  background: @red;
-  bottom: 100%;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  transform-origin: 100% 100%;
-  transform: rotate(-45deg);
-  width: 150%;
+.calendar__square--demgop {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @red;
+  border-bottom: (@calendar_square_width / 2) solid @blue;
+  border-left: (@calendar_square_width / 2) solid @blue;
+}
+
+.calendar__square--tricolor {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @yellow;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @blue;
+}
+
+.calendar__square--demstate {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @blue;
+  border-right: (@calendar_square_width / 2) solid @yellow;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @blue;
+}
+
+.calendar__square--gopstate {
+  width: @calendar_square_width / 2;
+  height: @calendar_square_width / 2;
+  border-top: (@calendar_square_width / 2) solid @red;
+  border-right: (@calendar_square_width / 2) solid @yellow;
+  border-bottom: (@calendar_square_width / 2) solid @yellow;
+  border-left: (@calendar_square_width / 2) solid @red;
 }
 
 .calendar__square--gop {
@@ -71,21 +84,6 @@
 
 .calendar__square--gray {
   background: #666;
-}
-
-.calendar__legend-item {
-  border-radius: 5px;
-  color: #fff;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  &.dem {
-    background-color: @blue;
-  }
-  &.gop {
-    background-color: @red;
-  }
 }
 
 .cl__date-border {
@@ -202,11 +200,13 @@
   color: var(--secondary);
   font-size: 14px;
   margin-left: @calendar_square_width + @cl_square_margin;
+  a[href]:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
   a:not([href]) {
     color: var(--secondary);
     cursor: arrow;
-
-    &:hover { opacity: 1; }
   }
   @media (@mobile) {
     margin-bottom: 14px;
