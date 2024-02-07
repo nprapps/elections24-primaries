@@ -20,7 +20,6 @@
     "src/js/calendarGraphic.js": "build/calendarGraphic.js",
     "src/js/loadHeaderBidding.js": "build/loadHeaderBidding.js",
     "src/js/statePage.js": "build/states/state.js",
-    "src/js/embeds/legacy-embeds.js": "build/embeds/legacy.js",
     "src/js/embeds/super-tuesday.js": "build/embeds/super-tuesday.js",
     "src/js/embeds/custom.js": "build/embeds/custom.js",
     "src/js/lib/sidechain.js": "build/sidechain.js"
