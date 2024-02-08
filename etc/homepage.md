@@ -38,7 +38,7 @@ Note: Someone from News Apps will need to change the references to `story1223407
                         <b class="audio-module-listen-icon icn-play"></b>
                         <b class="audio-module-listen-text">
                             <b class="audio-module-cta">Listen</b>
-                        </b>f
+                        </b>
                     </b>
                 </button>
             </div>
@@ -134,7 +134,7 @@ If the homepage card is using the special label in the upper left ("live", "deve
                         <b class="audio-module-listen-icon icn-play"></b>
                         <b class="audio-module-listen-text">
                             <b class="audio-module-cta">Listen</b>
-                        </b>f
+                        </b>
                     </b>
                 </button>
             </div>
