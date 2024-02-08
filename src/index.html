@@ -61,6 +61,7 @@
     <%= t.include("partials/_nav.html") %>
 
     <%= t.include("partials/_ad.html", {id: "ad-centerstage"}) %>
+    <button id="scroll-to-top">Scroll to top</button>
 
     <main class="calendar">
 
@@ -160,7 +161,7 @@
             var byMonth = groupBy(events, "month");
             Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
           %>
-          <section class="cl__month" data-month="<%= m %>">
+          <section class="cl__month" data-month="<%= m %>" id="section-<%= m %>">
             <h2><%= monthNames[m] %></h2>
             <%
               var byDay = groupBy(byMonth[m], "day");
