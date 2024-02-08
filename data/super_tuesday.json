@@ -1,0 +1,2934 @@
+{
+  "races": [
+    {
+      "id": "1670",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "AL",
+      "eevp": 95,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "1670",
+          "party": "GOP",
+          "updated": 1583515007533,
+          "precincts": 2281,
+          "reporting": 2280,
+          "reportingPercentage": 99.96,
+          "winners": [
+            "8639"
+          ],
+          "total": 722809,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 695469,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 96.22
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100004",
+              "votes": 16378,
+              "percentage": 2.27
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 10962,
+              "percentage": 1.52
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1817",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "AL",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "1817",
+          "party": "Dem",
+          "updated": 1583515007310,
+          "precincts": 2281,
+          "reporting": 2281,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 452093,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 286065,
+              "winner": true,
+              "percentage": 63.28
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 74755,
+              "percentage": 16.54
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 52750,
+              "percentage": 11.67
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 25847,
+              "percentage": 5.72
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 3700,
+              "percentage": 0.82
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 2250,
+              "percentage": 0.5
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 1416,
+              "percentage": 0.31
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 1048,
+              "percentage": 0.23
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 1038,
+              "percentage": 0.23
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 907,
+              "percentage": 0.2
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 875,
+              "percentage": 0.19
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 740,
+              "percentage": 0.16
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 294,
+              "percentage": 0.07
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 224,
+              "percentage": 0.05
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 184,
+              "percentage": 0.04
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4697",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "AR",
+      "eevp": 91,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4697",
+          "party": "Dem",
+          "updated": 1583431154040,
+          "precincts": 2570,
+          "reporting": 2570,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 228476,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 92586,
+              "winner": true,
+              "percentage": 40.52
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 51117,
+              "percentage": 22.37
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 38213,
+              "percentage": 16.73
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 22860,
+              "percentage": 10.01
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 7657,
+              "percentage": 3.35
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 7014,
+              "percentage": 3.07
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 2070,
+              "percentage": 0.91
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 1616,
+              "percentage": 0.71
+            },
+            {
+              "first": "Kamala",
+              "last": "Harris",
+              "party": "Dem",
+              "id": "64984",
+              "votes": 734,
+              "percentage": 0.32
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 730,
+              "percentage": 0.32
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 597,
+              "percentage": 0.26
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 592,
+              "percentage": 0.26
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 521,
+              "percentage": 0.23
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 502,
+              "percentage": 0.22
+            },
+            {
+              "first": "Steve",
+              "last": "Bullock",
+              "party": "Dem",
+              "id": "61839",
+              "votes": 501,
+              "percentage": 0.22
+            },
+            {
+              "first": "Joe",
+              "last": "Sestak",
+              "party": "Dem",
+              "id": "51545",
+              "votes": 427,
+              "percentage": 0.19
+            },
+            {
+              "first": "Mosie",
+              "last": "Boyd",
+              "party": "Dem",
+              "id": "6588",
+              "votes": 415,
+              "percentage": 0.18
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 324,
+              "percentage": 0.14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4873",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "AR",
+      "eevp": 83,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4873",
+          "party": "GOP",
+          "updated": 1583431153590,
+          "precincts": 2570,
+          "reporting": 2570,
+          "reportingPercentage": 100,
+          "winners": [
+            "8639"
+          ],
+          "total": 244932,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 237863,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 97.11
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 5216,
+              "percentage": 2.13
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 1853,
+              "percentage": 0.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8686",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "CA",
+      "eevp": 90,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "8686",
+          "party": "Dem",
+          "updated": 1584753320437,
+          "precincts": 20346,
+          "reporting": 19916,
+          "reportingPercentage": 97.89,
+          "winners": [
+            "1445"
+          ],
+          "total": 5634731,
+          "candidates": [
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 2002521,
+              "winner": true,
+              "percentage": 35.54
+            },
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 1575886,
+              "percentage": 27.97
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 748687,
+              "percentage": 13.29
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 689713,
+              "percentage": 12.24
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 247382,
+              "percentage": 4.39
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 126031,
+              "percentage": 2.24
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 111707,
+              "percentage": 1.98
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 42816,
+              "percentage": 0.76
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 33027,
+              "percentage": 0.59
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 13449,
+              "percentage": 0.24
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 7113,
+              "percentage": 0.13
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 6903,
+              "percentage": 0.12
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente III",
+              "party": "Dem",
+              "id": "67963",
+              "votes": 6011,
+              "percentage": 0.11
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 5853,
+              "percentage": 0.1
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 4484,
+              "percentage": 0.08
+            },
+            {
+              "first": "Michael",
+              "last": "Ellinger",
+              "party": "Dem",
+              "id": "67944",
+              "votes": 3319,
+              "percentage": 0.06
+            },
+            {
+              "first": "Joe",
+              "last": "Sestak",
+              "party": "Dem",
+              "id": "51545",
+              "votes": 3178,
+              "percentage": 0.06
+            },
+            {
+              "first": "Mark",
+              "last": "Greenstein",
+              "party": "Dem",
+              "id": "64546",
+              "votes": 3082,
+              "percentage": 0.05
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 1977,
+              "percentage": 0.04
+            },
+            {
+              "first": "Mosie",
+              "last": "Boyd",
+              "party": "Dem",
+              "id": "6588",
+              "votes": 1592,
+              "percentage": 0.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8688",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "CA",
+      "eevp": 82,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "8688",
+          "party": "GOP",
+          "updated": 1584753382130,
+          "precincts": 20346,
+          "reporting": 19916,
+          "reportingPercentage": 97.89,
+          "winners": [
+            "8639"
+          ],
+          "total": 2431817,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 2241786,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 92.19
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 66267,
+              "percentage": 2.72
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 63881,
+              "percentage": 2.63
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 23944,
+              "percentage": 0.98
+            },
+            {
+              "first": "Matthew",
+              "last": "Matern",
+              "party": "GOP",
+              "id": "67941",
+              "votes": 15235,
+              "percentage": 0.63
+            },
+            {
+              "first": "Robert",
+              "last": "Ardini",
+              "party": "GOP",
+              "id": "65218",
+              "votes": 12691,
+              "percentage": 0.52
+            },
+            {
+              "first": "Zoltan",
+              "last": "Istvan",
+              "party": "GOP",
+              "id": "66504",
+              "votes": 8013,
+              "percentage": 0.33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7393",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "CO",
+      "eevp": 90,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "7393",
+          "party": "Dem",
+          "updated": 1584976742563,
+          "precincts": 3219,
+          "reporting": 2671,
+          "reportingPercentage": 82.98,
+          "winners": [
+            "1445"
+          ],
+          "total": 953316,
+          "candidates": [
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 352316,
+              "winner": true,
+              "percentage": 36.96
+            },
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 235091,
+              "percentage": 24.66
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 176814,
+              "percentage": 18.55
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 167356,
+              "percentage": 17.56
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 9974,
+              "percentage": 1.05
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 3971,
+              "percentage": 0.42
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 3313,
+              "percentage": 0.35
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 1273,
+              "percentage": 0.13
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente III",
+              "party": "Dem",
+              "id": "67963",
+              "votes": 1132,
+              "percentage": 0.12
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 1081,
+              "percentage": 0.11
+            },
+            {
+              "first": "Rita",
+              "last": "Krichevsky",
+              "party": "Dem",
+              "id": "67953",
+              "votes": 442,
+              "percentage": 0.05
+            },
+            {
+              "first": "Robby",
+              "last": "Wells",
+              "party": "Dem",
+              "id": "67946",
+              "votes": 328,
+              "percentage": 0.03
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 225,
+              "percentage": 0.02
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 0,
+              "percentage": 0
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 0,
+              "percentage": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7394",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "CO",
+      "eevp": 88,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "7394",
+          "party": "GOP",
+          "updated": 1584976742790,
+          "precincts": 3219,
+          "reporting": 2608,
+          "reportingPercentage": 81.02,
+          "winners": [
+            "8639"
+          ],
+          "total": 678985,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 626604,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 92.29
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 24145,
+              "percentage": 3.56
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 12613,
+              "percentage": 1.86
+            },
+            {
+              "first": "Matthew",
+              "last": "Matern",
+              "party": "GOP",
+              "id": "67941",
+              "votes": 6919,
+              "percentage": 1.02
+            },
+            {
+              "first": "Zoltan",
+              "last": "Istvan",
+              "party": "GOP",
+              "id": "66504",
+              "votes": 5358,
+              "percentage": 0.79
+            },
+            {
+              "first": "Robert",
+              "last": "Ardini",
+              "party": "GOP",
+              "id": "65218",
+              "votes": 3346,
+              "percentage": 0.49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24547",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "MA",
+      "eevp": 97,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "24547",
+          "party": "GOP",
+          "updated": 1583435119253,
+          "precincts": 2173,
+          "reporting": 2171,
+          "reportingPercentage": 99.91,
+          "winners": [
+            "8639"
+          ],
+          "total": 269942,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 236692,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 87.68
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 25182,
+              "percentage": 9.33
+            },
+            {
+              "last": "No Preference",
+              "party": "GOP",
+              "id": "100005",
+              "votes": 4277,
+              "percentage": 1.58
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 3075,
+              "percentage": 1.14
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 716,
+              "percentage": 0.27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24548",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "MA",
+      "eevp": 96,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "24548",
+          "party": "Dem",
+          "updated": 1583435119477,
+          "precincts": 2173,
+          "reporting": 2171,
+          "reportingPercentage": 99.91,
+          "winners": [
+            "1036"
+          ],
+          "total": 1397679,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 470294,
+              "winner": true,
+              "percentage": 33.65
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 373173,
+              "percentage": 26.7
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 299733,
+              "percentage": 21.45
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 164689,
+              "percentage": 11.78
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 37172,
+              "percentage": 2.66
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 16862,
+              "percentage": 1.21
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 10616,
+              "percentage": 0.76
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 6851,
+              "percentage": 0.49
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 6666,
+              "percentage": 0.48
+            },
+            {
+              "last": "No Preference",
+              "party": "Dem",
+              "id": "100005",
+              "votes": 5212,
+              "percentage": 0.37
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 2621,
+              "percentage": 0.19
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 1409,
+              "percentage": 0.1
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 1000,
+              "percentage": 0.07
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 653,
+              "percentage": 0.05
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 431,
+              "percentage": 0.03
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 297,
+              "percentage": 0.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21075",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "ME",
+      "eevp": 98,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "21075",
+          "party": "Dem",
+          "updated": 1583360459080,
+          "precincts": 571,
+          "reporting": 561,
+          "reportingPercentage": 98.25,
+          "winners": [
+            "1036"
+          ],
+          "total": 200358,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 68396,
+              "winner": true,
+              "percentage": 34.14
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 65894,
+              "percentage": 32.89
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 31514,
+              "percentage": 15.73
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 24131,
+              "percentage": 12.04
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 4180,
+              "percentage": 2.09
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 2744,
+              "percentage": 1.37
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 1841,
+              "percentage": 0.92
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 670,
+              "percentage": 0.33
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 322,
+              "percentage": 0.16
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 267,
+              "percentage": 0.13
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 200,
+              "percentage": 0.1
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 199,
+              "percentage": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21076",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "ME",
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "21076",
+          "party": "GOP",
+          "updated": 1583360458440,
+          "precincts": 0,
+          "reporting": 0,
+          "reportingPercentage": 0,
+          "winners": [
+            "8639"
+          ],
+          "total": 0,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 0,
+              "winner": true,
+              "incumbent": true,
+              "percentage": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25869",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "MN",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "25869",
+          "party": "Dem",
+          "updated": 1583435149450,
+          "precincts": 4110,
+          "reporting": 4110,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 744498,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 287464,
+              "winner": true,
+              "percentage": 38.61
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 222530,
+              "percentage": 29.89
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 114754,
+              "percentage": 15.41
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 62064,
+              "percentage": 8.34
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 41508,
+              "percentage": 5.58
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 7627,
+              "percentage": 1.02
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 2613,
+              "percentage": 0.35
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 2507,
+              "percentage": 0.34
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 1755,
+              "percentage": 0.24
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 561,
+              "percentage": 0.08
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 316,
+              "percentage": 0.04
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 230,
+              "percentage": 0.03
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 204,
+              "percentage": 0.03
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 175,
+              "percentage": 0.02
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 116,
+              "percentage": 0.02
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 74,
+              "percentage": 0.01
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26428",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "MN",
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "26428",
+          "party": "GOP",
+          "updated": 1583435149243,
+          "precincts": 0,
+          "reporting": 0,
+          "reportingPercentage": 0,
+          "winners": [
+            "8639"
+          ],
+          "total": 0,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 0,
+              "winner": true,
+              "incumbent": true,
+              "percentage": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34653",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "NC",
+      "eevp": 100,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "34653",
+          "party": "Dem",
+          "updated": 1585581755260,
+          "precincts": 2670,
+          "reporting": 2670,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 1322580,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 568581,
+              "winner": true,
+              "percentage": 42.99
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 318872,
+              "percentage": 24.11
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 171823,
+              "percentage": 12.99
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 138502,
+              "percentage": 10.47
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 43368,
+              "percentage": 3.28
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 30641,
+              "percentage": 2.32
+            },
+            {
+              "last": "No Preference",
+              "party": "Dem",
+              "id": "100005",
+              "votes": 21710,
+              "percentage": 1.64
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 10715,
+              "percentage": 0.81
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 6649,
+              "percentage": 0.5
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 3021,
+              "percentage": 0.23
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 2197,
+              "percentage": 0.17
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 1984,
+              "percentage": 0.15
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 1349,
+              "percentage": 0.1
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 1281,
+              "percentage": 0.1
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 1115,
+              "percentage": 0.08
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 772,
+              "percentage": 0.06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34654",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "NC",
+      "eevp": 100,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "34654",
+          "party": "GOP",
+          "updated": 1585581755260,
+          "precincts": 2670,
+          "reporting": 2670,
+          "reportingPercentage": 100,
+          "winners": [
+            "8639"
+          ],
+          "total": 798773,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 747038,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 93.52
+            },
+            {
+              "last": "No Preference",
+              "party": "GOP",
+              "id": "100005",
+              "votes": 19943,
+              "percentage": 2.5
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 16504,
+              "percentage": 2.07
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 15288,
+              "percentage": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37002",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "OK",
+      "eevp": 94,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "37002",
+          "party": "GOP",
+          "updated": 1583435287800,
+          "precincts": 1948,
+          "reporting": 1948,
+          "reportingPercentage": 100,
+          "winners": [
+            "8639"
+          ],
+          "total": 295409,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 273562,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 92.6
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 10989,
+              "percentage": 3.72
+            },
+            {
+              "first": "Matthew",
+              "last": "Matern",
+              "party": "GOP",
+              "id": "67941",
+              "votes": 3805,
+              "percentage": 1.29
+            },
+            {
+              "first": "Bob",
+              "last": "Ely",
+              "party": "GOP",
+              "id": "61515",
+              "votes": 3292,
+              "percentage": 1.11
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 2464,
+              "percentage": 0.83
+            },
+            {
+              "first": "Zoltan",
+              "last": "Istvan",
+              "party": "GOP",
+              "id": "66504",
+              "votes": 1297,
+              "percentage": 0.44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38301",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "OK",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "38301",
+          "party": "Dem",
+          "updated": 1583435288020,
+          "precincts": 1948,
+          "reporting": 1948,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 303977,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 117552,
+              "winner": true,
+              "percentage": 38.67
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 77302,
+              "percentage": 25.43
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 42243,
+              "percentage": 13.9
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 40676,
+              "percentage": 13.38
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 6728,
+              "percentage": 2.21
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 5113,
+              "percentage": 1.68
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 5106,
+              "percentage": 1.68
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 2006,
+              "percentage": 0.66
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 1993,
+              "percentage": 0.66
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 1529,
+              "percentage": 0.5
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 1272,
+              "percentage": 0.42
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 1158,
+              "percentage": 0.38
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 679,
+              "percentage": 0.22
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 620,
+              "percentage": 0.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "TN",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4",
+          "party": "GOP",
+          "updated": 1585262678840,
+          "precincts": 1962,
+          "reporting": 1929,
+          "reportingPercentage": 98.32,
+          "winners": [
+            "8639"
+          ],
+          "total": 393969,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 380276,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 96.52
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100004",
+              "votes": 5665,
+              "percentage": 1.44
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 4135,
+              "percentage": 1.05
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 3893,
+              "percentage": 0.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43449",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "TN",
+      "eevp": 100,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "43449",
+          "party": "Dem",
+          "updated": 1585262679013,
+          "precincts": 1962,
+          "reporting": 1962,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 515440,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 215005,
+              "winner": true,
+              "percentage": 41.71
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 128688,
+              "percentage": 24.97
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 79638,
+              "percentage": 15.45
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 53555,
+              "percentage": 10.39
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 17051,
+              "percentage": 3.31
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 10645,
+              "percentage": 2.07
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 2292,
+              "percentage": 0.44
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 1980,
+              "percentage": 0.38
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 1882,
+              "percentage": 0.37
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 1187,
+              "percentage": 0.23
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 1097,
+              "percentage": 0.21
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 978,
+              "percentage": 0.19
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 498,
+              "percentage": 0.1
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 379,
+              "percentage": 0.07
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 326,
+              "percentage": 0.06
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 239,
+              "percentage": 0.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44001",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "TX",
+      "eevp": 100,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "44001",
+          "party": "Dem",
+          "updated": 1584728041273,
+          "precincts": 5742,
+          "reporting": 5742,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 2075862,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 716030,
+              "winner": true,
+              "percentage": 34.49
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 622360,
+              "percentage": 29.98
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 298262,
+              "percentage": 14.37
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 237028,
+              "percentage": 11.42
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 82221,
+              "percentage": 3.96
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 43027,
+              "percentage": 2.07
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 16844,
+              "percentage": 0.81
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 13801,
+              "percentage": 0.66
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 10408,
+              "percentage": 0.5
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 8695,
+              "percentage": 0.42
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 6673,
+              "percentage": 0.32
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente III",
+              "party": "Dem",
+              "id": "67963",
+              "votes": 5590,
+              "percentage": 0.27
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 4914,
+              "percentage": 0.24
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 3902,
+              "percentage": 0.19
+            },
+            {
+              "first": "John",
+              "last": "Delaney",
+              "party": "Dem",
+              "id": "61562",
+              "votes": 3277,
+              "percentage": 0.16
+            },
+            {
+              "first": "Robby",
+              "last": "Wells",
+              "party": "Dem",
+              "id": "67946",
+              "votes": 1514,
+              "percentage": 0.07
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 1316,
+              "percentage": 0.06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48765",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "TX",
+      "eevp": 100,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "48765",
+          "party": "GOP",
+          "updated": 1584728023690,
+          "precincts": 5569,
+          "reporting": 5569,
+          "reportingPercentage": 100,
+          "winners": [
+            "8639"
+          ],
+          "total": 2007314,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 1889006,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 94.11
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100004",
+              "votes": 71555,
+              "percentage": 3.56
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 15738,
+              "percentage": 0.78
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 14769,
+              "percentage": 0.74
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 7668,
+              "percentage": 0.38
+            },
+            {
+              "first": "Bob",
+              "last": "Ely",
+              "party": "GOP",
+              "id": "61515",
+              "votes": 3565,
+              "percentage": 0.18
+            },
+            {
+              "first": "Matthew",
+              "last": "Matern",
+              "party": "GOP",
+              "id": "67941",
+              "votes": 3525,
+              "percentage": 0.18
+            },
+            {
+              "first": "Zoltan",
+              "last": "Istvan",
+              "party": "GOP",
+              "id": "66504",
+              "votes": 1488,
+              "percentage": 0.07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45667",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "UT",
+      "eevp": 100,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "45667",
+          "party": "Dem",
+          "updated": 1585259704587,
+          "precincts": 2610,
+          "reporting": 2610,
+          "reportingPercentage": 100,
+          "winners": [
+            "1445"
+          ],
+          "total": 220433,
+          "candidates": [
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 79661,
+              "winner": true,
+              "percentage": 36.14
+            },
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 40641,
+              "percentage": 18.44
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 35704,
+              "percentage": 16.2
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 33975,
+              "percentage": 15.41
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 18728,
+              "percentage": 8.5
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 7602,
+              "percentage": 3.45
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 1702,
+              "percentage": 0.77
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 950,
+              "percentage": 0.43
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 703,
+              "percentage": 0.32
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 220,
+              "percentage": 0.1
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 159,
+              "percentage": 0.07
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 138,
+              "percentage": 0.06
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente III",
+              "party": "Dem",
+              "id": "67963",
+              "votes": 126,
+              "percentage": 0.06
+            },
+            {
+              "first": "Nathan",
+              "last": "Bloxham",
+              "party": "Dem",
+              "id": "67954",
+              "votes": 69,
+              "percentage": 0.03
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 55,
+              "percentage": 0.02
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 0,
+              "percentage": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47758",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "UT",
+      "eevp": 100,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "47758",
+          "party": "GOP",
+          "updated": 1585259704413,
+          "precincts": 2610,
+          "reporting": 2402,
+          "reportingPercentage": 92.03,
+          "winners": [
+            "8639"
+          ],
+          "total": 344505,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 302420,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 87.78
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 23649,
+              "percentage": 6.86
+            },
+            {
+              "first": "Joe",
+              "last": "Walsh",
+              "party": "GOP",
+              "id": "18446",
+              "votes": 7500,
+              "percentage": 2.18
+            },
+            {
+              "first": "Matthew",
+              "last": "Matern",
+              "party": "GOP",
+              "id": "67941",
+              "votes": 5748,
+              "percentage": 1.67
+            },
+            {
+              "first": "Robert",
+              "last": "Ardini",
+              "party": "GOP",
+              "id": "65218",
+              "votes": 3971,
+              "percentage": 1.15
+            },
+            {
+              "first": "Bob",
+              "last": "Ely",
+              "party": "GOP",
+              "id": "61515",
+              "votes": 1217,
+              "percentage": 0.35
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47942",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "VA",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "47942",
+          "party": "Dem",
+          "updated": 1583337618463,
+          "precincts": 2581,
+          "reporting": 2581,
+          "reportingPercentage": 100,
+          "winners": [
+            "1036"
+          ],
+          "total": 1325838,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 705800,
+              "winner": true,
+              "percentage": 53.23
+            },
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 306024,
+              "percentage": 23.08
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 142470,
+              "percentage": 10.75
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 129784,
+              "percentage": 9.79
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 11279,
+              "percentage": 0.85
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 11190,
+              "percentage": 0.84
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 8413,
+              "percentage": 0.63
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 3364,
+              "percentage": 0.25
+            },
+            {
+              "first": "Cory",
+              "last": "Booker",
+              "party": "Dem",
+              "id": "63133",
+              "votes": 1957,
+              "percentage": 0.15
+            },
+            {
+              "first": "Michael",
+              "last": "Bennet",
+              "party": "Dem",
+              "id": "59911",
+              "votes": 1731,
+              "percentage": 0.13
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 1587,
+              "percentage": 0.12
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 933,
+              "percentage": 0.07
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 925,
+              "percentage": 0.07
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 381,
+              "percentage": 0.03
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46789",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "VT",
+      "eevp": 64,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "46789",
+          "party": "GOP",
+          "updated": 1583332571913,
+          "precincts": 275,
+          "reporting": 275,
+          "reportingPercentage": 100,
+          "winners": [
+            "8639"
+          ],
+          "total": 38319,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 34000,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 88.73
+            },
+            {
+              "first": "Bill",
+              "last": "Weld",
+              "party": "GOP",
+              "id": "67972",
+              "votes": 3972,
+              "percentage": 10.37
+            },
+            {
+              "first": "Roque",
+              "last": "De La Fuente",
+              "party": "GOP",
+              "id": "64542",
+              "votes": 347,
+              "percentage": 0.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46790",
+      "date": "3/3/2020",
+      "test": false,
+      "state": "VT",
+      "eevp": 100,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "46790",
+          "party": "Dem",
+          "updated": 1583332571913,
+          "precincts": 275,
+          "reporting": 275,
+          "reportingPercentage": 100,
+          "winners": [
+            "1445"
+          ],
+          "total": 157786,
+          "candidates": [
+            {
+              "first": "Bernie",
+              "last": "Sanders",
+              "party": "Dem",
+              "id": "1445",
+              "votes": 80121,
+              "winner": true,
+              "percentage": 50.78
+            },
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 34734,
+              "percentage": 22.01
+            },
+            {
+              "first": "Elizabeth",
+              "last": "Warren",
+              "party": "Dem",
+              "id": "62244",
+              "votes": 19816,
+              "percentage": 12.56
+            },
+            {
+              "first": "Michael",
+              "last": "Bloomberg",
+              "party": "Dem",
+              "id": "32324",
+              "votes": 14843,
+              "percentage": 9.41
+            },
+            {
+              "first": "Pete",
+              "last": "Buttigieg",
+              "party": "Dem",
+              "id": "67933",
+              "votes": 3714,
+              "percentage": 2.35
+            },
+            {
+              "first": "Amy",
+              "last": "Klobuchar",
+              "party": "Dem",
+              "id": "51526",
+              "votes": 2023,
+              "percentage": 1.28
+            },
+            {
+              "first": "Tulsi",
+              "last": "Gabbard",
+              "party": "Dem",
+              "id": "62589",
+              "votes": 1298,
+              "percentage": 0.82
+            },
+            {
+              "first": "Andrew",
+              "last": "Yang",
+              "party": "Dem",
+              "id": "67936",
+              "votes": 589,
+              "percentage": 0.37
+            },
+            {
+              "first": "Tom",
+              "last": "Steyer",
+              "party": "Dem",
+              "id": "67935",
+              "votes": 205,
+              "percentage": 0.13
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 144,
+              "percentage": 0.09
+            },
+            {
+              "first": "Deval",
+              "last": "Patrick",
+              "party": "Dem",
+              "id": "51516",
+              "votes": 140,
+              "percentage": 0.09
+            },
+            {
+              "first": "Mark",
+              "last": "Greenstein",
+              "party": "Dem",
+              "id": "64546",
+              "votes": 107,
+              "percentage": 0.07
+            },
+            {
+              "first": "Julian",
+              "last": "Castro",
+              "party": "Dem",
+              "id": "67934",
+              "votes": 52,
+              "percentage": 0.03
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
