@@ -57,9 +57,9 @@ document.querySelectorAll(".cg__month-container").forEach(el => {
 window.addEventListener("scroll", () => {
   const button = $.one("#scroll-to-top")
   if (window.scrollY > 1000) {
-    button.style.display = "block"
+    button.style.right = "0"
   } else {
-    button.style.display = "none"
+    button.style.right = "-200px"
   }
 })
 

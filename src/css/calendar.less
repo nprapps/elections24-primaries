@@ -3,13 +3,23 @@
 @cl_square_margin: 5px;
 
 #scroll-to-top {
-  display: none;
-  position: fixed;
-  right: 20px;
+  background-color: white;
+  border: none;
+  border-right: none;
+  border-radius: 30px 0 0 30px;
   bottom: 20px;
-  height: 80px;
-  width: 100px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-weight: bold;
+  height: 60px;
+  padding: 5px 35px;
+  position: fixed;
+  right: -200px;
+  transition: right 250ms;
   z-index: 1000;
+  &:hover {
+    box-shadow: 0px 0px 4px 0px #000;
+  }
 }
 
 .calendar__hed {
