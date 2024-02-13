@@ -24,6 +24,7 @@ if (!here.searchParams.has("eternal")) {
   })
 }
 
+// move past months to bottom of page
 var months = $("section.cl__month");
 var pastMonths = months.filter(function(section) {
   var month = section.dataset.month;
@@ -39,3 +40,33 @@ if (pastMonths.length) {
   previousContainer.classList.add("show");
   pastMonths.forEach(p => previousContainer.appendChild(p));
 }
+
+// when user clicks a month in the horizontal graphic, scroll to that month in the list
+document.querySelectorAll(".cg__month-container").forEach(el => {
+  el.addEventListener("click", () => {
+    let section = document.querySelector("#section-" + el.dataset.month)
+    let position = section.getBoundingClientRect().y
+    window.scrollTo({
+      top: position,
+      left: 0,
+      behavior: "smooth"
+    })
+  })
+})
+
+window.addEventListener("scroll", () => {
+  const button = $.one("#scroll-to-top")
+  if (window.scrollY > 1000) {
+    button.style.right = "0"
+  } else {
+    button.style.right = "-200px"
+  }
+})
+
+$.one("#scroll-to-top").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  })
+})
