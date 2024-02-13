@@ -73,10 +73,21 @@
 
 .cg__month-container {
 	margin-right: @month_margin;
+	position: relative;
 	&:last-child {
 		margin-right: 0;
 	}
 	scroll-snap-align: center;
+	&:hover {
+		cursor: pointer;
+		.cg__month-hed {
+			font-weight: bold;
+		}
+		.cg__month-hed::after {
+			content: "\2193";
+			float: right;
+		}
+	}
 	@media (min-width: @cg_breakpoint) {
 		scroll-snap-align: start;
 	}

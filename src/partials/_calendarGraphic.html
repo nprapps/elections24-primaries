@@ -91,29 +91,29 @@
 		<div class="cg__flexbox">
 		<% months.forEach(function(month, i) { %>
 
-		<div class="cg__month-container">
-			<h3 class="cg__month-hed"><%= month %></h3>
-			<div class="cg__month-rectangle">
-				<% calendar_data[month].forEach(function(week) { %>
-					<% 
-					week.forEach(function(day) { 
-						let date_string = i+1 + "/" + day + "/2024"
-						if (day < 0) { 
-					%>
-							<div class="calendar__square cg__square cg__square--not-a-day"></div>
-						<% } else if (event_dates[date_string]) { %>
-							<div class="calendar__square cg__square calendar__square--<%= parties_by_date[date_string] %>" data-date="<%= date_string %>"></div>
-						<% } else { %>
-							<div class="calendar__square cg__square cg__square--regular-day" data-date="<%= date_string %>"></div>
-						<% } %>
+		<div class="cg__month-container" data-month="<%= i + 1 %>">
+				<h3 class="cg__month-hed"><%= month %></h3>
+				<div class="cg__month-rectangle">
+					<% calendar_data[month].forEach(function(week) { %>
+						<% 
+						week.forEach(function(day) { 
+							let date_string = i+1 + "/" + day + "/2024"
+							if (day < 0) { 
+						%>
+								<div class="calendar__square cg__square cg__square--not-a-day"></div>
+							<% } else if (event_dates[date_string]) { %>
+								<div class="calendar__square cg__square calendar__square--<%= parties_by_date[date_string] %>" data-date="<%= date_string %>"></div>
+							<% } else { %>
+								<div class="calendar__square cg__square cg__square--regular-day" data-date="<%= date_string %>"></div>
+							<% } %>
+						<% }) %>
 					<% }) %>
-				<% }) %>
-				<% if (calendar_data[month].length === 5) { %>
-					<% [...Array(7).keys()].forEach(function(day) { %>
-						<div class="cg__square cg__square--not-a-day"></div>
-					<% }) %>
-				<% } %>
-			</div>
+					<% if (calendar_data[month].length === 5) { %>
+						<% [...Array(7).keys()].forEach(function(day) { %>
+							<div class="cg__square cg__square--not-a-day"></div>
+						<% }) %>
+					<% } %>
+				</div>
 		</div>
 
 		<% }) %>
