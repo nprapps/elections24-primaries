@@ -3,7 +3,7 @@ var fs = require("fs").promises;
 
 var reportCache = {};
 
-var endpoint = "https://api.ap.org/v3/reports/";
+var endpoint = "https://api.ap.org/v3/elections/delegates/2024";
 var baseParams = {
   format: "json"
 };
@@ -121,8 +121,7 @@ var processStateReport = function(report) {
 };
 
 var getDelegates = async function(params = {}) {
-  console.log("Getting report lookup file...");
-  var links = await getAPIData(endpoint, params, { type: "delegates", geo: "US" });
+  
   var output = {};
   var normalize = {
     delSuper: processSuperReport,
@@ -130,28 +129,14 @@ var getDelegates = async function(params = {}) {
     delState: processStateReport
   }
   console.log("Getting reports...");
-  var latest = {};
-  links.reports.forEach(function(link) {
-    var updated = Date.parse(link.lastUpdated);
-    var [type, name] = link.title.split(/\s*\/\s*/g);
-    name = name.replace("del", "");
-    var url = link.id;
-    if (latest[name]) {
-      if (latest[name].updated > updated) return;
-    }
-    latest[name] = { updated, url };
-  });
-  var reports = Object.keys(latest).map(async function(name) {
-    var link = latest[name];
-    var { url } = link;
-    var report;
-    if (reportCache[url]) {
-      console.log(`Getting report from cache (${url})`);
-      report = reportCache[url];
-    } else {
-      console.log(`Loading report from AP (${url})`);
-      report = reportCache[url] = await getAPIData(endpoint + url, params)
-    }
+  reportTypes = {'summary':'delSum','state':'delState','super':'delSuper'}
+  var reports = Object.entries(reportTypes).map(async function(type) {
+    var response = await getAPIData(endpoint, {'type': type[0]})
+    var reportName = type[1]
+    var report = {[reportName]: response[reportName]}
+
+  
+  
     for (var k in report) {
       var prop = k.replace(/del/, "").toLowerCase();
       var processed = normalize[k](report);
