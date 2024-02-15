@@ -12,7 +12,7 @@ var embedSidechain = $.one("textarea#sidechain");
 var stateSelect = $.one("form .state");
 var raceSelect = $.one(`form [name="race"]`);
 
-var stateShown = "NH"; // specify a state to be highlighted first
+var stateShown = "SC"; // specify a state to be highlighted first
 
 var states = [...new Set(races.map(r => r.state))].sort();
 states.forEach(function(s) {
