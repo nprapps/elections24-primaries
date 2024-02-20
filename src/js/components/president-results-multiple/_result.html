@@ -7,7 +7,7 @@
       .replace(/^-+|[^\w\-]|-+$/g, "");
   };
 
-  var { activeMugs, schedule, stateRaces, eventDate } = data;
+  var { activeMugs, schedule, stateRaces, eventDate, party } = data;
 %>
 
 <% Object.keys(schedule).forEach(function(closing) { %>
@@ -28,7 +28,7 @@
       </div>
       <div class="state">
         <a
-          href="../states/<%= r.state %>.html#date=<%= data.eventDate %>&office=P&party=Dem&counties=true"
+          href="../states/<%= r.state %>.html#date=<%= data.eventDate %>&office=P&party=<%= party %>&counties=true"
           aria-label="See full results for <%= r.state %>">
           <%= r.ap %>
         </a>

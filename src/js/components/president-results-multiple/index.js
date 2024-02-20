@@ -123,6 +123,7 @@ class PresidentResultsMultiple extends ElementBase {
     var { races } = data;
     // filter to democratic races only
     var party = this.getAttribute("party");
+
     races = races.filter(d => d.party == party);
     // lookup table for races by state
     var stateRaces = {};
@@ -191,7 +192,8 @@ class PresidentResultsMultiple extends ElementBase {
       activeMugs,
       schedule,
       stateRaces,
-      eventDate
+      eventDate,
+      party
     });
 
     this.checkIfOverflow();
