@@ -1,3 +1,10 @@
+<% 
+  const copy = {
+    delegateTracker: "https://www.npr.org/2024/01/25/1226127965/gop-delegates-trump-haley-republican-nomination-election-2024",
+    allResults: "https://apps.npr.org/primary-election-results-2024/"
+  }
+%>
+
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -7,7 +14,7 @@
     <%= t.include("partials/_webfonts.html") %>
     <base target="_blank">
   </head>
-  <body>
+  <body class="homepage">
     <script>
       var here = new URL(window.location);
       document.body.classList.add(here.searchParams.get("theme"));

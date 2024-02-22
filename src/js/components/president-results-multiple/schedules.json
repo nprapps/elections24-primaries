@@ -35,5 +35,16 @@
       ]
     },
     "candidates": ["Trump", "Haley"]
+  },
+  "march2": {
+    "eventDate": "",
+    "schedule": {
+      "0:00": [
+        { "state": "ID", "ap": "Idaho", "delegates": 32 }
+      ],
+      "0:00": [
+        { "state": "MO", "ap": "Mo.", "delegates": 54 }
+      ],
+    }
   }
 }
