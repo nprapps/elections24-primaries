@@ -1,10 +1,6 @@
 @import "../../../css/values.less";
 
 house-primary {
-  .embed-row & .chatter {
-    display: none;
-  }  
-
   .results {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +54,18 @@ house-primary {
       }
     }
   }
+}
 
+// embed-specific overrides
+.embed-row house-primary {
+  .chatter {
+    display: none;
+  }
 
+  // if this is a one-district embed, 
+  // and there's only one seat up for election,
+  // stretch it full-width
+  &[district] house-seat[data-count="1"] {
+    flex-basis: 100%;
+  }
 }
