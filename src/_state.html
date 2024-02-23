@@ -13,7 +13,8 @@ var metadata = {
   project: Object.assign({}, grunt.data.json.project, {
     title: seo["stateTitle" + state] ? seo["stateTitle" + state] : seo.stateTitle.replace(/%state%/g, stateFull),
     description: seo["description" + state],
-    statePath: "states/" + state + ".html"
+    statePath: "states/" + state + ".html",
+    image: "assets/synced/state-" + state.toLowerCase() + ".png"
   })
 };
 %>
