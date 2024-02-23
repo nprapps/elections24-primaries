@@ -16,18 +16,18 @@
         { "state": "ME", "ap": "Maine", "delegates": 20 },
         { "state": "MA", "ap": "Mass.", "delegates": 40 },
         { "state": "OK", "ap": "Okla.", "delegates": 43 },
-        { "state": "TN", "ap": "Tenn.", "delegates": 58 },
-        { "state": "TX", "ap": "Texas", "delegates": 161 }
+        { "state": "TN", "ap": "Tenn.", "delegates": 58 }
       ],
       "8:30": [
         { "state": "AR", "ap": "Ark.", "delegates": 40 }
       ],
       "9:00": [
         { "state": "CO", "ap": "Colo.", "delegates": 37 },
-        { "state": "MN", "ap": "Minn.", "delegates": 39 }
+        { "state": "MN", "ap": "Minn.", "delegates": 39 },
+        { "state": "TX", "ap": "Texas", "delegates": 161 }
       ],
       "10:00": [
-        { "state": "UT", "ap": "Utah", "delegates": 40 },
+        { "state": "UT", "ap": "Utah", "delegates": 40 }
       ],
       "11:00": [
         { "state": "CA", "ap": "Calif.", "delegates": 169 }
