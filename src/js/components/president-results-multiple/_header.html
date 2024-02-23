@@ -1,0 +1,10 @@
+<% var copy = data.copy; %>
+
+<h3 data-as="headline"><a href="<%= copy.liveblogLink %>"><img src="<%= copy.logoImage %>" alt="<%= copy.logoAlt %>"> <%= copy.headline %></a></h3>
+<nav>
+  <ul>
+    <li><a data-as="resultsLink" href="<%= copy.liveblogLink %>">Latest Updates</a></li>
+    <li><a href="<%= copy.delegatesLink %>">Delegates</a></li>
+    <li><a href="<%= copy.allResultsLink %>">All Results</a></li>
+  </ul>
+</nav>

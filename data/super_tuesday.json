@@ -1,0 +1,2285 @@
+{
+  "test": true,
+  "races": [
+    {
+      "id": "2003",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "AK",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Caucus",
+      "office": "P",
+      "results": [
+        {
+          "id": "2003",
+          "party": "GOP",
+          "updated": 1708037306614,
+          "precincts": 402,
+          "reporting": 402,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 113608,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 64530,
+              "winner": true,
+              "percentage": 56.8
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 31970,
+              "percentage": 28.14
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 17108,
+              "percentage": 15.06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1670",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "AL",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "1670",
+          "party": "GOP",
+          "updated": 1708037483953,
+          "precincts": 1929,
+          "reporting": 1929,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 872463,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 565248,
+              "winner": true,
+              "percentage": 64.79
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 138116,
+              "percentage": 15.83
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 37278,
+              "percentage": 4.27
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 33541,
+              "percentage": 3.84
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 30377,
+              "percentage": 3.48
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 26264,
+              "percentage": 3.01
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 22650,
+              "percentage": 2.6
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100015",
+              "votes": 18989,
+              "percentage": 2.18
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1817",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "AL",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "1817",
+          "party": "Dem",
+          "updated": 1708037478782,
+          "precincts": 1929,
+          "reporting": 1929,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 872463,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 547585,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.76
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 219535,
+              "percentage": 25.16
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 105343,
+              "percentage": 12.07
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4697",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "AR",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4697",
+          "party": "Dem",
+          "updated": 1708037486001,
+          "precincts": 2573,
+          "reporting": 2573,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 337216,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 212483,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 63.01
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 58758,
+              "percentage": 17.42
+            },
+            {
+              "first": "Frankie",
+              "last": "Lozada",
+              "party": "Dem",
+              "id": "73161",
+              "votes": 20358,
+              "percentage": 6.04
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 18060,
+              "percentage": 5.36
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 15502,
+              "percentage": 4.6
+            },
+            {
+              "first": "Stephen",
+              "last": "Lyons",
+              "party": "Dem",
+              "id": "73146",
+              "votes": 12055,
+              "percentage": 3.57
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4873",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "AR",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4873",
+          "party": "GOP",
+          "updated": 1708037487285,
+          "precincts": 2573,
+          "reporting": 2573,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 337216,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 213937,
+              "winner": true,
+              "percentage": 63.44
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 53955,
+              "percentage": 16
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 13252,
+              "percentage": 3.93
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 12136,
+              "percentage": 3.6
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 10894,
+              "percentage": 3.23
+            },
+            {
+              "first": "Doug",
+              "last": "Burgum",
+              "party": "GOP",
+              "id": "64942",
+              "votes": 10077,
+              "percentage": 2.99
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 8801,
+              "percentage": 2.61
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 7734,
+              "percentage": 2.29
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 6430,
+              "percentage": 1.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8686",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "CA",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "8686",
+          "party": "Dem",
+          "updated": 1708037735723,
+          "precincts": 25614,
+          "reporting": 25614,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 4180791,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 2600535,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.2
+            },
+            {
+              "first": "President",
+              "last": "Boddie",
+              "party": "Dem",
+              "id": "67940",
+              "votes": 671454,
+              "percentage": 16.06
+            },
+            {
+              "first": "Stephen",
+              "last": "Lyons",
+              "party": "Dem",
+              "id": "73146",
+              "votes": 198604,
+              "percentage": 4.75
+            },
+            {
+              "first": "Eban",
+              "last": "Cambridge",
+              "party": "Dem",
+              "id": "73159",
+              "votes": 178332,
+              "percentage": 4.27
+            },
+            {
+              "first": "Gabriel",
+              "last": "Cornejo",
+              "party": "Dem",
+              "id": "73141",
+              "votes": 161517,
+              "percentage": 3.86
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 142581,
+              "percentage": 3.41
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 125845,
+              "percentage": 3.01
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 101923,
+              "percentage": 2.44
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8688",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "CA",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "8688",
+          "party": "GOP",
+          "updated": 1708037562351,
+          "precincts": 25614,
+          "reporting": 25614,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "60420"
+          ],
+          "total": 4180791,
+          "candidates": [
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 2737083,
+              "winner": true,
+              "percentage": 65.47
+            },
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 544941,
+              "percentage": 13.03
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 166670,
+              "percentage": 3.99
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 150953,
+              "percentage": 3.61
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 140984,
+              "percentage": 3.37
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 129937,
+              "percentage": 3.11
+            },
+            {
+              "first": "Rachel",
+              "last": "Swift",
+              "party": "GOP",
+              "id": "73156",
+              "votes": 114714,
+              "percentage": 2.74
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 106688,
+              "percentage": 2.55
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 88821,
+              "percentage": 2.12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7394",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "CO",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "7394",
+          "party": "GOP",
+          "updated": 1708037405633,
+          "precincts": 3267,
+          "reporting": 3267,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 829368,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 540602,
+              "winner": true,
+              "percentage": 65.18
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 130314,
+              "percentage": 15.71
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 42299,
+              "percentage": 5.1
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 36893,
+              "percentage": 4.45
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 30872,
+              "percentage": 3.72
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 25854,
+              "percentage": 3.12
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 22534,
+              "percentage": 2.72
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7393",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "CO",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "7393",
+          "party": "Dem",
+          "updated": 1708037418562,
+          "precincts": 3267,
+          "reporting": 3267,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 829368,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 519089,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.59
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 120786,
+              "percentage": 14.56
+            },
+            {
+              "first": "Jason",
+              "last": "Palmer",
+              "party": "Dem",
+              "id": "73148",
+              "votes": 35541,
+              "percentage": 4.29
+            },
+            {
+              "first": "Gabriel",
+              "last": "Cornejo",
+              "party": "Dem",
+              "id": "73141",
+              "votes": 32848,
+              "percentage": 3.96
+            },
+            {
+              "first": "Frankie",
+              "last": "Lozada",
+              "party": "Dem",
+              "id": "73161",
+              "votes": 29654,
+              "percentage": 3.58
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 26920,
+              "percentage": 3.25
+            },
+            {
+              "first": "Stephen",
+              "last": "Lyons",
+              "party": "Dem",
+              "id": "73146",
+              "votes": 24640,
+              "percentage": 2.97
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 21464,
+              "percentage": 2.59
+            },
+            {
+              "last": "Noncommitted Delegate",
+              "party": "Dem",
+              "id": "161518",
+              "votes": 18426,
+              "percentage": 2.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24548",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "MA",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "24548",
+          "party": "Dem",
+          "updated": 1708037426461,
+          "precincts": 2390,
+          "reporting": 2390,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 975677,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 623969,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 63.95
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 192023,
+              "percentage": 19.68
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 90628,
+              "percentage": 9.29
+            },
+            {
+              "last": "No Preference",
+              "party": "Dem",
+              "id": "100005",
+              "votes": 69057,
+              "percentage": 7.08
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24547",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "MA",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "24547",
+          "party": "GOP",
+          "updated": 1708037419805,
+          "precincts": 2390,
+          "reporting": 2390,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "60420"
+          ],
+          "total": 975677,
+          "candidates": [
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 618911,
+              "winner": true,
+              "percentage": 63.43
+            },
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 149963,
+              "percentage": 15.37
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 44990,
+              "percentage": 4.61
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 41128,
+              "percentage": 4.22
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 37418,
+              "percentage": 3.84
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 32349,
+              "percentage": 3.32
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 27401,
+              "percentage": 2.81
+            },
+            {
+              "last": "No Preference",
+              "party": "GOP",
+              "id": "100017",
+              "votes": 23517,
+              "percentage": 2.41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21075",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "ME",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "21075",
+          "party": "Dem",
+          "updated": 1708037417369,
+          "precincts": 571,
+          "reporting": 571,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 192324,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 124006,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 64.48
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 45158,
+              "percentage": 23.48
+            },
+            {
+              "last": "Total Write-ins",
+              "party": "Dem",
+              "id": "100008",
+              "votes": 23160,
+              "percentage": 12.04
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21403",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "ME",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "21403",
+          "party": "GOP",
+          "updated": 1708037403361,
+          "precincts": 571,
+          "reporting": 571,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 192324,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 122119,
+              "winner": true,
+              "percentage": 63.5
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 35488,
+              "percentage": 18.45
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 14086,
+              "percentage": 7.32
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 11473,
+              "percentage": 5.97
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 9158,
+              "percentage": 4.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25869",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "MN",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "25869",
+          "party": "Dem",
+          "updated": 1708037480400,
+          "precincts": 4100,
+          "reporting": 4100,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 676673,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 423451,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.58
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 99078,
+              "percentage": 14.64
+            },
+            {
+              "first": "Jason",
+              "last": "Palmer",
+              "party": "Dem",
+              "id": "73148",
+              "votes": 23162,
+              "percentage": 3.42
+            },
+            {
+              "first": "Eban",
+              "last": "Cambridge",
+              "party": "Dem",
+              "id": "73159",
+              "votes": 21312,
+              "percentage": 3.15
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 20193,
+              "percentage": 2.98
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 19093,
+              "percentage": 2.82
+            },
+            {
+              "first": "Frankie",
+              "last": "Lozada",
+              "party": "Dem",
+              "id": "73161",
+              "votes": 17344,
+              "percentage": 2.56
+            },
+            {
+              "first": "Gabriel",
+              "last": "Cornejo",
+              "party": "Dem",
+              "id": "73141",
+              "votes": 15328,
+              "percentage": 2.27
+            },
+            {
+              "first": "Cenk",
+              "last": "Uygur",
+              "party": "Dem",
+              "id": "68034",
+              "votes": 14078,
+              "percentage": 2.08
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 13101,
+              "percentage": 1.94
+            },
+            {
+              "last": "Total Write-ins",
+              "party": "Dem",
+              "id": "100008",
+              "votes": 10533,
+              "percentage": 1.56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26428",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "MN",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "26428",
+          "party": "GOP",
+          "updated": 1708037480072,
+          "precincts": 4103,
+          "reporting": 4103,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 676673,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 422298,
+              "winner": true,
+              "percentage": 62.41
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 124185,
+              "percentage": 18.35
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 40288,
+              "percentage": 5.95
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 35101,
+              "percentage": 5.19
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 29386,
+              "percentage": 4.34
+            },
+            {
+              "last": "Total Write-Ins",
+              "party": "GOP",
+              "id": "100016",
+              "votes": 25415,
+              "percentage": 3.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34653",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "NC",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "34653",
+          "party": "Dem",
+          "updated": 1708037420575,
+          "precincts": 2659,
+          "reporting": 2659,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 1091923,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 680300,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.3
+            },
+            {
+              "last": "No Preference",
+              "party": "Dem",
+              "id": "100005",
+              "votes": 411623,
+              "percentage": 37.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34654",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "NC",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "34654",
+          "party": "GOP",
+          "updated": 1708037422820,
+          "precincts": 2659,
+          "reporting": 2659,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 1091923,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 688816,
+              "winner": true,
+              "percentage": 63.08
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 180668,
+              "percentage": 16.55
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 47640,
+              "percentage": 4.36
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 43424,
+              "percentage": 3.98
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 39204,
+              "percentage": 3.59
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 34993,
+              "percentage": 3.2
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 30715,
+              "percentage": 2.81
+            },
+            {
+              "last": "No Preference",
+              "party": "GOP",
+              "id": "100017",
+              "votes": 26463,
+              "percentage": 2.42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37002",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "OK",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "37002",
+          "party": "GOP",
+          "updated": 1708037539397,
+          "precincts": 1984,
+          "reporting": 1984,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 427094,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 269146,
+              "winner": true,
+              "percentage": 63.02
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 64938,
+              "percentage": 15.2
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 20071,
+              "percentage": 4.7
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 18284,
+              "percentage": 4.28
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 17053,
+              "percentage": 3.99
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 14740,
+              "percentage": 3.45
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 12582,
+              "percentage": 2.95
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 10280,
+              "percentage": 2.41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38301",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "OK",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "38301",
+          "party": "Dem",
+          "updated": 1708037539332,
+          "precincts": 1984,
+          "reporting": 1984,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 427094,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 268023,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.76
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 68339,
+              "percentage": 16
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 28000,
+              "percentage": 6.56
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 24998,
+              "percentage": 5.85
+            },
+            {
+              "first": "Stephen",
+              "last": "Lyons",
+              "party": "Dem",
+              "id": "73146",
+              "votes": 20852,
+              "percentage": 4.88
+            },
+            {
+              "first": "Cenk",
+              "last": "Uygur",
+              "party": "Dem",
+              "id": "68034",
+              "votes": 16882,
+              "percentage": 3.95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "TN",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "4",
+          "party": "GOP",
+          "updated": 1708037421077,
+          "precincts": 1853,
+          "reporting": 1853,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 835352,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 523211,
+              "winner": true,
+              "percentage": 62.63
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 125408,
+              "percentage": 15.01
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 30639,
+              "percentage": 3.67
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 29333,
+              "percentage": 3.51
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 26956,
+              "percentage": 3.23
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 24720,
+              "percentage": 2.96
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 22566,
+              "percentage": 2.7
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 19561,
+              "percentage": 2.34
+            },
+            {
+              "last": "Total Write-Ins",
+              "party": "GOP",
+              "id": "100016",
+              "votes": 17974,
+              "percentage": 2.15
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100015",
+              "votes": 14984,
+              "percentage": 1.79
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43449",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "TN",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "43449",
+          "party": "Dem",
+          "updated": 1708037420152,
+          "precincts": 1853,
+          "reporting": 1853,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 835352,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 523978,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 62.73
+            },
+            {
+              "last": "Uncommitted",
+              "party": "Dem",
+              "id": "100004",
+              "votes": 209446,
+              "percentage": 25.07
+            },
+            {
+              "last": "Total Write-ins",
+              "party": "Dem",
+              "id": "100008",
+              "votes": 101928,
+              "percentage": 12.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48765",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "TX",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "48765",
+          "party": "GOP",
+          "updated": 1708037742873,
+          "precincts": 9144,
+          "reporting": 9144,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 3217653,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 2136126,
+              "winner": true,
+              "percentage": 66.39
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 429282,
+              "percentage": 13.34
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 124573,
+              "percentage": 3.87
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 113777,
+              "percentage": 3.54
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 104697,
+              "percentage": 3.25
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 91563,
+              "percentage": 2.85
+            },
+            {
+              "first": "Asa",
+              "last": "Hutchinson",
+              "party": "GOP",
+              "id": "5956",
+              "votes": 80887,
+              "percentage": 2.51
+            },
+            {
+              "first": "David",
+              "last": "Stuckenberg",
+              "party": "GOP",
+              "id": "73167",
+              "votes": 72123,
+              "percentage": 2.24
+            },
+            {
+              "last": "Uncommitted",
+              "party": "GOP",
+              "id": "100015",
+              "votes": 64625,
+              "percentage": 2.01
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44001",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "TX",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "44001",
+          "party": "Dem",
+          "updated": 1708037741919,
+          "precincts": 9144,
+          "reporting": 9144,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 3217653,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 2152419,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 66.89
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 429054,
+              "percentage": 13.33
+            },
+            {
+              "first": "Gabriel",
+              "last": "Cornejo",
+              "party": "Dem",
+              "id": "73141",
+              "votes": 138715,
+              "percentage": 4.31
+            },
+            {
+              "first": "Star",
+              "last": "Locke",
+              "party": "Dem",
+              "id": "61428",
+              "votes": 125665,
+              "percentage": 3.91
+            },
+            {
+              "first": "Frankie",
+              "last": "Lozada",
+              "party": "Dem",
+              "id": "73161",
+              "votes": 113755,
+              "percentage": 3.54
+            },
+            {
+              "first": "Armando",
+              "last": "Perez-Serrato",
+              "party": "Dem",
+              "id": "69747",
+              "votes": 98622,
+              "percentage": 3.07
+            },
+            {
+              "first": "Cenk",
+              "last": "Uygur",
+              "party": "Dem",
+              "id": "68034",
+              "votes": 85576,
+              "percentage": 2.66
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 73847,
+              "percentage": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45667",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "UT",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "45667",
+          "party": "Dem",
+          "updated": 1708037401052,
+          "precincts": 3122,
+          "reporting": 3122,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 358205,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 218953,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 61.13
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 67346,
+              "percentage": 18.8
+            },
+            {
+              "first": "Gabriel",
+              "last": "Cornejo",
+              "party": "Dem",
+              "id": "73141",
+              "votes": 27420,
+              "percentage": 7.65
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 23355,
+              "percentage": 6.52
+            },
+            {
+              "first": "Frankie",
+              "last": "Lozada",
+              "party": "Dem",
+              "id": "73161",
+              "votes": 21131,
+              "percentage": 5.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47758",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "UT",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Caucus",
+      "office": "P",
+      "results": [
+        {
+          "id": "47758",
+          "party": "GOP",
+          "updated": 1708037400007,
+          "precincts": 3122,
+          "reporting": 3122,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 358205,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 213228,
+              "winner": true,
+              "percentage": 59.53
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 88932,
+              "percentage": 24.83
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 56045,
+              "percentage": 15.65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47931",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "VA",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "47931",
+          "party": "GOP",
+          "updated": 1708037540519,
+          "precincts": 2886,
+          "reporting": 2886,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 1148178,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 727160,
+              "winner": true,
+              "percentage": 63.33
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 193196,
+              "percentage": 16.83
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 69943,
+              "percentage": 6.09
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 62677,
+              "percentage": 5.46
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 54994,
+              "percentage": 4.79
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 40208,
+              "percentage": 3.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47941",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "VA",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "47941",
+          "party": "Dem",
+          "updated": 1708037541184,
+          "precincts": 2886,
+          "reporting": 2886,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 1148178,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 735212,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 64.03
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 273221,
+              "percentage": 23.8
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 139745,
+              "percentage": 12.17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46789",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "VT",
+      "eevp": 99,
+      "party": "GOP",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "46789",
+          "party": "GOP",
+          "updated": 1708037359385,
+          "precincts": 283,
+          "reporting": 283,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "8639"
+          ],
+          "total": 94998,
+          "candidates": [
+            {
+              "first": "Donald",
+              "last": "Trump",
+              "party": "GOP",
+              "id": "8639",
+              "votes": 60042,
+              "winner": true,
+              "percentage": 63.2
+            },
+            {
+              "first": "Nikki",
+              "last": "Haley",
+              "party": "GOP",
+              "id": "60420",
+              "votes": 16700,
+              "percentage": 17.58
+            },
+            {
+              "first": "Ryan",
+              "last": "Binkley",
+              "party": "GOP",
+              "id": "71842",
+              "votes": 4849,
+              "percentage": 5.1
+            },
+            {
+              "first": "Chris",
+              "last": "Christie",
+              "party": "GOP",
+              "id": "60051",
+              "votes": 4261,
+              "percentage": 4.49
+            },
+            {
+              "first": "Ron",
+              "last": "DeSantis",
+              "party": "GOP",
+              "id": "62557",
+              "votes": 3658,
+              "percentage": 3.85
+            },
+            {
+              "first": "Vivek",
+              "last": "Ramaswamy",
+              "party": "GOP",
+              "id": "71843",
+              "votes": 3004,
+              "percentage": 3.16
+            },
+            {
+              "last": "Total Write-Ins",
+              "party": "GOP",
+              "id": "100016",
+              "votes": 2484,
+              "percentage": 2.61
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46790",
+      "date": "3/5/2024",
+      "test": true,
+      "state": "VT",
+      "eevp": 99,
+      "party": "Dem",
+      "type": "Primary",
+      "office": "P",
+      "results": [
+        {
+          "id": "46790",
+          "party": "Dem",
+          "updated": 1708037373295,
+          "precincts": 283,
+          "reporting": 283,
+          "reportingPercentage": 100,
+          "eevp": 99,
+          "winners": [
+            "1036"
+          ],
+          "total": 94998,
+          "candidates": [
+            {
+              "first": "Joe",
+              "last": "Biden",
+              "party": "Dem",
+              "id": "1036",
+              "votes": 60380,
+              "winner": true,
+              "incumbent": true,
+              "percentage": 63.56
+            },
+            {
+              "first": "Dean",
+              "last": "Phillips",
+              "party": "Dem",
+              "id": "67370",
+              "votes": 16085,
+              "percentage": 16.93
+            },
+            {
+              "first": "Marianne",
+              "last": "Williamson",
+              "party": "Dem",
+              "id": "63672",
+              "votes": 4824,
+              "percentage": 5.08
+            },
+            {
+              "first": "Mark",
+              "last": "Greenstein",
+              "party": "Dem",
+              "id": "64546",
+              "votes": 4300,
+              "percentage": 4.53
+            },
+            {
+              "first": "Jason",
+              "last": "Palmer",
+              "party": "Dem",
+              "id": "73148",
+              "votes": 3770,
+              "percentage": 3.97
+            },
+            {
+              "first": "Cenk",
+              "last": "Uygur",
+              "party": "Dem",
+              "id": "68034",
+              "votes": 3138,
+              "percentage": 3.3
+            },
+            {
+              "last": "Total Write-ins",
+              "party": "Dem",
+              "id": "100008",
+              "votes": 2501,
+              "percentage": 2.63
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

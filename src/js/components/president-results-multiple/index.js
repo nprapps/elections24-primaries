@@ -4,9 +4,10 @@ require("./president-results-multiple.less");
 
 var $ = require("../../lib/qsa");
 var dot = require("../../lib/dot");
+var headerTemplate = dot.compile(require("./_header.html"))
 var candidateListTemplate = dot.compile(require("./_candidate_list.html"));
 var resultTemplate = dot.compile(require("./_result.html"));
-var headerTemplate = dot.compile(require("./_resultHeader.html"));
+var resultHeaderTemplate = dot.compile(require("./_resultHeader.html"));
 
 var { formatTime, formatAPDate, groupBy, toggleAttribute } = require("../utils");
 
@@ -123,6 +124,7 @@ class PresidentResultsMultiple extends ElementBase {
     var { races } = data;
     // filter to democratic races only
     var party = this.getAttribute("party");
+
     races = races.filter(d => d.party == party);
     // lookup table for races by state
     var stateRaces = {};
@@ -178,6 +180,10 @@ class PresidentResultsMultiple extends ElementBase {
       activeMugs[c] = mugs[c];
     })
 
+    elements.header.innerHTML = headerTemplate({
+      "copy": scheduleInfo[lineup].copy
+    });
+
     elements.candidateList.innerHTML = candidateListTemplate({
       activeMugs
     });
@@ -186,12 +192,13 @@ class PresidentResultsMultiple extends ElementBase {
     var eventDate = scheduleInfo[lineup].eventDate;
 
     // template!
-    elements.resultsHeader.innerHTML = headerTemplate({ activeMugs });
+    elements.resultsHeader.innerHTML = resultHeaderTemplate({ activeMugs });
     elements.results.innerHTML = resultTemplate({
       activeMugs,
       schedule,
       stateRaces,
-      eventDate
+      eventDate,
+      party
     });
 
     this.checkIfOverflow();
