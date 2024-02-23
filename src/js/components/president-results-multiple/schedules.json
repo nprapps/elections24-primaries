@@ -30,10 +30,10 @@
         { "state": "UT", "ap": "Utah", "delegates": 40 },
       ],
       "11:00": [
-        { "state": "CA", "ap": "Calif.", "delegates": 29 }
+        { "state": "CA", "ap": "Calif.", "delegates": 169 }
       ],
       "1 a.m.": [
-        { "state": "AK", "ap": "Alaska", "delegates": 1 }
+        { "state": "AK", "ap": "Alaska", "delegates": 29 }
       ]
     },
     "candidates": ["Trump", "Haley"],
@@ -55,6 +55,15 @@
       "0:00": [
         { "state": "MO", "ap": "Mo.", "delegates": 54 }
       ],
+    },
+    "candidates": ["Trump", "Haley"],
+    "copy": {
+      "logoImage": "../assets/synced/elections-2024-logo-color-horizontal.svg",
+      "logoAlt": "2024 Election",
+      "headline": "March 2 primaries",
+      "delegatesLink": "https://www.npr.org/2024/01/25/1226127965/gop-delegates-trump-haley-republican-nomination-election-2024",
+      "liveblogLink": "https://www.npr.org/",
+      "allResultsLink": "https://apps.npr.org/primary-election-results-2024/"
     }
   }
 }
