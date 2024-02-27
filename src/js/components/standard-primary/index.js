@@ -105,7 +105,6 @@ class StandardPrimary extends ElementBase {
         var apState = strings[race.state + "-AP"]
         var headline = `${apState} ${general ? `${readableType}` : `${readableParty} primary`}`;
 
-
         if (host == "statepage") {
           child.setAttribute("max", 99);
           headline = `${readableParty} primary`;
@@ -114,6 +113,9 @@ class StandardPrimary extends ElementBase {
             search.set("date", race.date);
             search.set("party", race.party || "");
             search.set("office", race.office)
+            if (this.cache.special) {
+              search.set("special", true)
+            }
             href = "#" + search.toString();
 
             var { resultsLink } = child.illuminate();
