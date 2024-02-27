@@ -120,8 +120,12 @@ var processStateReport = function(report) {
   return out;
 };
 
-var getDelegates = async function(params = {}) {
+var getDelegates = async function(test, params = {"resultsType": "l"}) {
   
+  if (test) {
+    params.resultsType = 't'
+  }
+
   var output = {};
   var normalize = {
     delSuper: processSuperReport,
@@ -131,7 +135,9 @@ var getDelegates = async function(params = {}) {
   console.log("Getting reports...");
   reportTypes = {'summary':'delSum','state':'delState','super':'delSuper'}
   var reports = Object.entries(reportTypes).map(async function(type) {
-    var response = await getAPIData(endpoint, {'type': type[0]})
+    params['type'] = type[0]
+    console.log(params)
+    var response = await getAPIData(endpoint, params)
     var reportName = type[1]
     var report = {[reportName]: response[reportName]}
 
