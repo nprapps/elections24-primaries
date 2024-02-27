@@ -217,7 +217,7 @@ module.exports = function(grunt) {
         if (grunt.option("results-only")) return;
         var now = new Date();
         var delegateFile = ["delegates", now.getMonth() + 1, now.getDate(), now.getFullYear()].join("_");
-        var report = await api.getDelegates();
+        var report = await api.getDelegates(test);
         var reportJSON = serialize(report);
         grunt.file.write(`build/data/${delegateFile}.json`, reportJSON);
         grunt.file.write("build/data/delegates.json", reportJSON);
