@@ -3,25 +3,43 @@ Special code for homepage use
 
 Options:
 * [Election results table](#election-results-table)
-* [Election results table with live audio button](#election-results-table-with-live-audio-button)
-* [Banner headline above a lead image](#banner-headline-above-a-lead-image)
-* [Liveblog headlines](#liveblog-headlines) — _not needed for 2/24_
-* [Liveblog headlines with live audio button](#liveblog-headlines-with-live-audio-button) — _not needed for 2/24_
+* [Election results table with live audio button](#election-results-table-with-live-audio-button) — _not needed for 2/27_
+* [Banner headline above a lead image](#banner-headline-above-a-lead-image) — _not needed for 2/27_
+* [Liveblog headlines](#liveblog-headlines) — _not needed for 2/27_
+* [Liveblog headlines with live audio button](#liveblog-headlines-with-live-audio-button) — _not needed for 2/27_
 
 
 -----
 
 ### Election results table
 
-**South Carolina GOP primary**
-
 If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
+
+**Michigan presidential primaries (both)**
 
 ```
 <div style="padding-top: 20px;">
-<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=SC_P_2_24_2024&party=GOP&delegates=&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FSC.html%23date%3D2%252F24%252F2024%26office%3DP%26party%3DGOP%26counties%3Dtrue%26state" id="responsive-embed-SC-P-2-24-2024"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=MI_P_2_27_2024&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FMI.html" id="responsive-embed-MI-P-2-27-2024-all"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 ```
+
+**Michigan GOP presidential primary**
+
+```
+<div style="padding-top: 20px;">
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=MI_P_2_27_2024&party=Dem&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FMI.html%23date%3D2%252F27%252F2024%26office%3DP%26party%3DDem%26counties%3Dtrue%26state" id="responsive-embed-MI-P-2-27-2024-dem"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+</div>
+```
+
+**Michigan Dem presidential primary**
+
+```
+<div style="padding-top: 20px;">
+<p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/?live=&race=P&data=MI_P_2_27_2024&party=GOP&delegates=&link=https%3A%2F%2Fapps.npr.org%2Fprimary-election-results-2024%2Fstates%2FMI.html%23date%3D2%252F27%252F2024%26office%3DP%26party%3DGOP%26counties%3Dtrue%26state" id="responsive-embed-MI-P-2-27-2024-gop"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
+</div>
+```
+
+----
 
 ### Election results table with live audio button
 
