@@ -49,7 +49,6 @@ var onFormChange = function() {
     if (date) hash.set("date", date);
     if (race) {
       hash.set("office", race == "C" ? "P" : race);
-      hash.set("counties", "true");
     }
     url.hash = hash.toString();
   } else {
