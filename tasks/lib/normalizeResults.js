@@ -55,6 +55,9 @@ module.exports = function(resultArray, overrides) {
           id: c.polID,
           votes: c.voteCount || 0
         };
+        if (c.delegateCount || c.delegateCount == 0) {
+          candidate.delegates = c.delegateCount;
+        }
         // add winner field only if they won
         if (call) {
           if (call.indexOf(c.polID) > -1) candidate.winner = true;
