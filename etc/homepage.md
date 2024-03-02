@@ -12,12 +12,12 @@ Options:
 
 ### Election results table
 
-If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
+If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 35px.
 
 **Super Tuesday (homepage / with branding and links across the top)**
 
 ```
-<div style="padding-top: 20px;">
+<div style="padding-top: 0px;">
 <p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/super-tuesday.html?theme=homepage" id="responsive-embed-super-tuesday-hp"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 ```
@@ -36,12 +36,12 @@ If the homepage card is using the special label in the upper left ("live", "deve
 
 **Super Tuesday**
 
-If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 50px.
+If the homepage card is using the special label in the upper left ("live", "developing story", etc), up the padding to 35px.
 
 ```
 <!-- results plus live audio button --> 
 
-<div class="election-results-wrapper" style="padding-top: 20px;">
+<div class="election-results-wrapper" style="padding-top: 0px;">
 <p data-pym-loader data-child-src="https://apps.npr.org/primary-election-results-2024/embeds/super-tuesday.html?theme=homepage" id="responsive-embed-super-tuesday-hp"> Loading... </p> <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script>
 </div>
 
@@ -86,13 +86,13 @@ If the homepage card is using the special label in the upper left ("live", "deve
     display: none;
   }
 
-  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-  #story1223407223.hp-item.has-status:not(.hp-item-basic) .story-text {
+  /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+  #story1233808619.hp-item.has-status:not(.hp-item-basic) .story-text {
     padding-top: 0;
   }
 
-  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-  #story1223407223 .bucketwrap.statichtml { padding-top: 5px; }
+  /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+  #story1233808619 .bucketwrap.statichtml { padding-top: 5px; }
 
   @media screen and (min-width: 768px) {
     #res472586072 {
@@ -100,13 +100,13 @@ If the homepage card is using the special label in the upper left ("live", "deve
       margin-bottom: 15px;
     }
 
-    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-    #story1223407223 .bucketwrap.statichtml {
+    /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+    #story1233808619 .bucketwrap.statichtml {
       padding-top: 5px;
     }
 
-    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-    #story1223407223.hp-item.volume-high.has-status.no-image .story-text {
+    /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+    #story1233808619.hp-item.volume-high.has-status.no-image .story-text {
         padding-top: 20px;
     }
   }
@@ -127,7 +127,7 @@ The new `theme=2024` parameter makes the “2024” branding appear next to the 
 
 ### Liveblog headlines with live audio button
 
-Note: Someone from News Apps will need to change the references to `story1223407223` in this snippet to match the actual homepage card it will be attached to.
+Note: Someone from News Apps will need to change the references to `story1233808619` in this snippet to match the actual homepage card it will be attached to.
 
 ```
 <!-- live audio button plus liveblog headlines widget --> 
@@ -174,13 +174,13 @@ Note: Someone from News Apps will need to change the references to `story1223407
     display: none;
   }
 
-  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-  #story1223407223.hp-item.has-status:not(.hp-item-basic) .story-text {
+  /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+  #story1233808619.hp-item.has-status:not(.hp-item-basic) .story-text {
     padding-top: 0;
   }
 
-  /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-  #story1223407223 .bucketwrap.statichtml { padding-top: 5px; }
+  /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+  #story1233808619 .bucketwrap.statichtml { padding-top: 5px; }
 
   @media screen and (min-width: 768px) {
     #res472586072 {
@@ -188,13 +188,13 @@ Note: Someone from News Apps will need to change the references to `story1223407
       margin-bottom: 15px;
     }
 
-    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-    #story1223407223 .bucketwrap.statichtml {
+    /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+    #story1233808619 .bucketwrap.statichtml {
       padding-top: 5px;
     }
 
-    /* ADJUSTMENT NEEDED - change "story1223407223" to utilize the actual Seamus Id in the markup */
-    #story1223407223.hp-item.volume-high.has-status.no-image .story-text {
+    /* ADJUSTMENT NEEDED - change "story1233808619" to utilize the actual Seamus Id in the markup */
+    #story1233808619.hp-item.volume-high.has-status.no-image .story-text {
         padding-top: 20px;
     }
   }
