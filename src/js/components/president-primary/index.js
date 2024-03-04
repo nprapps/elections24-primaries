@@ -89,9 +89,18 @@ class PresidentPrimary extends ElementBase {
       
       var partyText = data.party == "Dem" ? "Democratic" : data.party == "GOP" ? "Republican" : data.party;
       var headline = `${strings[data.state + "-AP"]} ${partyText} primary`;
+        // thanks utah (presidential primary AND a caucus on the same day)
+        if (data.id == "47758") {
+        var headline = `${strings[data.state + "-AP"]} ${partyText} caucus`;
+      }
 
       if (host == "statepage") {
         headline = `${partyText} primary`;
+        // thanks utah pt 2
+        if (data.id == "47758") {
+          headline = `${partyText} caucus`;
+        }
+
         // update the link
         if (href != "false") {
           var search = new URLSearchParams("counties=true&office=P");
