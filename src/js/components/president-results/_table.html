@@ -8,6 +8,7 @@
       <div role="columnheader" class="th caucus"><%= data.caucus || "Caucus" %></div>
       <% } %>
       <div role="columnheader" class="th votes">Votes</div>
+      <div role="columnheader" class="th">Del.</div>
     </div>
   <% }); %>
   </div>
@@ -46,6 +47,7 @@
         <div role="cell" class="td caucus"><%=  c.caucus.toLocaleString() %></div>
         <% } %>
         <div role="cell" class="td votes"><%= c.votes ? c.votes.toLocaleString() : "-" %></div>
+        <div role="cell" class="td"><%= c.delegates ? c.delegates : "-" %></div>
         <% } else { %>
         <div role="cell" class="td votes uncontested" colspan="2">Uncontested</div>
         <% } %>
