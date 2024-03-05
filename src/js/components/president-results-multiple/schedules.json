@@ -10,9 +10,7 @@
         { "state": "NC", "ap": "N.C.", "delegates": 74 }
       ],
       "8:00": [
-        { "state": "AL", "ap": "Ala.", "delegates": 50 }
-      ],
-      "8:00": [
+        { "state": "AL", "ap": "Ala.", "delegates": 50 },
         { "state": "ME", "ap": "Maine", "delegates": 20 },
         { "state": "MA", "ap": "Mass.", "delegates": 40 },
         { "state": "OK", "ap": "Okla.", "delegates": 43 },
