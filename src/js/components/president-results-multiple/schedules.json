@@ -24,11 +24,9 @@
         { "state": "MN", "ap": "Minn.", "delegates": 39 },
         { "state": "TX", "ap": "Texas", "delegates": 161 }
       ],
-      "10:00": [
-        { "state": "UT", "ap": "Utah", "delegates": 40 }
-      ],
       "11:00": [
-        { "state": "CA", "ap": "Calif.", "delegates": 169 }
+        { "state": "CA", "ap": "Calif.", "delegates": 169 },
+        { "state": "UT", "ap": "Utah", "delegates": 40 }
       ],
       "12 a.m.": [
         { "state": "AK", "ap": "Alaska", "delegates": 29 }
