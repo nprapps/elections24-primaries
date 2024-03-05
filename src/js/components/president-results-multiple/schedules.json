@@ -30,7 +30,7 @@
       "11:00": [
         { "state": "CA", "ap": "Calif.", "delegates": 169 }
       ],
-      "1 a.m.": [
+      "12 a.m.": [
         { "state": "AK", "ap": "Alaska", "delegates": 29 }
       ]
     },
