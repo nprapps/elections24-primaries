@@ -1,3 +1,4 @@
+require("../analytics");
 var $ = require("../lib/qsa");
 var Sidechain = require("@nprapps/sidechain");
 

@@ -20,6 +20,9 @@
     </div>
 
     <script src="super-tuesday.js" async></script>
+    <script>
+      window.PROJECT_ANALYTICS = <%= JSON.stringify(json.project.analytics || {}) %>;
+    </script>
     <%= t.include("partials/_analytics.html", { json: { project: { embedded: true }}}) %>
   </body>
 </html>
