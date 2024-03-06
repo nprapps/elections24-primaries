@@ -220,11 +220,11 @@
                 <% if (event.link) { %>
                 <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
                 <% } %>
-                <% if (event.link && event.races) { %>
+                <% if (event.link && event.races && event.races.length) { %>
                 <span class="cl__results-label">
                 |
                 </span>
-                <% }%>
+                <% } %>
                 <% if (event.races && event.races.length) { %>
                 <span class="cl__results-label">Results:</span>
                   <%= event.races.map(r => `
