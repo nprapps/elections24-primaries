@@ -80,6 +80,11 @@ class StandardPrimary extends ElementBase {
     races.forEach(([race, element]) => {
       element.className = "race";
 
+      // carry over footnote if needed
+      if (typeof(race.footnote) != "undefined") {
+        race.results[0].footnote = race.footnote;
+      }
+
       toggleAttribute(element, "hidden", party && race.party != party);
       // create result tables
       var pairs = mapToElements(element, race.results, "results-table");
