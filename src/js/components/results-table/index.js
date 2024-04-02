@@ -68,7 +68,8 @@ class ResultsTable extends ElementBase {
       reporting,
       reportingPercentage,
       updated,
-      eevp
+      eevp,
+      footnote
     } = result;
 
     // copy the array before mutating
@@ -80,6 +81,10 @@ class ResultsTable extends ElementBase {
       candidates.length > 1
         ? ""
         : "The AP does not tabulate votes for uncontested races and declares its winner as soon as polls close.";
+
+    if (result.footnote) {
+      elements.footnote.innerHTML = result.footnote + " " + elements.footnote.innerHTML;
+    }
 
     this.setAttribute("party", party);
     // normalize percentages
@@ -174,6 +179,11 @@ class ResultsTable extends ElementBase {
         reporting_string = ">99% precincts reporting";
       } else {
         reporting_string = result.reportingPercentage.toFixed(0).toString() + "% precincts reporting";
+      }
+
+      // add footnote if one exists (specified in `footnotes` sheet)
+      if (footnote) {
+        elements.footnote.innerHTML = `Note: ${ footnote }`;
       }
     }
 

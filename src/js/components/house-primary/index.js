@@ -85,7 +85,12 @@ class HousePrimary extends ElementBase {
     var groupedResults = groupBy(this.cache.races, "seat");
     var seats = Object.keys(groupedResults).map(function(id) {
       return {
-        results: groupedResults[id].map(r => r.results[0]),
+        results: groupedResults[id].map(function(r) {
+          if (typeof(r.footnote) != "undefined") {
+            r.results[0].footnote = r.footnote;
+          }
+          return r.results[0];
+        }),
         id,
         state: groupedResults[id][0].state
       }
@@ -108,16 +113,22 @@ class HousePrimary extends ElementBase {
       // create result tables
       var pairs = mapToElements(seatElements.results, race.results, "results-table");
 
+      // console.log(seatElements.results, race.results);
+
       // render each one
       var test = !!this.cache.test;
 
       pairs.forEach(function([data, child]) {
         if (href) child.setAttribute("href", href);
         child.setAttribute("max", 99);
-        toggleAttribute(child, "test", test);
 
+        toggleAttribute(child, "test", test);
         toggleAttribute(child, "hidden", party && data.party != party);
         
+        if (data.id == "82157") {
+          console.log(data, child);
+        }
+
         var readableParty = general ? "" : 
           data.party == "Dem" ? "Democratic" : data.party == "GOP" ? "Republican" : (data.party || "Open");
         var raceType = general ? "election" : "primary";
