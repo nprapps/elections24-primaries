@@ -212,8 +212,8 @@ class CountyMap extends ElementBase {
     var result = this.fipsLookup[fips];
     if (result) {
       var candText = "";
-      if (result.results_in > 25) {
-        var leadingCandidate = result.candidates[0];
+      var leadingCandidate = result.candidates[0];
+      if (result.results_in > 25 && leadingCandidate.votes > 0) {
         var prefix = leadingCandidate.winner ? "Winner: " : "Leading: ";
         var candText = prefix + leadingCandidate.last + " (" + (leadingCandidate.percentage || 0).toFixed(1) + "%)";
       }

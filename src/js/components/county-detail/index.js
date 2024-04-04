@@ -119,7 +119,7 @@ class CountyDetail extends ElementBase {
         delete candidate.winner;
         candidates.add(candidate.id);
       });
-      if (r.reportingPercentage == 100) {
+      if (r.reportingPercentage == 100 && top.votes > 0) {
         top.winner = true;
       }
       counties[r.county] = r.fips;
