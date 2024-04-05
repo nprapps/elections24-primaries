@@ -187,8 +187,23 @@ module.exports = function(grunt) {
               footnote: contest.footnote,
               races: subsetResults("county")
             };
-            // add county name from the FIPS table
+
+            // create an array of county FIPS codes that exist in this state
+            var {state} = contest;
+            var fipsinstate = [];
+            var counties = grunt.data.json.fips;
+            for (const key in counties) {
+              if (counties[key].usps === state) {
+                fipsinstate.push(key)
+              }
+            }
+
             countyResults.races.forEach(function(race) {
+              // if this county FIPS doesn't exist in the state, drop it
+              race.results = race.results.filter(result => {
+                return fipsinstate.indexOf(result.fips) != -1;
+              });
+              // add county name from the FIPS table
               race.results.forEach(function(result) {
                 var county = grunt.data.json.fips[result.fips];
                 if (county) {
