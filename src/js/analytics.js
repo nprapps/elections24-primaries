@@ -5,6 +5,20 @@ var setupGoogleAnalytics = function() {
   // Bail early if opted out of Performance and Analytics consent groups
   if (!DataConsent.hasConsentedTo(DataConsent.PERFORMANCE_AND_ANALYTICS)) return;
 
+  var script = document.createElement("script")
+
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-LLLW9F9XPC"
+
+  script.async = true;
+
+  document.head.appendChild(script);
+
+  var script_embed = document.createElement("script")
+
+  script_embed.innerHTML = "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-LLLW9F9XPC');"
+
+  document.head.appendChild(script_embed)
+
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
