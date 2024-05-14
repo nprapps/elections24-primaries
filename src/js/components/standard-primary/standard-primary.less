@@ -23,5 +23,8 @@ standard-primary {
         margin-top: 20px;
       }
     }
+    &:has(> .race[hidden]) {
+      grid-template-columns: 1fr;
+    }
   }
 }
