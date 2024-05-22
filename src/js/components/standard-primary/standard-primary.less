@@ -12,8 +12,16 @@ standard-primary {
   }
 
   .results {
-    display: flex;
-    column-gap: 20px;
+    .main & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .embed-row & {
+      display: flex;
+      column-gap: 20px;
+    }
 
     @media @mobile {
       display: block;
