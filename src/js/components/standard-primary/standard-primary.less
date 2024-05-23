@@ -12,9 +12,17 @@ standard-primary {
   }
 
   .results {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    .main & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    .embed-row & {
+      display: flex;
+      column-gap: 20px;
+      justify-content: center;
+    }
 
     @media @mobile {
       display: block;
@@ -23,5 +31,11 @@ standard-primary {
         margin-top: 20px;
       }
     }
+  }
+
+  .race {
+    flex-grow: 2;
+    flex-basis: calc(50% - 10px);
+    max-width: 650px;
   }
 }
