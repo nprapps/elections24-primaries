@@ -156,7 +156,7 @@
         </div>
 
         <div>
-          <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
+          <button id="jump-to-past">Jump to past months &darr;</button>
           <%
             var byMonth = groupBy(events, "month");
             Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {
@@ -216,22 +216,25 @@
                 </div>
               </div>
               <p class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></p>
-              <div class="cl__links">
-                <% if (event.link) { %>
-                <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
-                <% } %>
-                <% if (event.link && event.races && event.races.length) { %>
-                <span class="cl__results-label">
-                |
-                </span>
-                <% } %>
-                <% if (event.races && event.races.length) { %>
-                <span class="cl__results-label">Results:</span>
-                  <%= event.races.map(r => `
-                    <a href="states/${r.state}.html#date=${r.date}&office=${r.office}${r.special ? "&special=true" : ""}" data-days="${r.days}">
-                    ${strings[r.office]}${r.special || r.general || r.runoff ? " - " + getDescriptors(r) : ""}</a>`).join(", ") %>
-                <% } %>
-              </div>
+              <% if (event.link || (event.races && event.races.length)) { %>
+                <div class="horizontal-line"></div>
+                <div class="cl__links">
+                  <% if (event.link) { %>
+                  <a class="cl__coverage-link" href="<%= event.link %>">Read NPR coverage</a>
+                  <% } %>
+                  <% if (event.link && event.races && event.races.length) { %>
+                  <span class="cl__results-label">
+                  |
+                  </span>
+                  <% } %>
+                  <% if (event.races && event.races.length) { %>
+                  <span class="cl__results-label">Results:</span>
+                    <%= event.races.map(r => `
+                      <a href="states/${r.state}.html#date=${r.date}&office=${r.office}${r.special ? "&special=true" : ""}" data-days="${r.days}">
+                      ${strings[r.office]}${r.special || r.general || r.runoff ? " - " + getDescriptors(r) : ""}</a>`).join(", ") %>
+                  <% } %>
+                </div>
+              <% } %>
             </div>
             <%
                     }

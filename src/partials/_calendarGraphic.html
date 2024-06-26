@@ -39,6 +39,8 @@
 
 	const event_dates = groupBy(events_for_calendar_graphic, "date")
 
+	const events_by_month = groupBy(events, "month")
+
 	let calendar_data = {}
 	months.forEach(function(month, i) {
 		calendar_data[month] = matrix(2024, i)
@@ -90,8 +92,7 @@
 	<div class="cg__viewport">
 		<div class="cg__flexbox">
 		<% months.forEach(function(month, i) { %>
-
-		<div class="cg__month-container" data-month="<%= i + 1 %>">
+			<div class="cg__month-container<%= events_by_month[i + 1] ? ' cg__month-with-events' : '' %>" data-month="<%= i + 1 %>">
 				<h3 class="cg__month-hed"><%= month %></h3>
 				<div class="cg__month-rectangle">
 					<% calendar_data[month].forEach(function(week) { %>

@@ -2,6 +2,8 @@
 @calendar_square_width: 20px;
 @cl_square_margin: 5px;
 
+@breakpoint: 850px;
+
 #scroll-to-top {
   background-color: white;
   border: none;
@@ -29,7 +31,7 @@
   margin: 0 0 1em 0;
   line-height: 1.2;
 
-  @media @mobile-above {
+  @media (min-width: @breakpoint) {
     font-size: 2.3em;
   }
 }
@@ -107,7 +109,7 @@
 }
 
 .cl__date-border {
-  @media (@mobile) {
+  @media (max-width: @breakpoint - 1) {
     border-top: 1px solid #ccc;
     height: 0px;
     margin-top: 22px;
@@ -125,12 +127,12 @@
   opacity: 0;
   top: -10px;
   white-space: nowrap;
-  @media (@mobile) {
+  @media (max-width: @breakpoint - 1) {
     background: #fff;
     position: absolute;
     padding-right: 5px;
   }
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     width: @date_width;
   }
   .index-0 & {
@@ -142,22 +144,21 @@
 }
 
 .cl__date--mobile-only {
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     visibility: hidden;
   }
 }
 
 .cl__square {
   flex-shrink: 0;
-  margin-right: @cl_square_margin;
 }
 
 .cl__day-label {
   line-height: 1;
-  @media (@mobile) {
+  @media (max-width: @breakpoint - 1) {
     margin: 18px 6px 6px 0;
   }
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     margin: 10px 6px 2px 0;
   }
 }
@@ -168,24 +169,33 @@
 
 .cl__event-row {
   margin: 6px 0;
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     align-items: baseline;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    &:not(.cl__label-row):hover {
-      background: #efefef;
-    }
-
   }
 }
 
 .cl__non-label-row {
   justify-content: space-between;
+  position: relative;
+}
+
+.horizontal-line {
+  position: absolute;
+  border-top: 1px dotted #ccc;
+  top: 12px;
+  right: 0;
+  width: calc(100% - 120px);
+  z-index: -1;
+  @media (max-width: @breakpoint - 1) {
+    display: none;
+  }
 }
 
 .cl__event-row__left-side {
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     display: flex;
   }
 }
@@ -195,17 +205,20 @@
 }
 
 .cl__title {
+  background-color: #fff;
   font-size: 16px;
   margin: 0;
+  padding-left: @cl_square_margin;
+  padding-right: @cl_square_margin; 
 }
 
 .cl__desc {
   font-size: 14px;
   margin: 0;
-  @media (@mobile) {
+  @media (max-width: @breakpoint - 1) {
     margin-left: @calendar_square_width + @cl_square_margin;
   }
-  @media (@mobile-above) {
+  @media (min-width: @breakpoint) {
     padding-left: @date_width + @calendar_square_width + @cl_square_margin;
     order: 2;
     width: 100%;
@@ -217,9 +230,11 @@
 }
 
 .cl__links {
+  background-color: #fff;
   color: var(--secondary);
   font-size: 14px;
   margin-left: @calendar_square_width + @cl_square_margin;
+  padding-left: 5px;
   a[href]:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -228,7 +243,7 @@
     color: var(--secondary);
     cursor: arrow;
   }
-  @media (@mobile) {
+  @media (max-width: @breakpoint - 1) {
     margin-bottom: 14px;
   }
 }
@@ -238,7 +253,7 @@
     display: none;
   }
   .cl__label-row & {
-    @media (@mobile-above) {
+    @media (min-width: @breakpoint) {
       margin-top: 7px;
     }
   }
@@ -250,13 +265,20 @@
   }
 }
 
-.jump-to-past {
-  font-size: 14px;
-  padding: 4px 10px;
+#jump-to-past {
+  background: none;
+  border: none;
+  color: var(--link);
+  cursor: pointer;
   border-radius: 4px;
-  margin-top: -3px;
-  float: right;
   display: none;
+  float: right;
+  font-size: 14px;
+  margin-top: -3px;
+  padding: 4px 0 4px 10px;
+  &:hover {
+    text-decoration: underline;
+  }
   &.show {
     display: block;
   }
