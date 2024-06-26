@@ -6,7 +6,6 @@ const today = new Date()
 const here = new URL(window.location.href)
 const current_day_of_year = inDays([today.getMonth() + 1, today.getDate(), today.getFullYear()].join("/"))
 
-
 if (!here.searchParams.has("eternal")) {
   $("div[data-days]").forEach(function(element) {
     let element_day = element.dataset.days
@@ -42,7 +41,7 @@ if (pastMonths.length) {
 }
 
 // when user clicks a month in the horizontal graphic, scroll to that month in the list
-document.querySelectorAll(".cg__month-container").forEach(el => {
+document.querySelectorAll(".cg__month-with-events").forEach(el => {
   el.addEventListener("click", () => {
     let section = document.querySelector("#section-" + el.dataset.month)
     let position = section.getBoundingClientRect().y
