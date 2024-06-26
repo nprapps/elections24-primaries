@@ -151,7 +151,6 @@
 
 .cl__square {
   flex-shrink: 0;
-  margin-right: @cl_square_margin;
 }
 
 .cl__day-label {
@@ -175,15 +174,24 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    &:not(.cl__label-row):hover {
-      background: #efefef;
-    }
-
   }
 }
 
 .cl__non-label-row {
   justify-content: space-between;
+  position: relative;
+}
+
+.horizontal-line {
+  position: absolute;
+  border-top: 1px dotted #ccc;
+  top: 12px;
+  right: 0;
+  width: calc(100% - 120px);
+  z-index: -1;
+  @media (max-width: @breakpoint - 1) {
+    display: none;
+  }
 }
 
 .cl__event-row__left-side {
@@ -197,8 +205,11 @@
 }
 
 .cl__title {
+  background-color: #fff;
   font-size: 16px;
   margin: 0;
+  padding-left: @cl_square_margin;
+  padding-right: @cl_square_margin; 
 }
 
 .cl__desc {
@@ -219,9 +230,11 @@
 }
 
 .cl__links {
+  background-color: #fff;
   color: var(--secondary);
   font-size: 14px;
   margin-left: @calendar_square_width + @cl_square_margin;
+  padding-left: 5px;
   a[href]:hover {
     text-decoration: underline;
     text-decoration-thickness: 1px;
