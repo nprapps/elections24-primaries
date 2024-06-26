@@ -252,13 +252,20 @@
   }
 }
 
-.jump-to-past {
-  font-size: 14px;
-  padding: 4px 10px;
+#jump-to-past {
+  background: none;
+  border: none;
+  color: var(--link);
+  cursor: pointer;
   border-radius: 4px;
-  margin-top: -3px;
-  float: right;
   display: none;
+  float: right;
+  font-size: 14px;
+  margin-top: -3px;
+  padding: 4px 0 4px 10px;
+  &:hover {
+    text-decoration: underline;
+  }
   &.show {
     display: block;
   }

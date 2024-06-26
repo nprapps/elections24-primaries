@@ -156,7 +156,7 @@
         </div>
 
         <div>
-          <a class="jump-to-past" href="#past-months">Jump to past months &darr;</a>
+          <button id="jump-to-past">Jump to past months &darr;</button>
           <%
             var byMonth = groupBy(events, "month");
             Object.keys(byMonth).sort((a, b) => a - b).forEach(function(m) {

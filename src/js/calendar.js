@@ -32,12 +32,20 @@ var pastMonths = months.filter(function(section) {
 });
 
 if (pastMonths.length) {
-  var previousLink = $.one("a.jump-to-past");
+  var previousLink = $.one("#jump-to-past");
   previousLink.classList.add("show");
 
   var previousContainer = $.one("#past-months");
   previousContainer.classList.add("show");
   pastMonths.forEach(p => previousContainer.appendChild(p));
+
+  previousLink.addEventListener("click", () => {
+    window.scrollTo({
+      top: previousContainer.getBoundingClientRect().y,
+      left: 0,
+      behavior: "smooth"
+    })
+  })
 }
 
 // when user clicks a month in the horizontal graphic, scroll to that month in the list
