@@ -45,7 +45,7 @@ var track = function(eventAction, eventLabel, eventValue) {
   event[DIMENSION_PARENT_URL] = parentURL;
   event[DIMENSION_PARENT_HOSTNAME] = hostname;
 
-  if (window.ga) ga("send", event);
+  if (window.gtag) gtag("event", "elex24", {'type': eventAction, 'label': eventLabel, 'value': eventValue});
 };
 
 module.exports = track;
