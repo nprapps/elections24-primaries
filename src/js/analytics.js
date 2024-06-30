@@ -44,7 +44,7 @@ if (window.top !== window) {
         customData["dimension1"] = parentUrl;
         customData["dimension2"] = parentHostname;
         customData["dimension3"] = initialWidth;
-		gtag('config', TAG_ID, {'custom_map': {'dimension1': 'parentUrl', 'dimension2': 'parentHostname', 'dimension3': 'initialWidth'}});
+		gtag('config', gtagID, {'custom_map': {'dimension1': 'parentUrl', 'dimension2': 'parentHostname', 'dimension3': 'initialWidth'}});
 		gtag('event', 'page_view', customData)
 	} else { 
 
@@ -75,7 +75,7 @@ if (window.top !== window) {
 		customData["dimension22"] = document.title;
 	
 	// // gtag('set', 'send_page_view', false);
-    gtag('config', TAG_ID, {'custom_map': {'dimension2': '', 'dimension3': '', 'dimension6': '', 'dimension22': ''}});
+    gtag('config', gtagID, {'custom_map': {'dimension2': '', 'dimension3': '', 'dimension6': '', 'dimension22': ''}});
 	}
 
     gtag('event', 'page_view', customData)
