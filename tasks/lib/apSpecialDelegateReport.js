@@ -137,7 +137,6 @@ var getSpecialDelegates = async function(test, params = {"resultsType": "l"}) {
   reportTypes = {'summary':'delSum','state':'delState','super':'delSuper'}
   var reports = Object.entries(reportTypes).map(async function(type) {
     params['type'] = type[0]
-    console.log(params)
     var response = await getAPIData(endpoint, params)
     var reportName = type[1]
     var report = {[reportName]: response[reportName]}
@@ -150,7 +149,11 @@ var getSpecialDelegates = async function(test, params = {"resultsType": "l"}) {
       output[prop] = processed;
     }
   });
-  await Promise.all(reports);
+  try {
+    await Promise.all(reports);
+  } catch (error) {
+    console.log("Error in special DNC delegate report: " + error)
+  }
   return output;
 };
 
