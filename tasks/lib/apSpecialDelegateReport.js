@@ -6,7 +6,7 @@ var reportCache = {};
 var endpoint = "https://api.ap.org/v3/elections/delegates/2024/special/preconvention";
 var baseParams = {
   format: "json",
-  votingRound: "latest"
+  votingRound: "1"
 };
 
 var getAPIData = async function(url, ...params) {
