@@ -238,11 +238,12 @@ module.exports = function(grunt) {
         grunt.file.write("build/data/delegates.json", reportJSON);
 
         // load special DNC delegate report
-        var specialDelegateFile = ["special-delegates", now.getMonth() + 1, now.getDate(), now.getFullYear()].join("_");
-        var specialReport = await api.getSpecialDelegates(test);
-        var specialReportJSON = serialize(specialReport);
-        grunt.file.write(`build/data/${specialDelegateFile}.json`, specialReportJSON);
-        grunt.file.write("build/data/special-delegates.json", specialReportJSON);
+        // var specialDelegateFile = ["special-delegates", now.getMonth() + 1, now.getDate(), now.getFullYear()].join("_");
+        // var specialReport = await api.getSpecialDelegates(test);
+        // var specialReportJSON = serialize(specialReport);
+        // grunt.file.write(`build/data/${specialDelegateFile}.json`, specialReportJSON);
+        // grunt.file.write("build/data/special-delegates.json", specialReportJSON);
+      
       })
       .then(done)
       .catch(err => console.log(err));
