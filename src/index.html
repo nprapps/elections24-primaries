@@ -212,7 +212,7 @@
                 <div class="cl__event-row__mobile-row">
                   <div class="calendar__square cl__square calendar__square--<%= get_class(event.party, event.state_primary) %>">
                   </div>
-                  <p class="cl__title"><%= event.title %></p>
+                  <p class="cl__title<%= event.category === 'Bold' ? ' cl__title--bold' : '' %>"><%= event.title %></p>
                 </div>
               </div>
               <p class="cl__desc <%= event.description ? 'shown' : 'hidden' %>"><%= event.description %></p>
