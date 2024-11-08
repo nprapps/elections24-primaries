@@ -31,7 +31,7 @@ var pastMonths = months.filter(function(section) {
   return month < thisMonth;
 });
 
-if (pastMonths.length) {
+if (pastMonths.length > 0 && pastMonths.length < months.length - 1) {
   var previousLink = $.one("#jump-to-past");
   previousLink.classList.add("show");
 
